@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <a
+                    href="6e770ee9617627d787b50a4d75c9415980780b2688be30f379cbeeda4a2c9074.html">Cadastrar Um Usuario No Site Automation&hellip;</a>
+                > <a
+                    href="ed42972b72db49bddad75843e95988dcd0d425a2ec6fc0a73700141cb2822cc8.html">Cadastrar usuario um </a>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 18-01-2018 12:25</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Cadastrar Um Usuario No Site Automation Practice</span>
+                                    <span class="badge tag-badge">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" href="5e96631c96454b7a316919dac1831f742133e12d0aa898f138c06488db288d74.html">Usrum
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Cadastrar Usuario Um
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Open home: &lt;url&gt;</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="scaled_d7660bced170fbe6a70996e0fc538474633b575a291072841826b7a70e0d30cb.png" title="Given estou na pagina inicial do site &quot;&lt;url&gt;&quot;" width="960"/>
+                <img src="scaled_a4828caa5996781391c0cb71a2a2ca8723745c047d5a30f6a7b2df92792265ed.png" title="Open home: http://automationpractice.com/index.php" width="960"/>
+                <img src="scaled_386b99b3fa18eba9b5f9f810bcb9d76acb16b7169cd54ddd57ba6da57d4b064c.png" title="When clico em 'Sign in'" width="960"/>
+                <img src="386b99b3fa18eba9b5f9f810bcb9d76acb16b7169cd54ddd57ba6da57d4b064c.png" title="And sistema apresenta tela de cadastro" width="960"/>
+                <img src="scaled_c927e9fd8d5c5b2d6335473297284ef2e8262172cdc850036df2eabd72107ae7.png" title="And preencho 'Email address' &quot;&lt;email_address&gt;&quot;" width="960"/>
+                <img src="scaled_0add762447b4d0a5c036e315704fba480befa6107bc68c02a2ac3f9f1343d2f6.png" title="And clico no bot&atilde;o 'Create an account'" width="960"/>
+                <img src="scaled_5ea2c05a3cd66e6dbc2f74be9bf148fb120481e5054bcd44d783446485996a99.png" title="And sistema apresenta tela 'YOUR PERSONAL INFORMATION'" width="960"/>
+                <img src="scaled_b7271e4de8fe30b7d4f1181ad3aee9ece64686762d5f62eb04a97a2535b94ea3.png" title="And sistema apresenta tela 'YOUR PERSONAL INFORMATION'" width="960"/>
+                <img src="scaled_b1f16acfa94078c9f9d154031a44e2704d37d7b4bc3efcc5562938e9192e098a.png" title="And preencho radio-button 'Title' &quot;&lt;title&gt;&quot;" width="960"/>
+                <img src="scaled_4567b79fd5dc2b9b9bb8fcffe67c57b06119cccb74f0bb6e41a93b9e780a6933.png" title="And preencho radio-button 'Title' &quot;&lt;title&gt;&quot;" width="960"/>
+                <img src="scaled_6644ae3332ea5d7029a1e9368164428d6bb71d877cb0ecb892a6aaec4d5d3af6.png" title="And preencho 'First name*' &quot;&lt;first_name&gt;&quot;" width="960"/>
+                <img src="scaled_2251514bffc4d256b7d54364f89d59b1c218a504b60c833462d6b302b73ada68.png" title="And preencho 'Last name*' &quot;&lt;last_name&gt;&quot;" width="960"/>
+                <img src="scaled_2be21a0987fc447f9151fb4df12f218792c05fd2ca00fc37614c9c6c643aaf35.png" title="And preencho 'Last name*' &quot;&lt;last_name&gt;&quot;" width="960"/>
+                <img src="scaled_88c4732b9837f247f00278bfc7f68f95484844a9e807588c0396d7b4883e5cc3.png" title="And preencho 'Email*' &quot;&lt;email&gt;&quot; da tela de cadastro" width="960"/>
+                <img src="scaled_d2828dfb5055f9f4454272a0d09f93bb32c70d17cd1f73d81b00202fc2e14488.png" title="And preencho 'Password*' &quot;&lt;password&gt;&quot;" width="960"/>
+                <img src="scaled_acd684436e4c09def6530118642e01886e1635aa0395c72723a2a4963e039fd4.png" title="And seleciono dia 'Date of Birth' &quot;&lt;day_of_birth&gt;&quot;" width="960"/>
+                <img src="scaled_26f917f964f68c91996e014354ece3dcccae7d933ee6707b51da07cf8f80252f.png" title="And seleciono m&ecirc;s 'Date of Birth' &quot;&lt;month_of_birth&gt;&quot;" width="960"/>
+                <img src="scaled_62d38b64eb0ba6d7c371a188a0c8b82cdc77cecf532e07673ecd782284f2fb49.png" title="And seleciono ano 'Date of Birth' &quot;&lt;year_of_birth&gt;&quot;" width="960"/>
+                <img src="scaled_d79bc88c1be6e61610899bdd006e83fc6645cbdd1a4f983d8a60a39b58827a6a.png" title="And preencho check-box 'Sign up for our newsletter!' &quot;&lt;check_box_newsletter&gt;&quot;" width="960"/>
+                <img src="d79bc88c1be6e61610899bdd006e83fc6645cbdd1a4f983d8a60a39b58827a6a.png" title="And preencho check-box 'Receive special offers from our partners!' &quot;&lt;check_box_offers_from_partners&gt;&quot;" width="960"/>
+                <img src="scaled_b2ec18f9d8e09e75e3951a9d83d7924c373c02b108bcc779437baa095f66e10a.png" title="And preencho 'Address*' &quot;&lt;address&gt;&quot;" width="960"/>
+                <img src="scaled_c6245c8fe4d23db19ea6fa8648d7d75ed13af5ed5e8e8b9360f4bf5fafba8046.png" title="And preencho 'City*' &quot;&lt;city&gt;&quot;" width="960"/>
+                <img src="scaled_8663c1770d2f733c8d5d4a79270b0208a23cfe4cbc46ad3546ea210e004a5788.png" title="And seleciono'State*' &quot;&lt;state&gt;&quot;" width="960"/>
+                <img src="scaled_df0b929ef33b68e998780dba998cb881e69a35ee51984083925952f8b177be1b.png" title="And seleciono'State*' &quot;&lt;state&gt;&quot;" width="960"/>
+                <img src="scaled_eef5c88d1e03e0e642bb151cb47100474c751ba4e4c70fa387b855b82d1f7ca0.png" title="And preencho 'Zip/Postal Code*' &quot;&lt;zip_postal_code&gt;&quot;" width="960"/>
+                <img src="scaled_90ddb90f366fdec1ac105e3b43acdf4ce94a8570d18cd1675d15e2ecc8d2e7e7.png" title="And seleciono'Country*' &quot;&lt;country&gt;&quot;" width="960"/>
+                <img src="eef5c88d1e03e0e642bb151cb47100474c751ba4e4c70fa387b855b82d1f7ca0.png" title="And preencho 'Additional information*' &quot;&lt;additional_information&gt;&quot;" width="960"/>
+                <img src="scaled_0388a097cad6aa348fdf7262f77ae68fb2e0a990e496e8f476913af724066934.png" title="And preencho 'Additional information*' &quot;&lt;additional_information&gt;&quot;" width="960"/>
+                <img src="scaled_c8c76318ffcddfa584afa097feaa17a48d71bf084fe6a317d64a580e50c7f37a.png" title="And preencho 'Mobile phone*' &quot;&lt;mobile_phone&gt;&quot;" width="960"/>
+                <img src="scaled_b302c4aeab93f8170c8c9a8722bb97f0097e879fb2fed3f857b279c1669245f2.png" title="And preencho 'Assign an address alias for future reference. *' &quot;&lt;address_alias&gt;&quot;" width="960"/>
+                <img src="scaled_943779faa5ec53b6df010804751ee86086d855018a809b39d77c9b7496254f44.png" title="And clico no bot&atilde;o 'Register &gt;'" width="960"/>
+                <img src="943779faa5ec53b6df010804751ee86086d855018a809b39d77c9b7496254f44.png" title="Then sistema apresente tela 'MY ACCOUNT': <span class='success-color'>SUCCESS</span>" width="960"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.3.0</span>
+</div>
+</body>
+</html>
