@@ -32,6 +32,7 @@ public class StepBusinessCorreios {
 		viewElement.getDriver().manage().window().maximize();
 	}
 
+	//CT1(Buscar CEP - por endereço) e CT2(Buscar Endereco - por CEP)
 	public void preencherCampoCepOUEndereco(String cepOuEndereco) {
 		viewElement.sendText(page.getTxtCepOuEndereco(), cepOuEndereco);
 	}
@@ -120,6 +121,7 @@ public class StepBusinessCorreios {
 		Assert.assertTrue(achou);
 	}
 	
+	//CT3(Calcular Preços e prazos)
 	public void clicarLinkPrecosPrazos() {
 		viewElement.click(page.getLinkPrecosPrazos());
 	}
@@ -147,4 +149,136 @@ public class StepBusinessCorreios {
 		viewElement.click(page.getCkbCompararServico());
 		page.waitFor(2).seconds();
 	}
+	
+	public void clicarCkbCompararServicos() {
+		viewElement.waitForElementIsPresent(10, page.getCkbCompararServico());
+		viewElement.click(page.getCkbCompararServico());
+		
+	}
+
+	public void clicarFormatoObjeto(String formato) {
+		
+		if(formato.equals("Caixa"))
+			viewElement.click(page.getImgCaixa());
+		else
+			if(formato.equals("Envelope"))
+				viewElement.click(page.getImgCaixa());
+		else
+			if(formato.equals("Rolo"))
+				viewElement.click(page.getImgCaixa());
+		
+	}
+
+	public void selecionarDdlEmbalagem(String embalagem) {
+
+		viewElement.selectByVisibleText(page.getDdlEmbalagem(), embalagem);
+		
+	}
+
+	public void clicarBotaoParaselecionarTipoEmbalagem(int tipo) {
+		page.waitFor(500).milliseconds();//carregar os tipos(imagens)
+		List<WebElement> btnsTipoEmbalagem =  viewElement.findElements(page.getXpathBtnsSelecionarEmbalagem());
+
+		tipo--;
+		for(int i = 0; i < tipo; i++)
+		{
+			viewElement.click(page.getLinkNext());
+			page.waitFor(500).milliseconds();
+		}
+		viewElement.waitForElementIsPresent(10, btnsTipoEmbalagem.get(tipo));
+		viewElement.click(btnsTipoEmbalagem.get(tipo));
+	}
+
+	public void selecionarDdlPesoEstimado(String peso) {
+		viewElement.selectByVisibleText(page.getDdlPeso(), peso);
+		
+	}
+
+	public void clicarCkbMaoPropria() {
+		viewElement.click(page.getCkbMaoPropria());
+		
+	}
+
+	public void clicarCkbAvisoRecebimento() {
+		viewElement.click(page.getCkbAvisoRecebimento());
+	
+	}
+
+	public void clicarCkbDeclaracaoValor() {
+		viewElement.click(page.getCkbValorDeclarado());
+	
+	}
+
+	public void preencherCampoDeclaracaoValor(String valor) {
+		viewElement.waitForElementIsPresent(10, page.getTxtValorDeclarado());
+		viewElement.sendText(page.getTxtValorDeclarado(), valor);
+	}
+	
+	
+	public void clicarBtnEnviar() {
+		viewElement.click(page.getBtnEnviar());
+	}
+	
+	public void verificarExistenciaResultados() {
+		Assert.assertTrue(page.getThValorTotal().getText().contains("Valor total"));
+	}
+
+	//CT4(Buscar Agencia)
+	public void clicarLinkRedeDeAtendimento() {
+		viewElement.click(page.getLinkAgencias());
+		
+	}
+
+	public void selecionarRdbTipoBusca(String tipoBusca) {
+
+		if(tipoBusca.equals("Proximidade"))
+			viewElement.click(page.getRdbTipoBusca().get(0));
+		else
+			if(tipoBusca.equals("Localidade"))
+				viewElement.click(page.getRdbTipoBusca().get(1));
+		else
+			if(tipoBusca.equals("Serviço"))
+				viewElement.click(page.getRdbTipoBusca().get(2));
+		
+	}
+
+	public void selecionarDdlEstado(String estado) {
+		viewElement.selectByVisibleText(page.getDdlEstadoAgencia(), estado);
+	}
+
+	public void selecionarDdlMunicipio(String municipio) {
+		page.waitForTextToDisappear("Loading");
+		viewElement.selectByVisibleText(page.getDdlMunicipioAgencia(), municipio);
+	}
+
+	public void selecionarDdlBairro(String bairro) {
+		page.waitForTextToDisappear("Loading");
+		viewElement.selectByVisibleText(page.getDdlBairroAgencia(), bairro);
+	}
+	
+	public void verificarListagemEnderecoAgencia(String rua )
+	{
+		viewElement.waitForElementIsPresent(10, page.getTblAgencias().get(0));//aguarda a presenca d ao menos o 1 elemento
+		
+		boolean achou = false;
+		List<WebElement> listaAgencias = page.getTblAgencias();
+		
+		for(int i = 0; i < listaAgencias.size(); i++)
+		{
+			listaAgencias.get(i).click();
+			page.waitForTextToAppear("Endereço");
+		
+			String nomeRua = viewElement.findElement(By.xpath("//*[@id=\"detalheAgencia"+ (i+1) +"\"]/tbody/tr[2]/td")).getText();
+			if(nomeRua.contains(rua)) {
+				achou = true;
+				break;	
+			} 
+			page.waitFor(500).milliseconds();
+		}
+		
+		Assert.assertTrue(achou);
+	}
+	
+	
+	
 }

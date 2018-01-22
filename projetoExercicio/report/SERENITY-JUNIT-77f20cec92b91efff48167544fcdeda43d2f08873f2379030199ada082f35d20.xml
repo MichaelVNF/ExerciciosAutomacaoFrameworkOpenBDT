@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Calcular Preços e prazos - de CEP A a CEP B" skipped="1" tests="1" time="8.04" timestamp="2018-01-19 01:02:33"><testcase name="Calcular Endereco"><skipped/></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Calcular Preços e prazos - de CEP A a CEP B" skipped="0" tests="1" time="37.0" timestamp="2018-01-22 12:24:03"><testcase name="Calcular Endereco"/></testsuite>

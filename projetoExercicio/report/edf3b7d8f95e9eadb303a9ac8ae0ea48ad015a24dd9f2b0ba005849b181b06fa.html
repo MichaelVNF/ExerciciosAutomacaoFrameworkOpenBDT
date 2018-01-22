@@ -58,7 +58,7 @@
             <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 19-01-2018 13:58</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 22-01-2018 12:23</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -98,9 +98,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-times-circle failure-icon fa-3x' title='FAILURE'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
                             <span class="test-case-title">
-                                    <span class="failing-color">
+                                    <span class="success-color">
                                     Buscar Endereco
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -133,17 +133,23 @@
                     <th>#</th>
                         <th>Url</th>
                         <th>Pesquisacep</th>
-                        <th>Enderecoesperado</th>
+                        <th>Logradouroesperado</th>
+                        <th>Bairroesperado</th>
+                        <th>Localidadeesperada</th>
                 </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="test-FAILURE"><a href="#0">1</a></td>
-                            <td class="test-FAILURE"><a href="#0">http://www.correios.com.br/para-voce</a>
+                        <td class="test-SUCCESS"><a href="#0">1</a></td>
+                            <td class="test-SUCCESS"><a href="#0">http://www.correios.com.br/para-voce</a>
                             </td>
-                            <td class="test-FAILURE"><a href="#0">08130-060</a>
+                            <td class="test-SUCCESS"><a href="#0">08130-060</a>
                             </td>
-                            <td class="test-FAILURE"><a href="#0">Rua M&aacute;rio Covas, Cidade Kemel, S&atilde;o Paulo/SP</a>
+                            <td class="test-SUCCESS"><a href="#0">Rua M&aacute;rio Covas</a>
+                            </td>
+                            <td class="test-SUCCESS"><a href="#0">Cidade Kemel</a>
+                            </td>
+                            <td class="test-SUCCESS"><a href="#0">S&atilde;o Paulo/SP</a>
                             </td>
                     </tr>
                 </tbody>
@@ -195,7 +201,7 @@
                                 </a>
                         </td>
                     <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">8.2s</span></td>
+                    <td width="100"><span class="top-level-step">8.63s</span></td>
                 </tr>
                     <tr>
                     <td colspan="5">
@@ -223,7 +229,7 @@
                                 </a>
                         </td>
                     <td width="100"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">7.41s</span></td>
+                    <td width="100"><span class="nested-group-step">8.21s</span></td>
                 </tr>
 
                     </table>
@@ -251,7 +257,7 @@
                                 </a>
                         </td>
                     <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">0.91s</span></td>
+                    <td width="100"><span class="top-level-step">0.97s</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -275,7 +281,7 @@
                                 </a>
                         </td>
                     <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">1.08s</span></td>
+                    <td width="100"><span class="top-level-step">1.14s</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -299,7 +305,7 @@
                                 </a>
                         </td>
                     <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">1.87s</span></td>
+                    <td width="100"><span class="top-level-step">2.13s</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -323,27 +329,21 @@
                                 </a>
                         </td>
                     <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">0.75s</span></td>
+                    <td width="100"><span class="top-level-step">0.78s</span></td>
                 </tr>
-                <tr class="test-FAILURE">
+                <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
                         <a name="5"/>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection5')"
-                               style="display:block">
-                                <i class="fa fa-plus-square-o imgstepSection5 failure-icon"
-                                   style="margin-left: 20px; float:left;  padding-right:5px"></i>
-                            </a>
+                            <span style="margin-left: 20px; margin-right: 5px;"
+                                  class="top-level-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection5')"
-                               style="display:block;">
-                            <span class="top-level-step">And pesquiso via cep e verifico se a tebela contem o endereco "&lt;enderecoEsperado&gt;"</span>
-                            </a>
+                            <span class="top-level-step">Then pesquiso via cep e verifico se a tebela contem o endereco "&lt;logradouroEsperado&gt;" "&lt;bairroEsperado&gt;" "&lt;localidadeEsperada&gt;"</span>
 
                         </div>
                     </td>
-                        <td width="100" class="FAILURE-text">
+                        <td width="100" class="SUCCESS-text">
                                 <a href="edf3b7d8f95e9eadb303a9ac8ae0ea48ad015a24dd9f2b0ba005849b181b06fa_screenshots.html#screenshots?screenshot=7">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
                                     <img src="0f998a946a2d680e75649272fd7989fe407def448efa99e1be4d018f205c0f70.png"
@@ -352,120 +352,13 @@
                                          width="48" height="48"/>
                                 </a>
                         </td>
-                    <td width="100"><span class="top-level-step">FAILURE</span></td>
-                    <td width="100"><span class="top-level-step">1.19s</span></td>
+                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">0.77s</span></td>
                 </tr>
-                    <tr>
-                    <td colspan="5">
-                    <table id="stepSection5" style="display:none; width:100%">
-
-                <tr class="test-FAILURE">
-                    <td width="60" class="step-icon">
-                        
-                            <span style="margin-left: 40px; margin-right: 5px;"
-                                  class="nested-group-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
-                    </td>
-                    <td>
-                        <div class="step-description">
-                            <span class="nested-group-step">Pesquisar cep verificar tabela endereco: Rua Mário Covas, Cidade Kemel, São Paulo/SP</span>
-
-                        </div>
-                    </td>
-                        <td width="100" class="FAILURE-text">
-                                <a href="edf3b7d8f95e9eadb303a9ac8ae0ea48ad015a24dd9f2b0ba005849b181b06fa_screenshots.html#screenshots?screenshot=8">
-                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
-                                    <img src="0f998a946a2d680e75649272fd7989fe407def448efa99e1be4d018f205c0f70.png"
-                                         href="0f998a946a2d680e75649272fd7989fe407def448efa99e1be4d018f205c0f70.png"
-                                         class="screenshot"
-                                         width="48" height="48"/>
-                                </a>
-                        </td>
-                    <td width="100"><span class="nested-group-step">FAILURE</span></td>
-                    <td width="100"><span class="nested-group-step">0.68s</span></td>
-                </tr>
-                    <tr class="test-FAILURE">
-                        <td width="40">&nbsp</td>
-                        <td width="%" colspan="4" class="error-message-cell">
-                            <div class="error-message ellipsis"
-                                 title='Assertion error'>
-                                <pre>Assertion error</pre>
-                            </div>
-                <div><!-- Stack trace -->
-                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
-                            data-target="#stacktraceModal-8">
-                        View stack trace
-                    </button>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="stacktraceModal-8" tabindex="-1" role="dialog"
-                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal"
-                                        aria-label="Close"><span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title" id="stacktraceModalLabel">
-                                java.lang.AssertionError
-                                </h4>
-                            </div>
-                            <div class="modal-body">
-
-                                br.com.rsi.exercicios.projetoExercicios.steps.business.StepBusinessCorreios.pesquisarCepVerificarTabelaEndereco(StepBusinessCorreios.java
-                                    :130) <br>
-                                br.com.rsi.exercicios.projetoExercicios.steps.definition.StepDefinitionCorreios.pesquiso_via_endereco_e_verifico_se_a_tebela_contem_o_endereco(StepDefinitionCorreios.java
-                                    :53) <br>
-                                io.openbdt.run.SuiteTestRunner.runWithJunit(SuiteTestRunner.java
-                                    :21) <br>
-                                br.com.rsi.exercicios.projetoExercicios.runner.RunnerTest.test(RunnerTest.java
-                                    :33) <br>
-                                org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java
-                                    :75) <br>
-                                org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java
-                                    :86) <br>
-                                org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java
-                                    :84) <br>
-                                org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java
-                                    :254) <br>
-                                org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java
-                                    :89) <br>
-                                org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java
-                                    :61) <br>
-                                org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java
-                                    :70) <br>
-                                org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java
-                                    :193) <br>
-                                org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java
-                                    :86) <br>
-                                org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java
-                                    :38) <br>
-                                org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java
-                                    :539) <br>
-                                org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java
-                                    :761) <br>
-                                org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java
-                                    :461) <br>
-                                org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java
-                                    :207) <br>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                        </td>
-                    </tr>
-
-                    </table>
-                    </td>
-                    <tr>
-                <tr class="test-FAILURE">
+                <tr class="test-SUCCESS">
                     <td colspan="3"></td>
-                    <td width="100"><span class="top-level-step"><em>FAILURE</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>14.01s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>14.41s</em></span></td>
                 </tr>
 
             </table>

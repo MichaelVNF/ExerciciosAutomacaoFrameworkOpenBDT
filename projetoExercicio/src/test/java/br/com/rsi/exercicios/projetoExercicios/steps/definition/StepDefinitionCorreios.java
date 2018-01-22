@@ -21,6 +21,7 @@ public class StepDefinitionCorreios {
 	    stepB.abrirPagina(url);
 	}
 	
+	//CT1(Buscar CEP - por endereço) e CT2(Buscar Endereco - por CEP)
 	@When("^preencho o campo 'Busca CEP ou Endereço' \"([^\"]*)\"$")
 	public void preencho_o_campo_Busca_CEP_ou_Endereço(String cepOuEndereco) throws Throwable {
 	    stepB.preencherCampoCepOUEndereco(cepOuEndereco);
@@ -54,8 +55,8 @@ public class StepDefinitionCorreios {
 	    stepB.pesquisarCepVerificarTabelaEndereco(logradouroEsperado,  bairrooEsperado,  localidadeEsperada);
 	}
 
-	//CT3
-	@When("^clico sobre o link 'Precos e Prazos'$")
+	//CT3(Calcular Preços e prazos)
+	@When("^clico no link 'Precos e Prazos'$")
 	public void clico_sobre_o_link_Precos_e_Prazos() throws Throwable {
 	    stepB.clicarLinkPrecosPrazos();
 	}
@@ -80,4 +81,94 @@ public class StepDefinitionCorreios {
 	public void seleciono_a_ddl_Servico(String servico) throws Throwable {
 	    stepB.selecionarDdlServico(servico);
 	}
+	
+	@When("^clico no ckb 'Comparar Servicos'$")
+	public void clico_no_ckb_Comparar_Servicos() throws Throwable {
+	    stepB.clicarCkbCompararServicos();
+	}
+
+	@When("^clico sobre o 'Formato' do objeto \"([^\"]*)\"$")
+	public void clico_sobre_o_Formato_do_objeto(String formato) throws Throwable {
+	    stepB.clicarFormatoObjeto(formato);
+	}
+
+	@When("^seleciono na ddl o tipo de 'Embalagem' \"([^\"]*)\"$")
+	public void seleciono_o_tipo_de_Embalagem(String embalagem) throws Throwable {
+	    stepB.selecionarDdlEmbalagem(embalagem);
+	}
+	
+	@When("^clico no botao 'Selecionar esta' para escolher um tipo \"([^\"]*)\"$")
+	public void clico_no_botao_Selecionar_esta_para_escolher_um_tipo(int tipo) throws Throwable {
+	    stepB.clicarBotaoParaselecionarTipoEmbalagem(tipo);
+	}
+	
+	@When("^seleciono a ddl 'Peso estimado' \"([^\"]*)\"$")
+	public void seleciono_a_ddl_Peso_estimado(String peso) throws Throwable {
+	    stepB.selecionarDdlPesoEstimado(peso);
+	}
+
+	@When("^clico no ckb 'Mao Propria'$")
+	public void clico_no_ckb_Mao_Propria() throws Throwable {
+	    stepB.clicarCkbMaoPropria();
+	}
+
+	@When("^clico no ckb 'Aviso de Recebimento - AR'$")
+	public void clico_no_ckb_Aviso_de_Recebimento_AR() throws Throwable {
+		stepB.clicarCkbAvisoRecebimento();
+	}
+
+	@When("^clico no ckb 'Declaracao de Valor'$")
+	public void clico_no_ckb_Declaracao_de_Valor() throws Throwable {
+		stepB.clicarCkbDeclaracaoValor();
+	}
+
+	@When("^preencho o campo 'Declaracao de Valor' \"([^\"]*)\"$")
+	public void preencho_o_campo_Declaracao_de_Valor(String valor) throws Throwable {
+		stepB.preencherCampoDeclaracaoValor(valor);
+	}
+
+	@When("^clico no botao 'Enviar'$")
+	public void clico_no_botao_Enviar() throws Throwable {
+	    stepB.clicarBtnEnviar();
+	}
+
+	@Then("^verifco se houve resultado dos calculos$")
+	public void verifco_se_houve_resultado_dos_calculos() throws Throwable {
+	    stepB.verificarExistenciaResultados();
+	}
+	
+	//CT4(Buscar Agencia)
+	@When("^clico no link 'Rede de atendimento'$")
+	public void clico_no_link_Rede_de_atendimento() throws Throwable {
+	    stepB.clicarLinkRedeDeAtendimento();
+	}
+
+	@When("^seleciono o tipo da busca \"([^\"]*)\"$")
+	public void seleciono_o_tipo_da_busca(String tipoBusca) throws Throwable {
+	    stepB.selecionarRdbTipoBusca(tipoBusca);
+	}
+
+	@When("^seleciono a ddl 'Estado' \"([^\"]*)\"$")
+	public void seleciono_a_ddl_Estado(String estado) throws Throwable {
+	    stepB.selecionarDdlEstado(estado);
+	}
+
+	@When("^seleciono a ddl 'Municipio' \"([^\"]*)\"$")
+	public void seleciono_a_ddl_Municipio(String municipio) throws Throwable {
+	    stepB.selecionarDdlMunicipio(municipio);
+	}
+
+	@When("^seleciono a ddl 'Bairro' \"([^\"]*)\"$")
+	public void seleciono_a_ddl_Bairro(String bairro) throws Throwable {
+	    stepB.selecionarDdlBairro(bairro);
+	}
+
+	@Then("^verifico a presenca da agencia na lista \"([^\"]*)\"$")
+	public void verifico_a_presenca_da_agencia_na_lista(String rua  ) throws Throwable {
+	    stepB.verificarListagemEnderecoAgencia(rua);
+
+	}
+	
+	
+	
 }
