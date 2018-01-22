@@ -82,9 +82,9 @@ public class StepDefinitionCorreios {
 	    stepB.selecionarDdlServico(servico);
 	}
 	
-	@When("^clico no ckb 'Comparar Servicos'$")
-	public void clico_no_ckb_Comparar_Servicos() throws Throwable {
-	    stepB.clicarCkbCompararServicos();
+	@When("^clico no ckb 'Comparar Servicos' \"([^\"]*)\"$")
+	public void clico_no_ckb_Comparar_Servicos(boolean clica) throws Throwable {
+	    stepB.clicarCkbCompararServicos(clica);
 	}
 
 	@When("^clico sobre o 'Formato' do objeto \"([^\"]*)\"$")
@@ -107,25 +107,21 @@ public class StepDefinitionCorreios {
 	    stepB.selecionarDdlPesoEstimado(peso);
 	}
 
-	@When("^clico no ckb 'Mao Propria'$")
-	public void clico_no_ckb_Mao_Propria() throws Throwable {
-	    stepB.clicarCkbMaoPropria();
+	@When("^clico no ckb 'Mao Propria' \"([^\"]*)\"$")
+	public void clico_no_ckb_Mao_Propria(boolean clica) throws Throwable {
+	    stepB.clicarCkbMaoPropria(clica);
 	}
 
-	@When("^clico no ckb 'Aviso de Recebimento - AR'$")
-	public void clico_no_ckb_Aviso_de_Recebimento_AR() throws Throwable {
-		stepB.clicarCkbAvisoRecebimento();
+	@When("^clico no ckb 'Aviso de Recebimento - AR' \"([^\"]*)\"$")
+	public void clico_no_ckb_Aviso_de_Recebimento_AR(boolean clica) throws Throwable {
+	    stepB.clicarCkbAvisoRecebimento(clica);
 	}
 
-	@When("^clico no ckb 'Declaracao de Valor'$")
-	public void clico_no_ckb_Declaracao_de_Valor() throws Throwable {
-		stepB.clicarCkbDeclaracaoValor();
+	@When("^clico no ckb 'Declaracao de Valor' \"([^\"]*)\" \"([^\"]*)\"$")
+	public void clico_no_ckb_Declaracao_de_Valor(boolean clica, String valor) throws Throwable {
+	    stepB.clicarCkbDeclaracaoValor(clica, valor);
 	}
 
-	@When("^preencho o campo 'Declaracao de Valor' \"([^\"]*)\"$")
-	public void preencho_o_campo_Declaracao_de_Valor(String valor) throws Throwable {
-		stepB.preencherCampoDeclaracaoValor(valor);
-	}
 
 	@When("^clico no botao 'Enviar'$")
 	public void clico_no_botao_Enviar() throws Throwable {

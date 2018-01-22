@@ -98,7 +98,7 @@ public class StepBusinessCorreios {
 			{
 				LOG.info("\n\n\nPROXIMA\n\n\n");
 				viewElement.click(page.getLinkProxima());
-				page.waitFor(500).milliseconds();
+				page.waitFor(300).milliseconds();
 				listaEnderecos = page.getTblEnderecos();//atribui a nova lista gerada dps de clicar em 'Proxima'
 			}
 			else
@@ -150,10 +150,11 @@ public class StepBusinessCorreios {
 		page.waitFor(2).seconds();
 	}
 	
-	public void clicarCkbCompararServicos() {
-		viewElement.waitForElementIsPresent(10, page.getCkbCompararServico());
-		viewElement.click(page.getCkbCompararServico());
-		
+	public void clicarCkbCompararServicos(boolean clica) {
+		if(clica) {
+			viewElement.waitForElementIsPresent(10, page.getCkbCompararServico());
+			viewElement.click(page.getCkbCompararServico());
+		}
 	}
 
 	public void clicarFormatoObjeto(String formato) {
@@ -194,27 +195,28 @@ public class StepBusinessCorreios {
 		
 	}
 
-	public void clicarCkbMaoPropria() {
-		viewElement.click(page.getCkbMaoPropria());
+	public void clicarCkbMaoPropria(boolean clica) {
+		if(clica)
+			viewElement.click(page.getCkbMaoPropria());
 		
 	}
 
-	public void clicarCkbAvisoRecebimento() {
-		viewElement.click(page.getCkbAvisoRecebimento());
+	public void clicarCkbAvisoRecebimento(boolean clica) {
+		if(clica)
+			viewElement.click(page.getCkbAvisoRecebimento());
 	
 	}
 
-	public void clicarCkbDeclaracaoValor() {
-		viewElement.click(page.getCkbValorDeclarado());
+	public void clicarCkbDeclaracaoValor(boolean clica, String valor) {
+		if(clica) {
+			viewElement.click(page.getCkbValorDeclarado());
+			
+			viewElement.waitForElementIsPresent(10, page.getTxtValorDeclarado());
+			viewElement.sendText(page.getTxtValorDeclarado(), valor);
+		}
 	
 	}
 
-	public void preencherCampoDeclaracaoValor(String valor) {
-		viewElement.waitForElementIsPresent(10, page.getTxtValorDeclarado());
-		viewElement.sendText(page.getTxtValorDeclarado(), valor);
-	}
-	
-	
 	public void clicarBtnEnviar() {
 		viewElement.click(page.getBtnEnviar());
 	}
