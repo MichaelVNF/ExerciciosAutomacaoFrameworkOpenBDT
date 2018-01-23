@@ -1,4 +1,4 @@
-Feature: Calcular Preços e prazos - RSI Osasco ate a RSI Alphaville
+Feature: CT05 - Calcular Preços e prazos - RSI Osasco a RSI Alphaville
 
 @calculoum
 Scenario Outline: Calcular Precos e Prazos

@@ -1,4 +1,4 @@
-Feature: Calcular Preços e prazos - de CEP A a CEP B
+Feature: CT03 - Calcular Preços e prazos - de CEP A a CEP B
 
 @calculoum
 Scenario Outline: Calcular Precos e Prazos

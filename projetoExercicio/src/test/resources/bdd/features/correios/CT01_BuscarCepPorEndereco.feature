@@ -1,4 +1,4 @@
-Feature: Buscar CEP (por endereço)
+Feature: CT01 - Buscar CEP (por endereço)
 
 @cepum
 Scenario Outline: Buscar CEP

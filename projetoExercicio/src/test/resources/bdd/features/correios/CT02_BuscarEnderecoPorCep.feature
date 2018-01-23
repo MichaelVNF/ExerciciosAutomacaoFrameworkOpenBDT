@@ -1,4 +1,4 @@
-Feature: Buscar Endereco (por CEP)
+Feature: CT02 - Buscar Endereco (por CEP)
 
 @enderecoum
 Scenario Outline: Buscar Endereco
