@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <a
+                    href="a3c5ecc14aa239ddd33add2a7e6283f1199578d61d6f190e21af64605e4f710b.html">Ct03 - Comprar Ingresso</a>
+                > <a
+                    href="cac406e114ce73595e81679a597829c6aa5e161fd0d0dffb29a8f710f34b1251.html">Comprar ingresso </a>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 23-01-2018 15:03</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Ct03 - Comprar Ingresso</span>
+                                    <span class="badge tag-badge">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" href="89c1c808d29c31d14ab00070beac01071d17ef87a13178a6fcb6e69cd64d977b.html">Cepum
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-exclamation-triangle error-icon fa-3x' title='ERROR'></i></span>
+                            <span class="test-case-title">
+                                <span class="error-color">Comprar Ingresso
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Abrir pagina: https://www.hotelurbano.com/</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+                <div class="panel-heading"><span class='error-caption ellipsis'>ERROR: Element not found exception: Element ...</span></div>
+                <div class="panel-body">
+                    <a href="pagesource5461149881398319708.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="scaled_ed52d4c1754dcbfc2eb30a756b3e3689f827c2a191250ad248e23da2ce670b24.png" title="Given estou na pagina do site do hotel urbano &quot;&lt;url&gt;&quot;" width="960"/>
+                <img src="scaled_03f83e42bb1107c3a2f38f250b46f7480b090e8aa6b4a056036654cd7764bf97.png" title="Abrir pagina: https://www.hotelurbano.com/" width="960"/>
+                <img src="scaled_b791a4fbe37cbd2bca731f34794df1033e737be0642d6436e8607beb598de16c.png" title="When clico no menu 'Ingressos' na barra superior" width="960"/>
+                <img src="c8d94089289b5354c19d99d0cd9fa96aaf85b10dc2c43eafdd75821c2fffa55f.png" title="When clico no menu 'Ingressos' na barra superior" width="960"/>
+                <img src="scaled_2c30012b57e753d58d8bb7763916f5db3fe273589acb6c86644a08f1b3e71d6e.png" title="And clico na div 'Ingresso' dos mais vendidos &quot;&lt;posIngresso&gt;&quot;" width="960"/>
+                <img src="2c30012b57e753d58d8bb7763916f5db3fe273589acb6c86644a08f1b3e71d6e.png" title="And seleciono a qtd de 'Pessoas' &quot;&lt;qtdPessoas&gt;&quot;" width="960"/>
+                <img src="scaled_5f6d650f2c6f143d9758ed71575fac99884310ab20cf037f895c1ab914352431.png" title="Selecionar ddl qtd pessoas: 2" width="960"/>
+                <img src="5f6d650f2c6f143d9758ed71575fac99884310ab20cf037f895c1ab914352431.png" title="Selecionar ddl qtd pessoas: 2: <span class='error-color'>ERROR</span>" width="960"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.3.0</span>
+</div>
+</body>
+</html>

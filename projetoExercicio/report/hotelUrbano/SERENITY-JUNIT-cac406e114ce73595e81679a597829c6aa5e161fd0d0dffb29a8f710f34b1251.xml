@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="CT03 - Comprar ingresso" skipped="0" tests="1" time="62.16" timestamp="2018-01-23 03:03:55"><testcase name="Comprar ingresso"><error message="Element is not present in the specified timeout: Proxy element for: PageObjectClassHotelUrbano.ddlQtdPessoas" type="io.openbdt.exception.ElementNotFoundException">Element is not present in the specified timeout: Proxy element for: PageObjectClassHotelUrbano.ddlQtdPessoas</error><system-err>Element is not present in the specified timeout: Proxy element for: PageObjectClassHotelUrbano.ddlQtdPessoas&#13;
+io.openbdt.element.WebBrowserScreenElement.waitForElementIsPresent(WebBrowserScreenElement.java:640)&#13;
+br.com.rsi.exercicios.projetoExercicios.steps.business.StepBusinessHotelUrbano.selecionarDdlQtdPessoas(StepBusinessHotelUrbano.java:114)&#13;
+br.com.rsi.exercicios.projetoExercicios.steps.definition.StepDefinitionHotelUrbano.seleciono_a_qtd_de_Pessoas(StepDefinitionHotelUrbano.java:100)&#13;
+io.openbdt.run.SuiteTestRunner.runWithJunit(SuiteTestRunner.java:21)&#13;
+br.com.rsi.exercicios.projetoExercicios.runner.RunnerTest.test(RunnerTest.java:33)&#13;
+org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)&#13;
+org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)&#13;
+org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)&#13;
+org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254)&#13;
+org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)&#13;
+org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)&#13;
+org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)&#13;
+org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)&#13;
+org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:539)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:761)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:461)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:207)&#13;
+</system-err></testcase></testsuite>
