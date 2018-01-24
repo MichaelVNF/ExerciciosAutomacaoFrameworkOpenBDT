@@ -1,6 +1,6 @@
 Feature: CT02 -  Consultar vôo economico para Bahia 
 
-@cepum
+@vooum
 Scenario Outline: Consultar vôo
   Given estou na pagina do site do hotel urbano "<url>"
   When clico no menu 'Aereos' na barra superior

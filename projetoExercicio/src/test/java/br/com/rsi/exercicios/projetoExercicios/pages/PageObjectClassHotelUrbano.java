@@ -44,10 +44,8 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	@FindBy(xpath = "//*[@id=\"search\"]/a")
 	private WebElement linkBuscar;
 	
-	
 	@FindBy(xpath = "//*[@id=\"service-class\"]/div/button/div")
 	private WebElement ddlClasse;
-	
 	
 	//CT03 - ComprarIngresso
 	@FindBy(css = "a[title=\"Ingressos\"]")
@@ -56,14 +54,127 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	@FindBy(xpath = "//*[@id=\"reactRoot\"]/div/div[3]/div[2]/div/div[2]/div/div[2]/div[1]/div/div/a/div[2]")
 	private List<WebElement> divIngressos;
 	
-	@FindBy(id = "select2-o13i-container")
+	@FindBy(xpath = "//*[@id=\"offer-options\"]/div[1]/div[1]/div/select")
 	private WebElement ddlQtdPessoas;
 	
 	@FindBy(xpath = "//*[@id=\"offer-options\"]/div[2]/div/div[2]/div/div[4]/div[2]/div[4]/a")
 	private List<WebElement> linksComprarIngresso;
 	
+	@FindBy(name = "guestEmail")
+	private WebElement txtEmail;
+	
+	@FindBy(name = "cpf[]")
+	private WebElement txtCpf;
+	
+	@FindBy(name = "date-of-birthday[]")
+	private WebElement txtDtNasc;
+	
+	@FindBy(name = "phoneNumber[]")
+	private WebElement txtTel;
+	
+	@FindBy(name = "cardNumber[]")
+	private WebElement txtNumCartao;
+	
+	@FindBy(name = "cardHolder[]")
+	private WebElement txtTitular;
+	
+	@FindBy(name = "expiration[]")
+	private WebElement txtValidade;
+	
+	@FindBy(name = "cvv[]")
+	private WebElement txtCodSeguranca;
+	
+	@FindBy(name = "installments[]")
+	private WebElement dllParcelas;
+	
+	@FindBy(name = "storeCardInfo[]")
+	private WebElement ckbArmazenarDados;
+
+	//CT04(Consultar Promocao)
+	@FindBy(css = "a[title=\"Promoções de Viagens\"]")
+	private WebElement menuPromocoes;
 	
 	
+	
+	//CT05(Reservar Hotel)
+	
+	//CALENDARIO POPUP
+	@FindBy(xpath = "//*[@id=\"formCalendarTop\"]/div[1]/div[1]/div/input")
+	private WebElement txtEntrada;
+	
+	@FindBy(xpath = "//*[@id=\"formCalendarTop\"]/div[1]/div[2]/div/input")
+	private WebElement txtSaida;
+		
+	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/div/div/span[1]")
+	private WebElement lblMes;
+	
+	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/div/div/span[2]")
+	private WebElement lblAno;
+	
+	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/table/tbody/tr/td")
+	private List<WebElement> listaDias;
+	
+	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/div/a[2]/span")
+	private WebElement spanNext;
+	
+	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/div/a[1]/span")
+	private WebElement spanPrevious;
+	///
+	
+	@FindBy(xpath = "//*[@id=\"formCalendarTop\"]/div[2]/div[1]/div/select")
+	private WebElement ddlQuartos;
+	
+	@FindBy(xpath = "//*[@id=\"formCalendarTop\"]/div[2]/div[2]/div/select")
+	private WebElement ddlAdultos;
+	
+	@FindBy(xpath = "//*[@id=\"formCalendarTop\"]/div[2]/div[3]/div/select")
+	private WebElement ddlCriancas;
+	
+	@FindBy(css = "input[value='Verificar disponibilidade']")
+	private WebElement btnVerificarDisp;
+	
+	@FindBy(name = "sku_quantity[]")
+	private List<WebElement> ddlsNumQuartos;
+	
+	@FindBy(css = "input[value='Reservar']")
+	private WebElement btnReservar;
+	
+	
+	public WebElement getTxtEmail() {
+		return txtEmail;
+	}
+
+	public WebElement getTxtCpf() {
+		return txtCpf;
+	}
+
+	public WebElement getTxtDtNasc() {
+		return txtDtNasc;
+	}
+
+	public WebElement getTxtTel() {
+		return txtTel;
+	}
+
+	public WebElement getTxtNumCartao() {
+		return txtNumCartao;
+	}
+
+	public WebElement getTxtTitular() {
+		return txtTitular;
+	}
+
+	public WebElement getTxtValidade() {
+		return txtValidade;
+	}
+
+	public WebElement getTxtCodSeguranca() {
+		return txtCodSeguranca;
+	}
+
+	public WebElement getDllParcelas() {
+		return dllParcelas;
+	}
 	
 	public WebElement getMenuHoteis() {
 		return menuHoteis;
@@ -113,6 +224,10 @@ public class PageObjectClassHotelUrbano extends PageObject{
 		return menuIngressos;
 	}
 
+	public WebElement getMenuPromocoes() {
+		return menuPromocoes;
+	}
+
 	public List<WebElement> getDivIngressos() {
 		return divIngressos;
 	}
@@ -124,6 +239,65 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	public List<WebElement> getLinksComprarIngresso() {
 		return linksComprarIngresso;
 	}
+
+	public WebElement getCkbArmazenarDados() {
+		return ckbArmazenarDados;
+	}
+
+	public WebElement getTxtEntrada() {
+		return txtEntrada;
+	}
+
+	public WebElement getTxtSaida() {
+		return txtSaida;
+	}
+
+	
+	public WebElement getDdlQuartos() {
+		return ddlQuartos;
+	}
+
+	public WebElement getDdlAdultos() {
+		return ddlAdultos;
+	}
+
+	public WebElement getDdlCriancas() {
+		return ddlCriancas;
+	}
+
+	public WebElement getBtnVerificarDisp() {
+		return btnVerificarDisp;
+	}
+
+	public WebElement getLblMes() {
+		return lblMes;
+	}
+
+	public WebElement getLblAno() {
+		return lblAno;
+	}
+
+	public List<WebElement> getListaDias() {
+		return listaDias;
+	}
+
+	public WebElement getSpanNext() {
+		return spanNext;
+	}
+
+	public WebElement getSpanPrevious() {
+		return spanPrevious;
+	}
+	
+	public List<WebElement> getDdlsNumQuartos() {
+		return ddlsNumQuartos;
+	}
+
+	public WebElement getBtnReservar() {
+		return btnReservar;
+	}
+
+	
 
 	
 	

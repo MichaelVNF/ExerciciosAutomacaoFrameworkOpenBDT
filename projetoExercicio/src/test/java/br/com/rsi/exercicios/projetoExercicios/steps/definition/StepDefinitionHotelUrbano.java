@@ -41,7 +41,7 @@ public class StepDefinitionHotelUrbano {
 	    stepB.selecionarCkbCategoria(qtdEstrelas);
 	}
 	
-	@When("^clico no link 'Ver Hotel' \"([^\"]*)\"$")
+	@When("^clico no link 'Ver' \"([^\"]*)\"$")
 	public void clico_no_link_Ver_Hotel(int pos) throws Throwable {
 	    stepB.clicarLinkVerHotel(pos);
 	}
@@ -95,6 +95,11 @@ public class StepDefinitionHotelUrbano {
 	    stepB.clicarDivIngresso(pos);
 	}
 	
+	@When("^clico na sugestao \"([^\"]*)\"$")
+	public void clico_na_sugestao(int pos) throws Throwable {
+	    stepB.clicarSugestaoPesq(pos);
+	}
+	
 	@When("^seleciono a qtd de 'Pessoas' \"([^\"]*)\"$")
 	public void seleciono_a_qtd_de_Pessoas(String qtd) throws Throwable {
 	    stepB.selecionarDdlQtdPessoas(qtd);
@@ -105,5 +110,117 @@ public class StepDefinitionHotelUrbano {
 	    stepB.clicarLinkComprarIngresso(pos);
 	}
 
+	@When("^seleciono a ddl 'Pessoas' \"([^\"]*)\"$")
+	public void seleciono_a_ddl_Pessoas(String qtd) throws Throwable {
+	    stepB.selecionarDdlQtdPessoas(qtd);
+	}
 
+	@When("^preencho o campo 'Email' \"([^\"]*)\"$")
+	public void preencho_o_campo_Email(String email) throws Throwable {
+	    stepB.preencherCampoEmail(email);
+	}
+
+	@When("^preencho o campo 'Cpf' \"([^\"]*)\"$")
+	public void preencho_o_campo_Cpf(String cpf) throws Throwable {
+	    stepB.preencherCampoCpf(cpf);
+	}
+
+	@When("^preencho o campo 'Data de Nascimento' \"([^\"]*)\"$")
+	public void preencho_o_campo_Data_de_Nascimento(String dtNasc) throws Throwable {
+	    stepB.preencherCampoDtNasc(dtNasc);
+	}
+	
+	@When("^preencho o campo 'Telefone' \"([^\"]*)\"$")
+	public void preencho_o_campo_Telefone(String tel) throws Throwable {
+	    stepB.preencherCampoTelefone(tel);
+	}
+
+	@When("^preencho o campo 'Numero do Cartao' \"([^\"]*)\"$")
+	public void preencho_o_campo_Numero_do_Cartao(String numCartao) throws Throwable {
+	    stepB.preencherCampoNumCartao(numCartao);
+	}
+
+	@When("^preencho o campo 'Titular' \"([^\"]*)\"$")
+	public void preencho_o_campo_Titular(String titular) throws Throwable {
+	    stepB.preencherCampoTitular(titular);
+	}
+
+	@When("^preencho o campo 'Validade' \"([^\"]*)\"$")
+	public void preencho_o_campo_Validade(String validade) throws Throwable {
+	    stepB.preencherCampoValidade(validade);
+	}
+
+	@When("^preencho o campo 'Codigo de Seguranca' \"([^\"]*)\"$")
+	public void preencho_o_campo_Codigo_de_Seguranca(String codSeguranca) throws Throwable {
+	    stepB.preencherCampoCodSeguranca(codSeguranca);
+	}
+
+	@When("^seleciono o numero de 'Parcelas' \"([^\"]*)\"$")
+	public void seleciono_o_numero_de_Parcelas(String qtdParcelas) throws Throwable {
+	    stepB.selecionarDdlParcelas(qtdParcelas);
+	}
+	
+	@Then("^clico na ckb 'Armazenar dados' \"([^\"]*)\"$")
+	public void clico_na_ckb_Armazenar_dados(boolean clica) throws Throwable {
+	    stepB.clicarCkbArmazenarDados(clica);
+	}
+
+	//CT04(Consultar Promocao)
+	@When("^clico no menu 'Promocoes' na barra superior$")
+	public void clico_no_menu_Promocoes_na_barra_superior() throws Throwable {
+	    stepB.clicarMenuPromocoes();
+	}
+	
+	@Then("^verifico se existe promocoa para o trajeto \"([^\"]*)\"$")
+	public void verifico_se_existe_promocoa_para_o_trajeto(String trajeto) throws Throwable {
+	    stepB.verificarExistenciaPromocao(trajeto);
+	}
+	
+	//CT05(Reservar Hotel)
+	
+	@When("^preencho o campo 'Entrada' \"([^\"]*)\"$")
+	public void preencho_o_campo_Entrada(String data) throws Throwable {
+		stepB.preencherCampoEntrada(data);
+	} 
+	
+	@When("^preencho o campo 'Saida' \"([^\"]*)\"$")
+	public void preencho_o_campo_Saida(String data) throws Throwable {
+		stepB.preencherCampoSaida(data);
+	} 
+	
+	@When("^seleciono a ddl 'Quartos' \"([^\"]*)\"$")
+	public void seleciono_a_ddl_Quartos(String qtd) throws Throwable {
+	    stepB.selecionarDdlQtdQuartos(qtd);
+	}
+
+	@When("^seleciono a ddl 'Adultos' \"([^\"]*)\"$")
+	public void seleciono_a_ddl_Adultos(String qtd) throws Throwable {
+	    stepB.selecionarDdlQtdAdultos(qtd);
+	}
+
+	@When("^seleciono a ddl 'Criancas' \"([^\"]*)\"$")
+	public void seleciono_a_ddl_Criancas(String qtd) throws Throwable {
+	    stepB.selecionarDdlQtdCriancas(qtd);
+	}
+	
+	@When("^clicar botao 'Verificar Disponibilidade'$")
+	public void clicar_botao_Verificar_Disponibilidade() throws Throwable {
+	    stepB.clicarBtnVarificarDisp();
+	}
+
+	@When("^seleciono a ddl 'Numero de Quartos' \"([^\"]*)\" \"([^\"]*)\"$")
+	public void seleciono_a_ddl_Numero_de_Quartos(int pos, String qtd) throws Throwable {
+	    stepB.selecionarDdlsNumQuartos(pos, qtd);
+	}
+
+	@When("^clico no botao 'Reservar'$")
+	public void clico_no_botao_Reservar() throws Throwable {
+	    stepB.clicarBtnReservar();
+	    
+	}
+	
+	@When("^preencher campos 'Responsavel do Quarto' \"([^\"]*)\" \"([^\"]*)\"$")
+	public void preencher_campos_Responsavel_do_Quarto(int qtdQuartos, String responsavel) throws Throwable {
+	    stepB.preencherNomesResponsaveisQuartos(qtdQuartos, responsavel);
+	}
 }
