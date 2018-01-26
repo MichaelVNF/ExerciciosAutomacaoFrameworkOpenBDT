@@ -1,16 +1,18 @@
 Feature: CT01 - Adicionar tenis ao carrinho (qualquer um)
 
-@carrinhoum
+@produtoum
 Scenario Outline: Adicionar Tenis
-  Given estou na pagina do site dos correios "<url>"
-#  When preencho o campo 'Busca CEP ou Endereço' "<pesqEndereco>"
-#  And clico no botao para pesquisar
-#  And verifico a abertura da nova janela
-#  And verifico se foram encontrado dados
-#  Then pesquiso via endereco e verifico se a tebela contem o cep "<logradouro>" "<bairro>" "<localidade>" "<cepEsperado>"
-#  
+  Given estou na pagina do site do netshoes "<url>"
+  When preencho o campo 'Busca' "<pesqProduto>"
+  And clico no icone de busca
+  And clico no link do produto "<nomeProduto>"
+  And clico no rdb 'color' "<posCor>"
+  And clico no rdb 'size' "<tamanhoTenis>"
+  And clico no botao 'Comprar'
+  Then verifico o produto no carrinho "<qtdProdComprados>"
+
 Examples:
-   | url                                     | pesqEndereco       | logradouro      | bairro        | localidade   | cepEsperado |
-   | http://www.correios.com.br/para-voce    |   Rua Covas        | Rua Mário Covas | Cidade Kemel  | São Paulo/SP |  08130-060  |
+   | url                         | pesqProduto | nomeProduto                      | posCor| tamanhoTenis | qtdProdComprados |
+   | http://www.netshoes.com.br/ |   Tênis     | Tênis Olympikus Daily 2 Feminino | 3     | 36           | 1                |
 
 

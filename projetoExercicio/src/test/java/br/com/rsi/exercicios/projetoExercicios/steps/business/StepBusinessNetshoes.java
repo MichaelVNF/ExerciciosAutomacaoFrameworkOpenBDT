@@ -1,8 +1,14 @@
 package br.com.rsi.exercicios.projetoExercicios.steps.business;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
@@ -27,6 +33,113 @@ public class StepBusinessNetshoes {
 		viewElement.getDriver().manage().window().maximize();
 	}
 
+	//CT01 e CT02 - (Adicionar item ao carrinho) 
+	public void preencherCampoBusca(String busca) {
+		viewElement.sendText(page.getCampoBusca(), busca);
+		
+	}
+
+	public void clicarIconeBusca() {
+		viewElement.click(page.getBtnBuscar());
+		
+	}
+
+	public void clicarLinkProduto(String nomeProduto) {
+		viewElement.waitForElementIsPresent(10, page.getDivProdutos().get(0));
+
+		boolean achou = false;
+		boolean linkProxAtivado = true;
+		boolean continua = true;
+		
+		List<WebElement> listaProdutos = page.getDivProdutos();
+		
+		while(continua) 
+		{
+			
+			for(int i = 0; i < listaProdutos.size(); i++){
+				LOG.info("Item "+ (i+1) + ": " + listaProdutos.get(i).getText());
+				if(listaProdutos.get(i).getText().contains(nomeProduto)) {
+					LOG.info("ACHOU O PRODUTO!");
+					achou = true;
+					listaProdutos.get(i).click();
+					break;
+				}
+			}
+			
+			if(achou == false){
+				try {
+					WebDriverWait wait = new WebDriverWait(viewElement.getDriver(), 3);
+					wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"search-linx\"]/div[6]/div[2]/div[5]/ul/li[8]/a")));//Espera pelo elemento, caso não aparerecer retorna exception
+				}
+				catch(Exception e) {
+					linkProxAtivado = false;
+				}
+			}
+			
+			if(achou == false && linkProxAtivado){
+				
+				viewElement.findElement(By.xpath("//*[@id=\"search-linx\"]/div[6]/div[2]/div[5]/ul/li[8]/a")).click();
+				page.waitFor(5).seconds();//espera carregar a nova lista
+				listaProdutos = page.getDivProdutos();//atribui a nova lista
+			}
+			else{
+				continua = false;
+			}
+		}
+		Assert.assertTrue(achou);
+	}
+		
+	public void clicarRdbCores(int pos) {	
+		viewElement.waitForElementIsPresent(10, page.getLinksCores().get(pos-1));
+		viewElement.click(page.getLinksCores().get(pos-1));
+		page.waitFor(1).seconds();
+	}
+
+	public void clicarRdbTamanho(String numTam) {
+		viewElement.findElement(By.cssSelector("span[title=\""+ numTam +"\"]")).click();
+		page.waitFor(1).seconds();
+	}
+	
+	public void clicarBotaoComprar() {
+		viewElement.click(page.getBtnComprar());
+	}
+	
+	public void verificarProdutoNoCarrinho(int qtd) {
+		viewElement.waitForElementIsPresent(10, page.getListaCarrinho().get(0));//espera aparecer ao meno o 1º elemento
+		
+		int total = 0;
+		for(int i = 0; i < page.getListaCarrinho().size(); i++)
+			total += Integer.parseInt(page.getListaCarrinho().get(i).getAttribute("value"));
+		
+		Assert.assertTrue(total == qtd);
+	}
+	
+	//CT04(Adicionar item ao carrinho e calcular frete)
+	public void preencherCamposCpf(String cpf) {
+		String cpfPartes[] = cpf.split("-");
+		viewElement.sendText(page.getCpfPrefixo(), cpfPartes[0]);
+		viewElement.sendText(page.getCpfSufixo(), cpfPartes[1]);
+	}
+	
+	public void clicarBtnCalcularFrete() {
+		viewElement.click(page.getBtnCalcFrete());
+		
+		page.waitFor(3).seconds();
+	}
+
+	public void verificarCalculoFrete() {
+		
+		//TESTANDO...
+		ArrayList precos = new ArrayList();
+		for(int i = 0; i < page.getPrecosProdutos().size(); i++)
+		{
+			LOG.info("\n\nPRECOS: " + page.getPrecosProdutos().get(i).getText());
+			precos.add( page.getPrecosProdutos().get(i).getText().replaceAll(",", "."));
+			precos.set(i, precos.get(i).toString().replaceAll("R$", "ZZ"));
+		}
+		LOG.info("\n\nPRECO NOVO: " + precos.get(0));
+	}
+	
 	
 
 }

@@ -6,5 +6,5 @@ import cucumber.api.CucumberOptions;
 import io.openbdt.cucumber.CucumberWithOpenBdt;
 
 @RunWith(CucumberWithOpenBdt.class)
-@CucumberOptions(features = {"src/test/resources/bdd/features/netshoes"}, glue = {"br.com.rsi.exercicios.projetoExercicios.steps.definition"})
+@CucumberOptions(features = {"src/test/resources/bdd/features/netshoes/CT04_AdicionarItemAoCarrinhoECalcularFrete.feature"}, glue = {"br.com.rsi.exercicios.projetoExercicios.steps.definition"})
 public class DefaultAcceptanceTestRunner {}
