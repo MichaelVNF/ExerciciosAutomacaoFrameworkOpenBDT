@@ -1,6 +1,6 @@
 Feature: CT04 - Consultar promoção trajeto Angra dos Reis - Rio de Janeiro
 
-@promocaoum
+@consultaPromocao
 Scenario Outline: Consultar Promocao
   Given estou na pagina do site do hotel urbano "<url>"
   When clico no menu 'Promocoes' na barra superior

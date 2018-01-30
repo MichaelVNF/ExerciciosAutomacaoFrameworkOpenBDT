@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <a
+                    href="d73a5476fd2ba1e9ce3e0fc953a1914c7cc5bf57ad913cdad2ca2c6766b5da5d.html">Ct05 - Calcular Frete De Qualquer Item A&hellip;</a>
+                > <a
+                    href="117b748ab0cd3fd5a8673fb6bf38b50488038ad5761bc01fe6dd0a4fe4171406.html">Calcular Frete </a>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 30-01-2018 13:53</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Ct05 - Calcular Frete De Qualquer Item Ate O CEP Da RSI Matriz (Osasco)</span>
+                                    <span class="badge tag-badge">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" href="da102e3aa71e0a7aee0f83f108c395ba0fde59acb229b2edf51948ee8bb1aed6.html">Calculafrete
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Calcular Frete
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Abrir pagina: http://www.soubarato.com.br/</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="2e1aa4b6cc210301866ec8b574d72f9a07e41b4dc591762733cfa183249355a1.png" title="Given estou na pagina do site do sou barato &quot;&lt;url&gt;&quot;" width="960"/>
+                <img src="2e1aa4b6cc210301866ec8b574d72f9a07e41b4dc591762733cfa183249355a1.png" title="Abrir pagina: http://www.soubarato.com.br/" width="960"/>
+                <img src="67589f979e97524fd7d8a74c9360a71ea789a2604bf1988aee2ee13db4f7fee7.png" title="When preencho o campo de 'Busca' &quot;&lt;pesqProduto&gt;&quot;" width="960"/>
+                <img src="scaled_acbd58d981e3b7c496841c8d030a55df669a19585f23c105c0c16c7da744f47f.png" title="When preencho o campo de 'Busca' &quot;&lt;pesqProduto&gt;&quot;" width="960"/>
+                <img src="scaled_e2604d2af5e896ca8f5926fbbc09479f21a0e3940e08b864e6656130c3312252.png" title="And clico no botao para 'Buscar'" width="960"/>
+                <img src="scaled_cea1c777e001189b74a14aca09f2c7e541b955ce7ce222b0d0eed0ada2092aed.png" title="And clico no botao para 'Buscar'" width="960"/>
+                <img src="scaled_5efeb2fc98485ff2e3ff8b1738a6031da47cb9ed1dcb2d4e92294fbf04a337f5.png" title="And clico no link do produto especifico &quot;&lt;nomeProduto&gt;&quot;" width="960"/>
+                <img src="scaled_1895f279e0ab2311a8b897157415575cfb476ab3f42756dfce647d040cabe387.png" title="And clico no botao para 'Comprar'" width="960"/>
+                <img src="scaled_845a69cd4f776a0bea009ea4f07ad49a463da3df55a117994d95843efa1d9b3d.png" title="And clico no rdb 'Garantia' &quot;&lt;anosGarantia&gt;&quot;" width="960"/>
+                <img src="scaled_1c4b6be8ba657b99f07ad7cfc1d34320501abb0e93d045e2d1534d67233cab04.png" title="And clico no rdb 'Garantia' &quot;&lt;anosGarantia&gt;&quot;" width="960"/>
+                <img src="1c4b6be8ba657b99f07ad7cfc1d34320501abb0e93d045e2d1534d67233cab04.png" title="And verifico os produtos na sacola &quot;&lt;qtdProdComprados&gt;&quot;" width="960"/>
+                <img src="scaled_acf4c650d54f4909398277b99fb658a0ee400fa873c1069f430c13d12e665338.png" title="And preencho o campo 'Cep' &quot;&lt;cep&gt;&quot;" width="960"/>
+                <img src="scaled_add92e2e3304ab4c572942507ff40248e59dce2722884cc360c8e1d5859b4ef7.png" title="And clico no botao 'Ok' para calcular cep" width="960"/>
+                <img src="scaled_bf5f799d8cc61f1085ad09ce78c976ff3def439cb66494be9d3fe088c9ea5a52.png" title="And clico no botao 'Ok' para calcular cep" width="960"/>
+                <img src="scaled_4b8994df87d7712d06c26c7005b73380e6f04838520af229c85abbcfa4e5202b.png" title="Then verifico o calculo do cep: <span class='success-color'>SUCCESS</span>" width="960"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.3.0</span>
+</div>
+</body>
+</html>

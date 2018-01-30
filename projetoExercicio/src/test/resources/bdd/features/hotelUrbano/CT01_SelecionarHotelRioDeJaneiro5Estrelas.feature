@@ -1,6 +1,6 @@
 Feature: CT01 - Selecionar hotel 5 estrelas Rio de Janeiro
 
-@selecionaum
+@selecionaHotel
 Scenario Outline: Selecionar hotel
   Given estou na pagina do site do hotel urbano "<url>"
   When clico no menu 'Hoteis' na barra superior

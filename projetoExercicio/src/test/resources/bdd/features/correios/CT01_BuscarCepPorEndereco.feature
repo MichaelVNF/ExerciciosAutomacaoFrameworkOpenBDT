@@ -10,10 +10,9 @@ Scenario Outline: Buscar CEP
   Then pesquiso via endereco e verifico se a tebela contem o cep "<logradouro>" "<bairro>" "<localidade>" "<cepEsperado>"
   
 Examples:
-   | url                                     | pesqEndereco       | logradouro      | bairro        | localidade   | cepEsperado |
-   | http://www.correios.com.br/para-voce    |   Rua Covas        | Rua Mário Covas | Cidade Kemel  | São Paulo/SP |  08130-060  |
+   | url                                     | pesqEndereco       | logradouro                                       | bairro     | localidade  | cepEsperado |
+   | http://www.correios.com.br/para-voce    | Autonomistas       | Avenida dos Autonomistas - até 825 - lado ímpar  | Vila Yara  | Osasco/SP   | 06020-000   |
 
 
 
-# Rua Mário Covas 	Cidade Kemel 	São Paulo/SP, CEP ESPERADO => 08130-060
 # As Variaveis logradouro, bairro e localidade são complementares à pesquisa. Representa o endereco unico e exato a partir do objetivo da pesquisa

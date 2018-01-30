@@ -73,7 +73,7 @@ public class StepBusinessCorreios {
 		while(continua)
 		{	
 			for(int i = 0; i < listaEnderecos.size(); i+=4)
-			{
+			{   LOG.info("Item"+ (i-3) + ": "+ listaEnderecos.get(i).getText() + " | " + listaEnderecos.get(i+1).getText() + " | " + listaEnderecos.get(i+2).getText() + " | ");
 				if(listaEnderecos.get(i).getText().contains(logradouro) && listaEnderecos.get(i+1).getText().contains(bairro) && listaEnderecos.get(i+2).getText().contains(localidade))
 				{
 					LOG.info("\n\nACHOU - CEP: " + listaEnderecos.get(i+3).getText() + "\n\n");

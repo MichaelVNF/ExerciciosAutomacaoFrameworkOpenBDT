@@ -1,6 +1,6 @@
 Feature: CT01 - Adicionar tenis ao carrinho (qualquer um)
 
-@produtoum
+@adicionaTenis
 Scenario Outline: Adicionar Tenis
   Given estou na pagina do site do netshoes "<url>"
   When preencho o campo 'Busca' "<pesqProduto>"
@@ -13,6 +13,6 @@ Scenario Outline: Adicionar Tenis
 
 Examples:
    | url                         | pesqProduto | nomeProduto                      | posCor| tamanhoTenis | qtdProdComprados |
-   | http://www.netshoes.com.br/ |   Tênis     | Tênis Olympikus Daily 2 Feminino | 3     | 36           | 1                |
+   | http://www.netshoes.com.br/ |   Tênis     | Tênis Nike Flex Bijoux Feminino  | 1     | 34           | 1                |
 
 

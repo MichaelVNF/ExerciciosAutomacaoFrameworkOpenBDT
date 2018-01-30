@@ -19,7 +19,9 @@ public class PageObjectClassNetshoes extends PageObject{
 	
 	@FindBy(xpath = "//*[@id=\"search-linx\"]/div[6]/div[2]/ul[2]/li/a/div[2]/div[1]/span")
 	private List<WebElement> divProdutos;
-		
+	
+	private By btnProximo = By.partialLinkText("Próxim");
+	
 	@FindBy(id = "border-bottom-color-text")
 	private List<WebElement> linksCores;
 
@@ -28,6 +30,16 @@ public class PageObjectClassNetshoes extends PageObject{
 	
 	@FindBy(id = "buy-now-button")
 	private WebElement btnComprar;
+	
+	//CT03(Escolher um calçado na secao outlet com valor abaixo de 150 reais)
+	@FindBy(xpath = "/html/body/div[3]/div[2]/div[1]/div[3]/aside/div/div[2]/ul/li[12]/a")
+	private WebElement linkTenisOutlet;
+	
+	@FindBy(name = "price.pricelistLow")
+	private List<WebElement> ckbsPrecos;
+	
+	@FindBy(xpath = "/html/body/div[3]/div[4]/div/div/ul/li/span/a/div/div[1]")
+	private List<WebElement> divProdutosOutlet;
 	
 	//CT04(Adicionar item ao carrinho e calcular frete)
 	@FindBy(name = "cep-first-input")
@@ -39,15 +51,12 @@ public class PageObjectClassNetshoes extends PageObject{
 	@FindBy(xpath = "/html/body/div[3]/div[2]/table/tfoot/tr[1]/td[1]/div/form/div/div/div[4]/button")
 	private WebElement btnCalcFrete;
 	
-	@FindBy(xpath = "/html/body/div[3]/div[2]/table/tfoot/tr[1]/td[3]/p/span[1]")
-	private List<WebElement> valoresFrete;
+	//CT05(Adicionar item no carrinho, Limpar Carrinho e voltar para loja)
+	@FindBy(xpath = "/html/body/div[3]/div[2]/table/tfoot/tr[5]/td[1]/form/button")
+	private WebElement btnLimparCarrinho;
 	
-	@FindBy(xpath = "/html/body/div[3]/div[2]/table/tbody/tr/td[4]/p")
-	private List<WebElement> precosProdutos;
-	
-	@FindBy(xpath = "/html/body/div[3]/div[2]/table/tfoot/tr[3]/td[2]/p/strong")
-	private List<WebElement> precoTotal;
-	
+	@FindBy(xpath = "/html/body/div[3]/div[2]/div[3]/div[1]/div/a")
+	private WebElement linkVoltarLoja;
 	
 	public WebElement getCampoBusca() {
 		return campoBusca;
@@ -81,23 +90,34 @@ public class PageObjectClassNetshoes extends PageObject{
 		return btnCalcFrete;
 	}
 
-	public List<WebElement> getValoresFrete() {
-		return valoresFrete;
-	}
-
 	public List<WebElement> getDivProdutos() {
 		return divProdutos;
 	}
 
-	public List<WebElement> getPrecosProdutos() {
-		return precosProdutos;
+	public WebElement getBtnLimparCarrinho() {
+		return btnLimparCarrinho;
 	}
 
-	public List<WebElement> getPrecoTotal() {
-		return precoTotal;
+	public WebElement getLinkVoltarLoja() {
+		return linkVoltarLoja;
 	}
-	
-	
+
+	public WebElement getLinkTenisOutlet() {
+		return linkTenisOutlet;
+	}
+
+	public List<WebElement> getCkbsPrecos() {
+		return ckbsPrecos;
+	}
+
+	public List<WebElement> getDivProdutosOutlet() {
+		return divProdutosOutlet;
+	}
+
+	public By getBtnProximo() {
+		return btnProximo;
+	}
+
 	
 	
 	

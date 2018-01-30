@@ -1,6 +1,6 @@
 Feature: CT04 - Adicionar item ao carrinho e calcular frete atq o CEP da RSI Matriz
 
-@produtoum
+@calculaFrete
 Scenario Outline: Adicionar Item
   Given estou na pagina do site do netshoes "<url>"
   When preencho o campo 'Busca' "<pesqProduto>"
@@ -15,6 +15,6 @@ Scenario Outline: Adicionar Item
   
 Examples:
    | url                         | pesqProduto				| nomeProduto                       | posCor | qtdProdComprados | cpf       |
-   | http://www.netshoes.com.br/ | Bola de futebol de campo | Bola Futebol Campo Topper Cup III | 1      | 1                | 12345-000 |
+   | http://www.netshoes.com.br/ | Bola de futebol de campo | Bola Futebol Campo Topper Cup III | 1      | 1                | 06020-000 |
 
 

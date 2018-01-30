@@ -46,16 +46,23 @@ public class StepBusinessNetshoes {
 
 	public void clicarLinkProduto(String nomeProduto) {
 		viewElement.waitForElementIsPresent(10, page.getDivProdutos().get(0));
+		selecionarProduto(nomeProduto, page.getDivProdutos(), page.getBtnProximo());
 
+	}
+	
+	public void clicarLinkProdutoOutlet(String nomeProduto) {
+		viewElement.waitForElementIsPresent(10, page.getDivProdutosOutlet().get(0));
+		selecionarProduto(nomeProduto, page.getDivProdutosOutlet(), page.getBtnProximo());
+
+	}
+	
+	public void selecionarProduto(String nomeProduto, List<WebElement> listaProdutos, org.openqa.selenium.By proximo) {
 		boolean achou = false;
 		boolean linkProxAtivado = true;
 		boolean continua = true;
 		
-		List<WebElement> listaProdutos = page.getDivProdutos();
-		
 		while(continua) 
 		{
-			
 			for(int i = 0; i < listaProdutos.size(); i++){
 				LOG.info("Item "+ (i+1) + ": " + listaProdutos.get(i).getText());
 				if(listaProdutos.get(i).getText().contains(nomeProduto)) {
@@ -69,7 +76,7 @@ public class StepBusinessNetshoes {
 			if(achou == false){
 				try {
 					WebDriverWait wait = new WebDriverWait(viewElement.getDriver(), 3);
-					wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"search-linx\"]/div[6]/div[2]/div[5]/ul/li[8]/a")));//Espera pelo elemento, caso não aparerecer retorna exception
+					wait.until(ExpectedConditions.presenceOfElementLocated(proximo));//Espera pelo elemento, caso não aparerecer retorna exception
 				}
 				catch(Exception e) {
 					linkProxAtivado = false;
@@ -78,7 +85,7 @@ public class StepBusinessNetshoes {
 			
 			if(achou == false && linkProxAtivado){
 				
-				viewElement.findElement(By.xpath("//*[@id=\"search-linx\"]/div[6]/div[2]/div[5]/ul/li[8]/a")).click();
+				viewElement.findElement(proximo).click();
 				page.waitFor(5).seconds();//espera carregar a nova lista
 				listaProdutos = page.getDivProdutos();//atribui a nova lista
 			}
@@ -114,6 +121,25 @@ public class StepBusinessNetshoes {
 		Assert.assertTrue(total == qtd);
 	}
 	
+	//CT03(Escolher um calçado na secao outlet com valor abaixo de 150 reais)
+	public void clicarLinkTenisOutlet() {
+		viewElement.waitForElementIsPresent(10, page.getLinkTenisOutlet());
+		viewElement.click(page.getLinkTenisOutlet());
+	}
+	
+	public void clicarCkbsPrecos(double valor) {
+		
+		double precos[] = {50, 100, 200, 300, 500, 1000};
+		
+		for(int i = 0; i < precos.length; i++) {
+			if(valor >= precos[i]){
+				viewElement.waitForElementIsPresent(10, page.getCkbsPrecos().get(i));
+				viewElement.click(page.getCkbsPrecos().get(i));
+			}
+		}	
+	}
+	
+	
 	//CT04(Adicionar item ao carrinho e calcular frete)
 	public void preencherCamposCpf(String cpf) {
 		String cpfPartes[] = cpf.split("-");
@@ -123,22 +149,28 @@ public class StepBusinessNetshoes {
 	
 	public void clicarBtnCalcularFrete() {
 		viewElement.click(page.getBtnCalcFrete());
-		
-		page.waitFor(3).seconds();
+		page.waitFor(1).seconds();
 	}
 
 	public void verificarCalculoFrete() {
 		
-		//TESTANDO...
-		ArrayList precos = new ArrayList();
-		for(int i = 0; i < page.getPrecosProdutos().size(); i++)
-		{
-			LOG.info("\n\nPRECOS: " + page.getPrecosProdutos().get(i).getText());
-			precos.add( page.getPrecosProdutos().get(i).getText().replaceAll(",", "."));
-			precos.set(i, precos.get(i).toString().replaceAll("R$", "ZZ"));
-		}
-		LOG.info("\n\nPRECO NOVO: " + precos.get(0));
+		Assert.assertTrue(viewElement.findElement(By.xpath("/html/body/div[3]/div[2]/table/tfoot/tr[1]/td[2]/strong")).getText().contains("FRETE"));
 	}
+
+	//CT05(Adicionar item no carrinho, Limpar Carrinho e voltar para loja)
+	public void clicarBtnLimparCarrinho() {
+		viewElement.click(page.getBtnLimparCarrinho());
+		
+	}
+
+	public void clicarLinkVoltarLoja() {
+		viewElement.waitForElementIsPresent(10, page.getLinkVoltarLoja());
+		viewElement.click(page.getLinkVoltarLoja());
+
+	}
+	
+	
+	
 	
 	
 

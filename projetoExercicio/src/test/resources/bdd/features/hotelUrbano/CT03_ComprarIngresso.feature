@@ -1,6 +1,6 @@
 Feature: CT03 - Comprar ingresso
 
-@ingressoum
+@compraIngresso
 Scenario Outline: Comprar ingresso
   Given estou na pagina do site do hotel urbano "<url>"
   When clico no menu 'Ingressos' na barra superior

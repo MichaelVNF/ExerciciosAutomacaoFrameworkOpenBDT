@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <a
+                    href="e54de26c0c79b70b85a966a75c4c550a307c8f4cae0ba1d9f18e6bd2b45f7710.html">Ct03 - Adicionar Iphone Ao Carrinho (Via&hellip;</a>
+                > <a
+                    href="e77298052b6236abee5efacf5746f3822a985447cce7731c008ee4298277edd1.html">Adicionar Iphone </a>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 30-01-2018 13:52</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Ct03 - Adicionar Iphone Ao Carrinho (Via Campo Pesquisa)</span>
+                                    <span class="badge tag-badge">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" href="4308a4329799aaff6206f65e97c5647710817eb884da0b90b5dbcd4f6597b3e2.html">Adicionaprodutoviacampopesquisa
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Adicionar Iphone
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Abrir pagina: http://www.soubarato.com.br/</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="2e1aa4b6cc210301866ec8b574d72f9a07e41b4dc591762733cfa183249355a1.png" title="Given estou na pagina do site do sou barato &quot;&lt;url&gt;&quot;" width="960"/>
+                <img src="2e1aa4b6cc210301866ec8b574d72f9a07e41b4dc591762733cfa183249355a1.png" title="Abrir pagina: http://www.soubarato.com.br/" width="960"/>
+                <img src="67589f979e97524fd7d8a74c9360a71ea789a2604bf1988aee2ee13db4f7fee7.png" title="When preencho o campo de 'Busca' &quot;&lt;pesqProduto&gt;&quot;" width="960"/>
+                <img src="ed5f59b400fe7d75e6e9f29020c99ed91ca291f839c904a764dbbe1be0ddb34e.png" title="When preencho o campo de 'Busca' &quot;&lt;pesqProduto&gt;&quot;" width="960"/>
+                <img src="54273f7dc39cf7987422248bdb8b11bb35f854f37ba1d33ea71a86fc2381ea2a.png" title="And clico no botao para 'Buscar'" width="960"/>
+                <img src="93e79c3e0f78ef1b97e981fd8711f006f10f8371927c7dfc4ee1ae002bd82463.png" title="And clico no botao para 'Buscar'" width="960"/>
+                <img src="8e6ad96190af41eea34d30ca6cf082d3e0f2338b510fe4c1328b8a1bce61ac76.png" title="And clico no link do produto especifico &quot;&lt;nomeProduto&gt;&quot;" width="960"/>
+                <img src="a8c2b929f4da0a80bf20f68fbf000b668293a43d703a6fbbe2326a71be73bf67.png" title="And clico no botao para 'Comprar'" width="960"/>
+                <img src="9e3d428f45f5f90eda7b01e61d0f5a4b781b0b2cd6163d54dac24112a63b3628.png" title="And clico no rdb 'Garantia' &quot;&lt;anosGarantia&gt;&quot;" width="960"/>
+                <img src="ed5f8cb6721b2a65815d20cf418b8ce10682ab2946983172beccd183a335224c.png" title="Then verifico os produtos na sacola &quot;&lt;qtdProdComprados&gt;&quot;" width="960"/>
+                <img src="8903d52a5be512512d5ba0d92e4ebd1172105da47901375c18bd37a435aa47ba.png" title="Then verifico os produtos na sacola &quot;&lt;qtdProdComprados&gt;&quot;: <span class='success-color'>SUCCESS</span>" width="960"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.3.0</span>
+</div>
+</body>
+</html>

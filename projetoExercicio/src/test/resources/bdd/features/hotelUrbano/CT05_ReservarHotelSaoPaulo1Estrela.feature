@@ -1,6 +1,6 @@
 Feature: CT05 - Reservar hotel 1 estrela São Paulo
 
-@reservarum
+@reservaHotel
 Scenario Outline: Reservar hotel
   Given estou na pagina do site do hotel urbano "<url>"
   When clico no menu 'Hoteis' na barra superior

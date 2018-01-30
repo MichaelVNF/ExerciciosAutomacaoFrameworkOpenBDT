@@ -1,6 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"CT04 - Buscar Agencia","Buscar Agencia","SUCCESS","2018-01-23T08:59:11.259-02:00","0.0","28.92"
-"CT01 - Buscar CEP (por endereço)","Buscar CEP","SUCCESS","2018-01-23T08:57:48.952-02:00","0.0","34.44"
-"CT02 - Buscar Endereco (por CEP)","Buscar Endereco","SUCCESS","2018-01-23T08:58:28.985-02:00","0.0","11.72"
-"CT03 - Calcular Preços e prazos - de CEP A a CEP B","Calcular Precos e Prazos","SUCCESS","2018-01-23T08:58:41.103-02:00","0.0","29.63"
-"CT05 - Calcular Preços e prazos - RSI Osasco a RSI Alphaville","Calcular Precos e Prazos","SUCCESS","2018-01-23T08:59:40.926-02:00","0.0","26.87"
