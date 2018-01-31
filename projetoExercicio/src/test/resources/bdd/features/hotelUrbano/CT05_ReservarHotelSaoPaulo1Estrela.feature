@@ -7,8 +7,7 @@ Scenario Outline: Reservar hotel
   And preencho o campo de 'Pesquisa' "<pesquisa>"
   And clico no botao 'Buscar'
   And seleciono o nivel de 'Categoria' "<qtdEstrelas>"
-  And clico no link 'Ver' "<posLink>"
-  And verifico a abertura da nova janela
+  And clico no link 'Ver' "<nomeHotel>"
   And verifico o link do hotel clicado "<qtdEstrelas>"
   And preencho o campo 'Entrada' "<dataEntrada>"
   And preencho o campo 'Saida' "<dataSaida>"
@@ -31,5 +30,5 @@ Scenario Outline: Reservar hotel
   Then clico na ckb 'Armazenar dados' "<armazenarDados>"
   
 Examples:
-   | url                          | pesquisa        |qtdEstrelas | posLink | dataEntrada| dataSaida | qtdQuartos | qtdAdultos | qtdCriancas | posDdl | nomeResp       | email             | cpf         | dtNasc    | tel         |numCartao        | titular          | validade   | codSeg | qtdParcelas | armazenarDados |
-   | https://www.hotelurbano.com/ | São Paulo       |1           | 1       | 13/03/2018 | 25/05/2018| 2          | 1          | 0           | 1      | Sr. Responsavel| usuario@email.com | 18277552530 | 02/02/2000| 11999999999 |4556905972222574 | Usuario de Testes| 10/19      | 300    |    4        |   true         |
+   | url                          | pesquisa        |qtdEstrelas | nomeHotel              | dataEntrada| dataSaida | qtdQuartos | qtdAdultos | qtdCriancas | posDdl | nomeResp       | email             | cpf         | dtNasc    | tel         |numCartao        | titular          | validade   | codSeg | qtdParcelas | armazenarDados |
+   | https://www.hotelurbano.com/ | São Paulo       |1           | Balcony Hostel e Hotel | 13/03/2018 | 27/07/2018| 2          | 1          | 0           | 1      | Sr. Responsavel| usuario@email.com | 18277552530 | 02/02/2000| 11999999999 |4556905972222574 | Usuario de Testes| 10/19      | 300    |    4        |   true         |

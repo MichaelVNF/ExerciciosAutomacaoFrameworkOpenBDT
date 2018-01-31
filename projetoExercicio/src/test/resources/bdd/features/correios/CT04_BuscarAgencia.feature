@@ -1,6 +1,6 @@
 Feature: CT04 - Buscar Agencia
 
-@agenciaum
+@buscaAgencia
 Scenario Outline: Buscar Agencia
   Given estou na pagina do site dos correios "<url>"
   When clico no link 'Rede de atendimento' 

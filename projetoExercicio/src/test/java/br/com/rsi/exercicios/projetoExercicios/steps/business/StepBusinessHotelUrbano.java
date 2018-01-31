@@ -51,14 +51,22 @@ public class StepBusinessHotelUrbano {
 		page.waitForTextToDisappear("Buscando as melhores ofertas...");
 	}
 	
-	public void clicarLinkVerHotel(int pos) {
-		viewElement.waitForElementIsPresent(10, page.getLinksVerHotel().get(pos-1));
-		viewElement.click(page.getLinksVerHotel().get(pos-1));	
+	public void clicarLinkVerHotel(String nome) {
+		viewElement.waitForElementIsPresent(10, page.getLinksVerHotel().get(0));
 		
-		page.waitFor(5).seconds();
+		for(int i = 0; i < page.getLinksVerHotel().size(); i++) {
+			LOG.info("Item " + (i+1)+ ": " + page.getLinksVerHotel().get(i).getText());
+			if(page.getLinksVerHotel().get(i).getText().contains(nome))
+			{
+				viewElement.waitForElementIsPresent(10, page.getLinksVerHotel().get(i));
+				viewElement.open(page.getLinksVerHotel().get(i).getAttribute("href"));
+				break;
+			}
+		}
 	}
 	
 	public void verificarHotelClicado(int qtdEstrelas) {
+		viewElement.waitForElementIsPresent(10, page.getIEstrelas().get(0));
 		Assert.assertTrue(qtdEstrelas == page.getIEstrelas().size());	
 	}
 	
@@ -115,10 +123,12 @@ public class StepBusinessHotelUrbano {
 	
 	
 	public void selecionarDdlQtdPessoas(String qtd) {
+		viewElement.waitForElementIsPresent(10, page.getDdlQtdPessoas());
 		viewElement.selectByVisibleText(page.getDdlQtdPessoas(), qtd);
 	}
 	
 	public void clicarLinkComprarIngresso(int pos) {
+		viewElement.waitForElementIsPresent(10, page.getLinksComprarIngresso().get(pos-1));
 		viewElement.click(page.getLinksComprarIngresso().get(pos-1));
 	}
 	

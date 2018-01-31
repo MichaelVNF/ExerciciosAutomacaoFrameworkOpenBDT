@@ -7,8 +7,7 @@ Scenario Outline: Comprar ingresso
   And preencho o campo de 'Pesquisa' "<pesquisa>"
   And clico na sugestao "<posSugestao>"
   And clico no botao 'Buscar'
-  And clico no link 'Ver' "<posLink>"
-  And verifico a abertura da nova janela
+  And clico no link 'Ver' "<nomeIngresso>"
   And seleciono a ddl 'Pessoas' "<qtdPessoas>"
   And clico no link 'Comprar' ingresso "<posLink2>"
   And preencho o campo 'Email' "<email>"
@@ -23,7 +22,7 @@ Scenario Outline: Comprar ingresso
   Then clico na ckb 'Armazenar dados' "<armazenarDados>"
 
 Examples:
-   | url                            | pesquisa              | posSugestao |posLink    |posIngresso |qtdPessoas | posLink2 | email             | cpf         | dtNasc    | tel         |numCartao        | titular          | validade   | codSeg | qtdParcelas | armazenarDados |
-   | https://www.hotelurbano.com/   | Thermas dos Laranjais | 1           | 1         |3           |4          |  3       | usuario@email.com | 18277552530 | 02/02/2000| 11999999999 |4556905972222574 | Usuario de Testes| 10/19      | 300    |    4        |   true         |
+   | url                            | pesquisa              | posSugestao | nomeIngresso                   |posIngresso |qtdPessoas | posLink2 | email             | cpf         | dtNasc    | tel         |numCartao        | titular          | validade   | codSeg | qtdParcelas | armazenarDados |
+   | https://www.hotelurbano.com/   | Thermas dos Laranjais | 1           | Ingresso Thermas dos Laranjais |3           |4          |  3       | usuario@email.com | 18277552530 | 02/02/2000| 11999999999 |4556905972222574 | Usuario de Testes| 10/19      | 300    |    4        |   true         |
 
 

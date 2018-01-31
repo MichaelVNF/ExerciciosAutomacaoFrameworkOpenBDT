@@ -42,8 +42,8 @@ public class StepDefinitionHotelUrbano {
 	}
 	
 	@When("^clico no link 'Ver' \"([^\"]*)\"$")
-	public void clico_no_link_Ver_Hotel(int pos) throws Throwable {
-	    stepB.clicarLinkVerHotel(pos);
+	public void clico_no_link_Ver_Hotel(String nome) throws Throwable {
+	    stepB.clicarLinkVerHotel(nome);
 	}
 
 	@Then("^verifico o link do hotel clicado \"([^\"]*)\"$")

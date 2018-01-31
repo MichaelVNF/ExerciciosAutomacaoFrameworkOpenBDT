@@ -7,11 +7,11 @@ Scenario Outline: Selecionar hotel
   And preencho o campo de 'Pesquisa' "<pesquisa>"
   And clico no botao 'Buscar'
   And seleciono o nivel de 'Categoria' "<qtdEstrelas>"
-  And clico no link 'Ver' "<posLink>"
-  And verifico a abertura da nova janela
-  Then verifico o link do hotel clicado "<qtdEstrelas>"
+  And clico no link 'Ver' "<nomeHotel>"
+#  And verifico a abertura da nova janela
+#  Then verifico o link do hotel clicado "<qtdEstrelas>"
  
 Examples:
-   | url                          | pesquisa        |qtdEstrelas | posLink |
-   | https://www.hotelurbano.com/ | Rio de Janeiro  |5           | 1       |
+   | url                          | pesquisa        | nomeHotel                          |qtdEstrelas | posLink |
+   | https://www.hotelurbano.com/ | Rio de Janeiro  | Pullman Rio de Janeiro São Conrado |5           | 1       |
 

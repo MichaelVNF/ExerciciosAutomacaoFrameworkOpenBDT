@@ -249,16 +249,16 @@ public class StepBusinessCorreios {
 	}
 
 	public void selecionarDdlMunicipio(String municipio) {
-		page.waitForTextToDisappear("Loading");
+		//page.waitForTextToDisappear("Loading");
 		viewElement.selectByVisibleText(page.getDdlMunicipioAgencia(), municipio);
 	}
 
 	public void selecionarDdlBairro(String bairro) {
-		page.waitForTextToDisappear("Loading");
+		//page.waitForTextToDisappear("Loading");
 		viewElement.selectByVisibleText(page.getDdlBairroAgencia(), bairro);
 	}
 	
-	public void verificarListagemEnderecoAgencia(String rua )
+	public void verificarListagemEnderecoAgencia(String rua)
 	{
 		viewElement.waitForElementIsPresent(10, page.getTblAgencias().get(0));//aguarda a presenca d ao menos o 1 elemento
 		

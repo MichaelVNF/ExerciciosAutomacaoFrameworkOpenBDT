@@ -24,8 +24,9 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	public By getCkbsCategoria() {
 		return ckbsCategoria;
 	}
-			
-	@FindBy(xpath = "//*[@id=\"result-card\"]/div")
+	
+	//@FindBy(xpath = "//*[@id=\"result-card\"]/div/div/a")
+	@FindBy(xpath = "//*[@id=\"result-card\"]/div/div/div[2]/div/div/div/h3/a")
 	private List<WebElement> linksVerHotel;
 	
 	@FindBy(xpath = "//*[@id=\"wrap-page-head\"]/div[1]/span/i")

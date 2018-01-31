@@ -1,6 +1,6 @@
 Feature: CT03 - Calcular Preços e prazos - de CEP A a CEP B
 
-@calculoum
+@calculaPrecoPrazo
 Scenario Outline: Calcular Precos e Prazos
   Given estou na pagina do site dos correios "<url>"
   When clico no link 'Precos e Prazos'
@@ -22,6 +22,6 @@ Scenario Outline: Calcular Precos e Prazos
   
   
  Examples:
-   | url                                     | dataPostagem |  cepOrigem | cepDestino | servico      | ckbCompararServ |formato | embalagem                | numTipoEmbalagem | pesoEstimado | ckbMaoPropria | ckbAvisoRecebimento | ckbDeclaracaoValor |valorDeclarado |
-   | http://www.correios.com.br/para-voce    |   20/01/2018 |  01014-970 |  01036-971 |  SEDEX HOJE  | false           |Caixa   |  Embalagem dos Correios  |            7     |    7         | true          |  true               | true               |  12000        |
+   | url                                     | dataPostagem |  cepOrigem | cepDestino | servico | ckbCompararServ |formato | embalagem                | numTipoEmbalagem | pesoEstimado | ckbMaoPropria | ckbAvisoRecebimento | ckbDeclaracaoValor |valorDeclarado |
+   | http://www.correios.com.br/para-voce    |   20/01/2018 |  06273-200 |  06020-000 |  SEDEX  | false           |Caixa   |  Embalagem dos Correios  |            7     |    7         | true          |  true               | true               |  12000        |
 

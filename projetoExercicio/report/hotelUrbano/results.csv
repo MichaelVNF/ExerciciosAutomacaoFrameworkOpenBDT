@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"CT03 - Comprar ingresso","Comprar ingresso","SUCCESS","2018-01-31T12:53:45.050-02:00","0.0","105.05"
+"CT04 - Consultar promoção trajeto Angra dos Reis - Rio de Janeiro","Consultar Promocao","SUCCESS","2018-01-31T12:56:52.760-02:00","0.0","29.84"
+"CT02 -  Consultar vôo economico para Bahia","Consultar vôo","SUCCESS","2018-01-31T12:50:59.599-02:00","0.0","67.16"
+"CT05 - Reservar hotel 1 estrela São Paulo","Reservar hotel","SUCCESS","2018-01-31T12:58:06.302-02:00","0.0","132.79"
+"CT01 - Selecionar hotel 5 estrelas Rio de Janeiro","Selecionar hotel","SUCCESS","2018-01-31T12:45:39.034-02:00","0.0","97.99"

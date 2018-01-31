@@ -30,6 +30,18 @@ public class StepBusinessSouBarato {
 	public void abrirPagina(String url) {
 		viewElement.open(url);
 		viewElement.getDriver().manage().window().maximize();
+		
+		boolean existe = true; 
+		try {
+			WebDriverWait wait = new WebDriverWait(viewElement.getDriver(), 3);
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"lightpop\"]/div/div[2]/a")));//Espera pelo elemento, caso não aparerecer retorna exception	
+		}
+		catch(Exception e) {
+			existe = false;
+		}
+		
+		if(existe)
+			viewElement.findElement(By.xpath("//*[@id=\"lightpop\"]/div/div[2]/a")).click();
 	}
 
 	//CT01(Adicionar ao carrinho um item da seção Produtos Reembalados)
