@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"CT04 - Acessar aba das vantagens do cartão Sou Barato","Acessar Aba","SUCCESS","2018-02-01T09:39:23.727-02:00","0.0","20.55"
+"CT02 - Adicionar geladeira Brastemp ao carrinho (via Menu)","Adicionar Geladeira","SUCCESS","2018-02-01T09:37:31.215-02:00","0.0","58.42"
+"CT03 - Adicionar Iphone ao carrinho (via campo pesquisa)","Adicionar Iphone","SUCCESS","2018-02-01T09:38:30.249-02:00","0.0","52.72"
+"CT01 - Adicionar ao carrinho um item da seção Produtos Reembalados","Adicionar Produto","SUCCESS","2018-02-01T09:36:22.496-02:00","0.0","67.04"
+"CT05 - Calcular frete de qualquer item ate o CEP da RSI Matriz (Osasco)","Calcular Frete","SUCCESS","2018-02-01T10:30:00.655-02:00","0.0","75.31"

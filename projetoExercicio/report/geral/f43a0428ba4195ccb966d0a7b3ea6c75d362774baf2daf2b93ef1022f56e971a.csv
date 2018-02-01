@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"CT02 - Adicionar ao carrinho camisa selecao brasileira","Adicionar Camisa","SUCCESS","2018-02-01T09:25:23.799-02:00","0.0","72.61"
+"CT04 - Adicionar item ao carrinho e calcular frete atq o CEP da RSI Matriz","Adicionar Item","SUCCESS","2018-02-01T09:28:34.594-02:00","0.0","80.48"
+"CT01 - Adicionar tenis ao carrinho (qualquer um)","Adicionar Tenis","SUCCESS","2018-02-01T09:22:42.430-02:00","0.0","158.22"
+"CT05 - Adicionar item no carrinho, Limpar Carrinho e voltar para loja","Adicionar item","SUCCESS","2018-02-01T09:29:56.703-02:00","0.0","104.6"
+"CT03 - Escolher um calçado na secao outlet com valor abaixo de 150 reais","Escolher Calcado","SUCCESS","2018-02-01T09:26:37.426-02:00","0.0","115.78"

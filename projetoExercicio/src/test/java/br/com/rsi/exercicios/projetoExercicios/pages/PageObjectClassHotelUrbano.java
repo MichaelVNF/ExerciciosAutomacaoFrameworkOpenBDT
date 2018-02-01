@@ -25,7 +25,6 @@ public class PageObjectClassHotelUrbano extends PageObject{
 		return ckbsCategoria;
 	}
 	
-	//@FindBy(xpath = "//*[@id=\"result-card\"]/div/div/a")
 	@FindBy(xpath = "//*[@id=\"result-card\"]/div/div/div[2]/div/div/div/h3/a")
 	private List<WebElement> linksVerHotel;
 	
@@ -48,7 +47,7 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	@FindBy(xpath = "//*[@id=\"service-class\"]/div/button/div")
 	private WebElement ddlClasse;
 	
-	//CT03 - ComprarIngresso
+	//CT03(ComprarIngresso)
 	@FindBy(css = "a[title=\"Ingressos\"]")
 	private WebElement menuIngressos;
 	
@@ -98,7 +97,6 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	
 	
 	//CT05(Reservar Hotel)
-	
 	//CALENDARIO POPUP
 	@FindBy(xpath = "//*[@id=\"formCalendarTop\"]/div[1]/div[1]/div/input")
 	private WebElement txtEntrada;
@@ -120,7 +118,7 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	
 	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/div/a[1]/span")
 	private WebElement spanPrevious;
-	///
+	///FIM - CALENDARIO POPUP
 	
 	@FindBy(xpath = "//*[@id=\"formCalendarTop\"]/div[2]/div[1]/div/select")
 	private WebElement ddlQuartos;

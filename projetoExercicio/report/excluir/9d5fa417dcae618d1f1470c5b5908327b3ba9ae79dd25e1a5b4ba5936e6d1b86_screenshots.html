@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <a
+                    href="e44d8f867ef608445cf390e4a1be0ceeb4679e37981cea7d46b9762058056c4f.html">Ct05 - Adicionar Item No Carrinho, Limpa&hellip;</a>
+                > <a
+                    href="9d5fa417dcae618d1f1470c5b5908327b3ba9ae79dd25e1a5b4ba5936e6d1b86.html">Adicionar item </a>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 01-02-2018 14:42</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Ct05 - Adicionar Item No Carrinho, Limpar Carrinho E Voltar Para Loja</span>
+                                    <span class="badge tag-badge">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" href="3609750114834255dfa43de56a3fbcf2f2bb7c1a67e370abd79f1b9a3766d99b.html">Adiocinalimpaevolta
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Adicionar Item
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Abrir pagina: http://www.netshoes.com.br/</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="scaled_14533a6bac8de126b15837f5a292ef178848d8b412eeae156533dde0c2fb6ab1.png" title="Given estou na pagina do site do netshoes &quot;&lt;url&gt;&quot;" width="960"/>
+                <img src="scaled_cbf03294076bf378daa683bbe9a1e193b002b654a6974d0f4c8c6ff28630ee02.png" title="Abrir pagina: http://www.netshoes.com.br/" width="960"/>
+                <img src="scaled_aeaa4ef8cdd57a786ae21a3eaaaf45932cd4045d64567a153474b20f48891c04.png" title="When preencho o campo 'Busca' &quot;&lt;pesqProduto&gt;&quot;" width="960"/>
+                <img src="scaled_c8c9fcd315fbb2d5feecd85d678bce2583e32ee348661f64b0b95fad609918ee.png" title="When preencho o campo 'Busca' &quot;&lt;pesqProduto&gt;&quot;" width="960"/>
+                <img src="scaled_68249bbb5e0adc3a607fbcf5678b002fdb3f037c9e4f871958121cb9c948b91d.png" title="And clico no icone de busca" width="960"/>
+                <img src="scaled_a6bbd926ea1d70c9cff7d412d6cf805ff708f9d83b07b5136a064937bc429027.png" title="And clico no icone de busca" width="960"/>
+                <img src="125ef7d792251ab4898b1d84073e116aa7d469a477840016caa35cef8119ebcd.png" title="And clico no link do produto &quot;&lt;nomeProduto&gt;&quot;" width="960"/>
+                <img src="8d2aba7592d1ca9619bba1fa83fe7b3a2ef85c862be07c742ba528b24d846b08.png" title="And clico no rdb 'color' &quot;&lt;posCor&gt;&quot;" width="960"/>
+                <img src="scaled_58293b67ec1296e93fa5cf98df51084901367912acf6c12a35a0bb4154ece49b.png" title="And clico no botao 'Comprar'" width="960"/>
+                <img src="58293b67ec1296e93fa5cf98df51084901367912acf6c12a35a0bb4154ece49b.png" title="And verifico o produto no carrinho &quot;&lt;qtdProdComprados&gt;&quot;" width="960"/>
+                <img src="8a703a92bd7bd37e6da59f52d426f2b81d4b570b9ff69ddced4db6f0d695ca46.png" title="And limpo o carrinho" width="960"/>
+                <img src="scaled_f6a9649b808e8599743d2b742f0d6b586eeb4f7d615c99e51b0b44dd895b1c1b.png" title="Then volto para para o inicio da loja: <span class='success-color'>SUCCESS</span>" width="960"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.3.0</span>
+</div>
+</body>
+</html>

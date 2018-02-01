@@ -108,13 +108,9 @@ public class StepBusinessHotelUrbano {
 	}
 	
 	
-	//CT03(Comprar Ingresso)
+	//CT03(Comprar Ingresso) e 	CT05(Reservar Hotel)
 	public void clicarMenuIngressos() {
 		viewElement.click(page.getMenuIngressos());
-	}
-	
-	public void clicarDivIngresso(int pos) {
-		viewElement.click(page.getDivIngressos().get(pos-1));
 	}
 	
 	public void clicarSugestaoPesq(int pos) {
@@ -312,7 +308,8 @@ public class StepBusinessHotelUrbano {
 		}
 			
 	}
-
+	
+	//CT04(Consultar Promocao)
 	public void clicarMenuPromocoes() {
 		viewElement.click(page.getMenuPromocoes());
 		

@@ -49,9 +49,14 @@ public class StepBusinessSouBarato {
 		page.getMenuSuperior().findElement(By.partialLinkText(opcao)).click();
 	}
 
+	public List<WebElement> retornarListaNova() {
+		return page.getNomeProdutos().findElements(By.className("p-name"));
+	}
+	
 	public void clicarLinkProdutoEspecifico(String nomeProduto) {
-		viewElement.waitForElementIsPresent(10, page.getNomeProdutos().get(0));
-		selecionarProduto(nomeProduto,  page.getNomeProdutos(), page.getBtnMaisProdutos());
+		
+		viewElement.waitForElementIsPresent(10, page.getNomeProdutos().findElements(By.className("p-name")).get(0));
+		selecionarProduto(nomeProduto,  retornarListaNova(), page.getBtnMaisProdutos());
 		
 		page.waitFor(5).seconds();
 	}
@@ -61,6 +66,7 @@ public class StepBusinessSouBarato {
 		boolean linkProxAtivado = true;
 		boolean continua = true;
 		int aux = 0;
+		
 		while(continua) 
 		{
 			
@@ -88,6 +94,7 @@ public class StepBusinessSouBarato {
 				aux = listaProdutos.size();//conta a partir da ultima lida
 				viewElement.findElement(proximo).click();
 				page.waitFor(5).seconds();//espera carregar a nova lista
+				listaProdutos =  retornarListaNova();//nova lista
 				
 			}
 			else{
@@ -99,6 +106,7 @@ public class StepBusinessSouBarato {
 	
 	public void clicarBtnComprar() {
 		boolean clicarContinua = false;
+		
 		if(viewElement.findElement(By.className("p-buybox")).getText().contains("Reembalado"))
 			clicarContinua = true;
 		
@@ -110,12 +118,6 @@ public class StepBusinessSouBarato {
 			viewElement.click(page.getLinkContinuarCompra());
 		}
 		
-	}
-	
-	public void clicarLinkContinuarCompra() {
-		viewElement.waitForElementIsPresent(10, page.getLinkContinuarCompra());
-		viewElement.click(page.getLinkContinuarCompra());
-
 	}
 	
 	public void clicarRdbsGarantia(String anosGarantia) {
@@ -178,7 +180,7 @@ public class StepBusinessSouBarato {
 		Assert.assertTrue(page.containsAllText(comparativo));
 	}
 	
-	//CT05
+	//CT05(Adicionar item e Calcular frete)
 	public void preencherCampoCep(String cep) {
 		viewElement.waitForElementIsPresent(10, page.getTxtCep());
 		viewElement.sendText(page.getTxtCep(), cep);
@@ -188,8 +190,6 @@ public class StepBusinessSouBarato {
 		viewElement.click(page.getBtnCalcFrete());
 		page.waitFor(1).seconds();
 	}
-	
-	
 	
 	public void verificarCalculoFrete() {
 		Assert.assertTrue(page.containsAllText("Confira abaixo o prazo de entrega e o valor do frete para o"));

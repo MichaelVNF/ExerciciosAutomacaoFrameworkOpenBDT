@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <a
+                    href="436286625a53ab742d1acd3b9d20c39f3cab48a2a405b3f220097ed1cfc9dbb4.html">Ct01 - Selecionar Hotel 5 Estrelas Rio D&hellip;</a>
+                > <a
+                    href="0baf941e01750571dea218b84f869fe0a9a8f2da5dd285f1afdba8ca06c38ea7.html">Selecionar hotel </a>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 01-02-2018 09:07</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Ct01 - Selecionar Hotel 5 Estrelas Rio De Janeiro</span>
+                                    <span class="badge tag-badge">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" href="86f298e295b9b6958e8c42a6969fe16813c7385ae940151ead5c421be6fad0d3.html">Hotelurbano
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Selecionar Hotel
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Abrir pagina: https://www.hotelurbano.com/</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="38bfeac43df5c148e54257a8b9e1b4b05da44c39b04bbf0feb0afa6469661f35.png" title="Given estou na pagina do site do hotel urbano &quot;&lt;url&gt;&quot;" width="960"/>
+                <img src="7a5cee2af02889e2580533012e3141fb5302775695ac82546d45d5c8b18099bb.png" title="Abrir pagina: https://www.hotelurbano.com/" width="960"/>
+                <img src="09628da3240d1693bd55cb2f80238ca6e13cf46b8a8b24a22a8575c8756efff2.png" title="When clico no menu 'Hoteis' na barra superior" width="960"/>
+                <img src="ec2730a5a276aeaeaa72a2ca513f1c681478f1dff70d99208497d2ae08517fa8.png" title="When clico no menu 'Hoteis' na barra superior" width="960"/>
+                <img src="6aa1143bd3168673ff6694b3a48eee1cb9a0fff833142be583d1442e5659e9d9.png" title="And preencho o campo de 'Pesquisa' &quot;&lt;pesquisa&gt;&quot;" width="960"/>
+                <img src="98cc7c8117d5c2634ed1e5d24793a6f649af942174af77801ac767dc44235077.png" title="And clico no botao 'Buscar'" width="960"/>
+                <img src="591360093ae1ce03b63565902e217a8389c93bdcb0631f7425cf6ff876719bc9.png" title="And clico no botao 'Buscar'" width="960"/>
+                <img src="b5af3ed6f5c9dff5802480641c854370f7fa3ba56a10e9fd1ae6d883213cf574.png" title="And seleciono o nivel de 'Categoria' &quot;&lt;qtdEstrelas&gt;&quot;" width="960"/>
+                <img src="e9d857ab717041368d848edf79ccfc59ed41bd7b78ececa77f3488f6f1023d0d.png" title="And seleciono o nivel de 'Categoria' &quot;&lt;qtdEstrelas&gt;&quot;" width="960"/>
+                <img src="8b01482a209e30e7c05f8865175616ca3759e0f640a7b127a859664552af32fa.png" title="And clico no link 'Ver' &quot;&lt;nomeHotel&gt;&quot;" width="960"/>
+                <img src="e799a433b9d7291d195d520cbac8711d80131f63edc47abf5b281a4e06952944.png" title="And clico no link 'Ver' &quot;&lt;nomeHotel&gt;&quot;" width="960"/>
+                <img src="2681e81ce1d9ae13e0c8158cf844832c8da54e781f061e03a691c22373156cc5.png" title="Then verifico o link do hotel clicado &quot;&lt;qtdEstrelas&gt;&quot;" width="960"/>
+                <img src="8bb96eb53b8c5de535ec771421b7c5c31ffd1916eb222b605b4dd73e618f379b.png" title="Then verifico o link do hotel clicado &quot;&lt;qtdEstrelas&gt;&quot;: <span class='success-color'>SUCCESS</span>" width="960"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.3.0</span>
+</div>
+</body>
+</html>

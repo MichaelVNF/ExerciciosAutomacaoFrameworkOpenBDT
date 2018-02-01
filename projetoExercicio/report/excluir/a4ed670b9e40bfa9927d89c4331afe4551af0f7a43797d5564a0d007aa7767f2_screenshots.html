@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <a
+                    href="9f9c1566a3f9b9dca231f694697194166f41974af4ecc17a024abaf8d2ee07a0.html">Ct03 - Escolher Um Cal&ccedil;ado Na Secao Outl&hellip;</a>
+                > <a
+                    href="a4ed670b9e40bfa9927d89c4331afe4551af0f7a43797d5564a0d007aa7767f2.html">Escolher Calcado </a>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 01-02-2018 14:38</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Ct03 - Escolher Um Calçado Na Secao Outlet Com Valor Abaixo De 150 Reais</span>
+                                    <span class="badge tag-badge">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" href="388d3aa1dcc97cf1acf6f1fd67ec4c7a8545aafd20d55b32ee4482fe4ac101b9.html">Escolhecalcadosecao
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Escolher Calcado
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Abrir pagina: http://www.netshoes.com.br/</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="e7e41a07c1441845cc53420ca3dc81ae126dd421b3064731c6003ff1d90f45ee.png" title="Given estou na pagina do site do netshoes &quot;&lt;url&gt;&quot;" width="960"/>
+                <img src="e0e4c01e838d93db31b1111d3bc4f535d67b1ad53d2aed89a68dbb27c4de12aa.png" title="Abrir pagina: http://www.netshoes.com.br/" width="960"/>
+                <img src="59982f9df6c0b77439154e7af61b6082313a929b2739eb34e80b3fa84877a4a7.png" title="When preencho o campo 'Busca' &quot;&lt;pesqProduto&gt;&quot;" width="960"/>
+                <img src="8ef39a3547948bb61a571b70293af01cb928bd2a3e5a83a631ce78bb027ccf79.png" title="When preencho o campo 'Busca' &quot;&lt;pesqProduto&gt;&quot;" width="960"/>
+                <img src="41c30e7600bdca4e066aa90a8e0da52f78b98a0af24a4022647ab4ff4fbbbb65.png" title="And clico no icone de busca" width="960"/>
+                <img src="4a9a9f5558c3edc897e39ae891a4788619c68c7ab9b5e379d53ba8f0ec1e9c6e.png" title="And clico no icone de busca" width="960"/>
+                <img src="71934724d7e8535a500147fbbfa7c98dc044943535d559f1fe17f3ab2ea4d41a.png" title="And clico no link 'Tenis' em 'Outlet'" width="960"/>
+                <img src="450328356c00155374cac3be8d0936e09573922ded96a3c1012437a66fe959a0.png" title="And clico na ckb 'Preco' &quot;&lt;precoAte&gt;&quot;" width="960"/>
+                <img src="e7988e06dd3cd07cbe227ec157eb8d1d1e86ad09b3a7368754723a9e6c415d50.png" title="And clico no link do produto &quot;&lt;nomeProduto&gt;&quot;" width="960"/>
+                <img src="4def887369014cd4cd343e7f902f301c6912f35f1caf8abd61e193b88110e9b7.png" title="And clico no rdb 'color' &quot;&lt;posCor&gt;&quot;" width="960"/>
+                <img src="4e8f4fab5c30ee142da562811bdbea857cc334764451fa1293cff4390125bbed.png" title="And clico no rdb 'size' &quot;&lt;tamanhoTenis&gt;&quot;" width="960"/>
+                <img src="99bd2ca2dcf76226c9386ed7d4cc208938bdd2f962e48e60977052514de466b4.png" title="And clico no botao 'Comprar'" width="960"/>
+                <img src="99bd2ca2dcf76226c9386ed7d4cc208938bdd2f962e48e60977052514de466b4.png" title="Then verifico o produto no carrinho &quot;&lt;qtdProdComprados&gt;&quot;: <span class='success-color'>SUCCESS</span>" width="960"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.3.0</span>
+</div>
+</body>
+</html>

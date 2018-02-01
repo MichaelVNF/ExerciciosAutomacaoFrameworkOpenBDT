@@ -21,6 +21,7 @@ public class StepDefinitionHotelUrbano {
 	    stepB.abrirPagina(url);
 	}
 	
+	//CT01(Selecionar hotel) 
 	@When("^clico no menu 'Hoteis' na barra superior$")
 	public void clico_no_menu_Hoteis_na_barra_superior() throws Throwable {
 		stepB.clicarMenuHoteis();
@@ -90,24 +91,19 @@ public class StepDefinitionHotelUrbano {
 	    stepB.clicarMenuIngressos();
 	}
 
-	@When("^clico na div 'Ingresso' dos mais vendidos \"([^\"]*)\"$")
-	public void clico_na_div_Ingresso_dos_mais_vendidos(int pos) throws Throwable {
-	    stepB.clicarDivIngresso(pos);
-	}
-	
 	@When("^clico na sugestao \"([^\"]*)\"$")
 	public void clico_na_sugestao(int pos) throws Throwable {
 	    stepB.clicarSugestaoPesq(pos);
 	}
 	
-	@When("^seleciono a qtd de 'Pessoas' \"([^\"]*)\"$")
-	public void seleciono_a_qtd_de_Pessoas(String qtd) throws Throwable {
-	    stepB.selecionarDdlQtdPessoas(qtd);
-	}
-
 	@When("^clico no link 'Comprar' ingresso \"([^\"]*)\"$")
 	public void clico_no_link_Comprar_ingresso(int pos) throws Throwable {
 	    stepB.clicarLinkComprarIngresso(pos);
+	}
+	
+	@When("^seleciono a qtd de 'Pessoas' \"([^\"]*)\"$")
+	public void seleciono_a_qtd_de_Pessoas(String qtd) throws Throwable {
+	    stepB.selecionarDdlQtdPessoas(qtd);
 	}
 
 	@When("^seleciono a ddl 'Pessoas' \"([^\"]*)\"$")
@@ -177,7 +173,6 @@ public class StepDefinitionHotelUrbano {
 	}
 	
 	//CT05(Reservar Hotel)
-	
 	@When("^preencho o campo 'Entrada' \"([^\"]*)\"$")
 	public void preencho_o_campo_Entrada(String data) throws Throwable {
 		stepB.preencherCampoEntrada(data);

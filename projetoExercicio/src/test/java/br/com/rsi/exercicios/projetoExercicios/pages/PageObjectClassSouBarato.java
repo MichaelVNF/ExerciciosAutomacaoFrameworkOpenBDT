@@ -10,18 +10,17 @@ import net.serenitybdd.core.pages.PageObject;
 public class PageObjectClassSouBarato extends PageObject{
 
 	//CT01(Adicionar ao carrinho um item da seção Produtos Reembalados)
-	
 	@FindBy(xpath = "//*[@id=\"containerpage\"]/div[1]/div/div/ul")
 	private WebElement menuSuperior;
 	
 	@FindBy(linkText = "Produtos Reembalados")
 	private WebElement menuProdutosReembalados;
 	
-	@FindBy(className = "p-name")
-	private List<WebElement> nomeProdutos;
-	
-	private By btnMaisProdutos = By.xpath("//*[@id=\"containerpage\"]/div[2]/div/div/div/section/div[2]/a");
-	
+	@FindBy(className = "grid-control")
+	private WebElement nomeProdutos;
+	                                     
+	private By btnMaisProdutos = By.partialLinkText("Carregar mais produtos");
+
 	@FindBy(id = "product-buy-button")
 	private WebElement btnComprar;
 	
@@ -53,13 +52,12 @@ public class PageObjectClassSouBarato extends PageObject{
 	@FindBy(xpath = "//*[@id=\"containerpage\"]/div[3]/div/div/div[1]/ul")
 	private WebElement menuCartaoSouBarato;
 	
-	//CT05
+	//CT05(Adicionar item e Calcular frete)
 	@FindBy(id = "cep")
 	private WebElement txtCep;
 	
 	@FindBy(id = "calculate-freight-button")
 	private WebElement btnCalcFrete;	
-	
 	
 	
 	public By getBtnMaisProdutos() {
@@ -74,7 +72,7 @@ public class PageObjectClassSouBarato extends PageObject{
 		return menuProdutosReembalados;
 	}
 
-	public List<WebElement> getNomeProdutos() {
+	public WebElement getNomeProdutos() {
 		return nomeProdutos;
 	}
 

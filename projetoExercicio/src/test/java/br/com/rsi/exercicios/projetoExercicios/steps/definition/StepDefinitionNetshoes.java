@@ -68,11 +68,6 @@ public class StepDefinitionNetshoes {
 	    stepB.clicarCkbsPrecos(valor);
 	}
 	
-	@When("^clico no link do produto da lista outlet \"([^\"]*)\"$")
-	public void clico_no_link_do_produto_da_lista_outlet(String nomeProduto) throws Throwable {
-	    stepB.clicarLinkProdutoOutlet(nomeProduto);
-	}
-	
 	//CT04(Adicionar item ao carrinho e calcular frete)
 	@When("^preencho os campos do 'CPF' \"([^\"]*)\"$")
 	public void preencho_os_campos_do_CPF(String cpf) throws Throwable {

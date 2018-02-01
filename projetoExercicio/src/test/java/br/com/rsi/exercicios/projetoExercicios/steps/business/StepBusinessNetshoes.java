@@ -50,12 +50,6 @@ public class StepBusinessNetshoes {
 
 	}
 	
-	public void clicarLinkProdutoOutlet(String nomeProduto) {
-		viewElement.waitForElementIsPresent(10, page.getDivProdutosOutlet().get(0));
-		selecionarProduto(nomeProduto, page.getDivProdutosOutlet(), page.getBtnProximo());
-
-	}
-	
 	public void selecionarProduto(String nomeProduto, List<WebElement> listaProdutos, org.openqa.selenium.By proximo) {
 		boolean achou = false;
 		boolean linkProxAtivado = true;

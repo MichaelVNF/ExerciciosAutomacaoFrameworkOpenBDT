@@ -121,7 +121,7 @@ public class StepBusinessCorreios {
 		Assert.assertTrue(achou);
 	}
 	
-	//CT3(Calcular Preços e prazos)
+	//CT3(Calcular Preços e prazos) e CT5(Calcular Preços e prazos)
 	public void clicarLinkPrecosPrazos() {
 		viewElement.click(page.getLinkPrecosPrazos());
 	}
@@ -245,16 +245,19 @@ public class StepBusinessCorreios {
 	}
 
 	public void selecionarDdlEstado(String estado) {
+		viewElement.waitForElementIsPresent(10, page.getDdlEstadoAgencia());
 		viewElement.selectByVisibleText(page.getDdlEstadoAgencia(), estado);
 	}
 
 	public void selecionarDdlMunicipio(String municipio) {
 		//page.waitForTextToDisappear("Loading");
+		page.waitFor(2000).milliseconds();
 		viewElement.selectByVisibleText(page.getDdlMunicipioAgencia(), municipio);
 	}
 
 	public void selecionarDdlBairro(String bairro) {
 		//page.waitForTextToDisappear("Loading");
+		page.waitFor(2000).milliseconds();
 		viewElement.selectByVisibleText(page.getDdlBairroAgencia(), bairro);
 	}
 	

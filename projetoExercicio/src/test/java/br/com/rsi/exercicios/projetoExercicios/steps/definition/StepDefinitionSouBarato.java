@@ -21,7 +21,7 @@ public class StepDefinitionSouBarato {
 	    stepB.abrirPagina(url);
 	}
 
-	//CT01
+	//CT01(Adicionar ao carrinho um item da seção Produtos Reembalados)
 	@When("^clico no menu superior \"([^\"]*)\"$")
 	public void clico_no_menu_superior(String opcao) throws Throwable {
 	    stepB.clicarMenuSuperior(opcao);
@@ -36,11 +36,6 @@ public class StepDefinitionSouBarato {
 	@When("^clico no botao para 'Comprar'$")
 	public void clico_no_botao_para_Comprar() throws Throwable {
 	    stepB.clicarBtnComprar();
-	}
-
-	@When("^clico no link 'Continuar'$")
-	public void clico_no_link_Continuar() throws Throwable {
-	    stepB.clicarLinkContinuarCompra();
 	}
 
 	@When("^clico no rdb 'Garantia' \"([^\"]*)\"$")
@@ -69,7 +64,7 @@ public class StepDefinitionSouBarato {
 	    stepB.clicarSubmenuCatergoria(subCategoria);
 	}
 
-	
+	//CT03(Adicionar Iphone ao carrinho (via campo busca)
 	@When("^preencho o campo de 'Busca' \"([^\"]*)\"$")
 	public void preencho_o_campo_de_Busca(String busca) throws Throwable {
 	    stepB.preencherCampoBusca(busca);
@@ -91,7 +86,7 @@ public class StepDefinitionSouBarato {
 	    stepB.verificarAberturaPagina(comparativo);
 	}
 	
-	//CTO5
+	//CT05(Adicionar item e Calcular frete)
 	@When("^preencho o campo 'Cep' \"([^\"]*)\"$")
 	public void preencho_o_campo_Cep(String cep) throws Throwable {
 	    stepB.preencherCampoCep(cep);

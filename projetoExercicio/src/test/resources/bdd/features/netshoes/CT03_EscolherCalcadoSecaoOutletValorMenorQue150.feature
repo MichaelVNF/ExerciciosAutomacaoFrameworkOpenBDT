@@ -7,7 +7,7 @@ Scenario Outline: Escolher Calcado
   And clico no icone de busca
   And clico no link 'Tenis' em 'Outlet'
   And clico na ckb 'Preco' "<precoAte>"
-  And clico no link do produto da lista outlet "<nomeProduto>"
+  And clico no link do produto "<nomeProduto>"
   And clico no rdb 'color' "<posCor>"
   And clico no rdb 'size' "<tamanhoTenis>"
   And clico no botao 'Comprar'
@@ -15,6 +15,6 @@ Scenario Outline: Escolher Calcado
 
 Examples:
    | url                         | pesqProduto | precoAte | nomeProduto          | posCor| tamanhoTenis | qtdProdComprados |
-   | http://www.netshoes.com.br/ |   Outlet    |   150    | Tênis Kappa Impact   | 1     | 38           | 1                |
+   | http://www.netshoes.com.br/ |   Outlet    |   150    | Tênis Kappa Impact   | 2     | 38           | 1                |
 
 

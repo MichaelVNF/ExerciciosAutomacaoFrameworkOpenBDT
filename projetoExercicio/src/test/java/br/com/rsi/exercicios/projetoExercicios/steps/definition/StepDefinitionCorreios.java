@@ -55,7 +55,7 @@ public class StepDefinitionCorreios {
 	    stepB.pesquisarCepVerificarTabelaEndereco(logradouroEsperado,  bairrooEsperado,  localidadeEsperada);
 	}
 
-	//CT3(Calcular Preços e prazos)
+	//CT3(Calcular Preços e prazos) e CT5(Calcular Preços e prazos)
 	@When("^clico no link 'Precos e Prazos'$")
 	public void clico_sobre_o_link_Precos_e_Prazos() throws Throwable {
 	    stepB.clicarLinkPrecosPrazos();

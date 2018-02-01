@@ -22,7 +22,7 @@ public class PageObjectClassCorreios extends PageObject{
 	@FindBy(xpath = "/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/div[5]/a")
 	private WebElement linkProxima;
 	
-	//CT3(Calcular Preços e prazos)
+	//CT3(Calcular Preços e prazos) e CT5(Calcular Preços e prazos)
 	@FindBy(xpath = "//*[@id=\"content-principais-servicos\"]/ul/li[3]/a")
 	private WebElement linkPrecosPrazos;
 	

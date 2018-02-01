@@ -17,7 +17,7 @@ public class PageObjectClassNetshoes extends PageObject{
 	@FindBy(xpath = "//*[@id=\"input-search-bt\"]/span")
 	private WebElement btnBuscar;
 	
-	@FindBy(xpath = "//*[@id=\"search-linx\"]/div[6]/div[2]/ul[2]/li/a/div[2]/div[1]/span")
+	@FindBy(css = "div[itemprop='name']")
 	private List<WebElement> divProdutos;
 	
 	private By btnProximo = By.partialLinkText("Próxim");
@@ -37,9 +37,6 @@ public class PageObjectClassNetshoes extends PageObject{
 	
 	@FindBy(name = "price.pricelistLow")
 	private List<WebElement> ckbsPrecos;
-	
-	@FindBy(xpath = "/html/body/div[3]/div[4]/div/div/ul/li/span/a/div/div[1]")
-	private List<WebElement> divProdutosOutlet;
 	
 	//CT04(Adicionar item ao carrinho e calcular frete)
 	@FindBy(name = "cep-first-input")
@@ -108,10 +105,6 @@ public class PageObjectClassNetshoes extends PageObject{
 
 	public List<WebElement> getCkbsPrecos() {
 		return ckbsPrecos;
-	}
-
-	public List<WebElement> getDivProdutosOutlet() {
-		return divProdutosOutlet;
 	}
 
 	public By getBtnProximo() {

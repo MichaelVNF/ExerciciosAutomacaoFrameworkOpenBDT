@@ -6,5 +6,5 @@ import cucumber.api.CucumberOptions;
 import io.openbdt.cucumber.CucumberWithOpenBdt;
 
 @RunWith(CucumberWithOpenBdt.class)
-@CucumberOptions(features = {"src/test/resources/bdd/features/correios/CT01_BuscarCepPorEndereco.feature"}, glue = {"br.com.rsi.exercicios.projetoExercicios.steps.definition"})
+@CucumberOptions(features = {"src/test/resources/bdd/features"}, glue = {"br.com.rsi.exercicios.projetoExercicios.steps.definition"})
 public class DefaultAcceptanceTestRunner {}

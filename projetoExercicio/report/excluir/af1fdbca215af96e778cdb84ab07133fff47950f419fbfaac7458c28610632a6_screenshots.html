@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <a
+                    href="7887f8800da979f3a0294aba1f90b66639e387f1cf0dd1f8c24161fc561a4aec.html">Ct05 - Reservar Hotel 1 Estrela S&atilde;o Paul&hellip;</a>
+                > <a
+                    href="af1fdbca215af96e778cdb84ab07133fff47950f419fbfaac7458c28610632a6.html">Reservar hotel </a>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 01-02-2018 14:32</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Ct05 - Reservar Hotel 1 Estrela São Paulo</span>
+                                    <span class="badge tag-badge">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" href="ca77680a16e23e19841acfe63add39c64ee05be3148ce41a731adf5a54f02571.html">Reservahotel
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Reservar Hotel
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Abrir pagina: https://www.hotelurbano.com/</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="scaled_65bae06258817f0e0f52cf06acb857ce9c5ab3cd0a9433c68d7086bd771e5199.png" title="Given estou na pagina do site do hotel urbano &quot;&lt;url&gt;&quot;" width="960"/>
+                <img src="scaled_108f248a1e266c572efe37cea942cf1cffce42304d1b5207e527396f566a803f.png" title="Abrir pagina: https://www.hotelurbano.com/" width="960"/>
+                <img src="scaled_224e4355b1e9722f25e1d7587931eb580bcafc51b17796f10987f9995be835af.png" title="When clico no menu 'Hoteis' na barra superior" width="960"/>
+                <img src="scaled_58ab3d4657f82bd7545e94851c31518a41479892c9a0b201bb8a48454a38fa42.png" title="And preencho o campo de 'Pesquisa' &quot;&lt;pesquisa&gt;&quot;" width="960"/>
+                <img src="scaled_13b6cba319fbcf795f4eab867ef95f695bd8b11158a7eb8a29ab267fbd4ebcb5.png" title="And preencho o campo de 'Pesquisa' &quot;&lt;pesquisa&gt;&quot;" width="960"/>
+                <img src="scaled_153959b35fe04a7a5d225733e74fdd82941e38f256c85392c231c42d809b8d6e.png" title="And clico no botao 'Buscar'" width="960"/>
+                <img src="scaled_670c280e86bf21a49d1267a8f32cbe677c3391385eb76b72337808909e6ef93a.png" title="And clico no botao 'Buscar'" width="960"/>
+                <img src="scaled_70bfaa0a3151d8f48c8edd9d69151748f468a1c02295af9f838cf8084e89ef3c.png" title="And seleciono o nivel de 'Categoria' &quot;&lt;qtdEstrelas&gt;&quot;" width="960"/>
+                <img src="scaled_dc77f60f2a73028c0a7f22e5053698ca3e5e9ec40c5f83ab78ed722b9e414a86.png" title="And seleciono o nivel de 'Categoria' &quot;&lt;qtdEstrelas&gt;&quot;" width="960"/>
+                <img src="scaled_d8cc02e77115ab627328d61fa71a52811573d52a6df665ead51f0bbfd82623e3.png" title="And clico no link 'Ver' &quot;&lt;nomeHotel&gt;&quot;" width="960"/>
+                <img src="2690be8f6d072716ffb200d41f52511821794c0591f4c9b59a9d3b6cc891a850.png" title="And clico no link 'Ver' &quot;&lt;nomeHotel&gt;&quot;" width="960"/>
+                <img src="2690be8f6d072716ffb200d41f52511821794c0591f4c9b59a9d3b6cc891a850.png" title="And verifico o link do hotel clicado &quot;&lt;qtdEstrelas&gt;&quot;" width="960"/>
+                <img src="scaled_dda44e822a3db4a97549bb82236cf586da55da32b57f564493b6afd0742c6804.png" title="And preencho o campo 'Entrada' &quot;&lt;dataEntrada&gt;&quot;" width="960"/>
+                <img src="scaled_ccfda401ef849783ad6bf33a86ff3872783ccab46ba3a7d9e95f48302c16cc04.png" title="And preencho o campo 'Saida' &quot;&lt;dataSaida&gt;&quot;" width="960"/>
+                <img src="scaled_e6659c0eb1d105cd0c8e08dc88018f61760d01dc9ed662ebdcbabce81101d248.png" title="And seleciono a ddl 'Quartos' &quot;&lt;qtdQuartos&gt;&quot;" width="960"/>
+                <img src="scaled_79e6ae15097061fb73d877f52e860b0bf08a6de122d80655947e5804e4651c2a.png" title="And seleciono a ddl 'Quartos' &quot;&lt;qtdQuartos&gt;&quot;" width="960"/>
+                <img src="scaled_04a7f110af61379ce8dbf56f352a48df76ed6fb9e0ee9522f8825ffb410fa33e.png" title="And seleciono a ddl 'Adultos' &quot;&lt;qtdAdultos&gt;&quot;" width="960"/>
+                <img src="04a7f110af61379ce8dbf56f352a48df76ed6fb9e0ee9522f8825ffb410fa33e.png" title="And seleciono a ddl 'Criancas' &quot;&lt;qtdCriancas&gt;&quot;" width="960"/>
+                <img src="scaled_415273247946eef50abce539d2698f22e8db8c70504fc55cdd039ed83f0c97ae.png" title="And clicar botao 'Verificar Disponibilidade'" width="960"/>
+                <img src="scaled_6d335a4715acf1f3dd25e5f5f681eb8495591967fefbcc2306352539d7d12964.png" title="And seleciono a ddl 'Numero de Quartos' &quot;&lt;posDdl&gt;&quot; &quot;&lt;qtdQuartos&gt;&quot;" width="960"/>
+                <img src="scaled_f24edf0651c989a6a521bb50d772371e05b8ca51c8a5a667c7f069fa11492919.png" title="And seleciono a ddl 'Numero de Quartos' &quot;&lt;posDdl&gt;&quot; &quot;&lt;qtdQuartos&gt;&quot;" width="960"/>
+                <img src="scaled_d8f74d532a846429d8f5439624eab58ab9ef76f9deb792dbae2766e78bb1bb5e.png" title="And clico no botao 'Reservar'" width="960"/>
+                <img src="c90d557f83cd5e2ad5db41d8b63dcf95c8db5ad1367e8bfb035fa664fe0eee09.png" title="And clico no botao 'Reservar'" width="960"/>
+                <img src="scaled_70c852a6b70cf36a2ac149c955b37080c3c47ae7ac16602424a5192a154c1407.png" title="And preencho o campo 'Email' &quot;&lt;email&gt;&quot;" width="960"/>
+                <img src="scaled_2ab8a169f3d5796bb991231b045dfa4ce86fb06f663f218881562ecc8a4cf8b5.png" title="And preencher campos 'Responsavel do Quarto' &quot;&lt;qtdQuartos&gt;&quot; &quot;&lt;nomeResp&gt;&quot;" width="960"/>
+                <img src="scaled_1b22058aa193ac71a8fb3b5f40578ae533e5951a23bbb6baeabf8369f91e1e23.png" title="And preencher campos 'Responsavel do Quarto' &quot;&lt;qtdQuartos&gt;&quot; &quot;&lt;nomeResp&gt;&quot;" width="960"/>
+                <img src="scaled_632773107634308c8386a354b1c5209945be0cf8e043d294487ae9406de72bca.png" title="And preencho o campo 'Cpf' &quot;&lt;cpf&gt;&quot;" width="960"/>
+                <img src="scaled_7adf4c82a76211682fe5f390abf1ae3481779262c69a6c52df01be06ad95dbf5.png" title="And preencho o campo 'Cpf' &quot;&lt;cpf&gt;&quot;" width="960"/>
+                <img src="scaled_836f7a11d0a22af2b613e93c1226a4bb7a55a5226ccc616b1f673300402ebc26.png" title="And preencho o campo 'Data de Nascimento' &quot;&lt;dtNasc&gt;&quot;" width="960"/>
+                <img src="scaled_7f82cb9187864f14d456d5156f3cefe35f607b9e0714f3eff1753365923a37c1.png" title="And preencho o campo 'Data de Nascimento' &quot;&lt;dtNasc&gt;&quot;" width="960"/>
+                <img src="scaled_69cbc1da0541a202ec808c74a0e3df71962531276fc5a7455503fb5cbcc06980.png" title="And preencho o campo 'Telefone' &quot;&lt;tel&gt;&quot;" width="960"/>
+                <img src="scaled_fec4169177727a7acd10f6c064b19187fa2616aa27ec6dcdd4e0b966d4c53de4.png" title="And preencho o campo 'Telefone' &quot;&lt;tel&gt;&quot;" width="960"/>
+                <img src="scaled_e7289565ec0f422f54ed84cb7aac29feaca2ee903bf72b25a793f5bf752d3a0d.png" title="And preencho o campo 'Numero do Cartao' &quot;&lt;numCartao&gt;&quot;" width="960"/>
+                <img src="scaled_2c562d3b7641058a58e3c338754c9f192ed1435a2a6afa8615af268e98674d3e.png" title="And preencho o campo 'Numero do Cartao' &quot;&lt;numCartao&gt;&quot;" width="960"/>
+                <img src="scaled_031122db8eef1305cac9597c640e354157cc7b00c1555cb40878d699382409fb.png" title="And preencho o campo 'Titular' &quot;&lt;titular&gt;&quot;" width="960"/>
+                <img src="scaled_e054daa6b8de0cef1df296873887fb2b8f19d01ce11708eedaa424cb23f84c54.png" title="And preencho o campo 'Titular' &quot;&lt;titular&gt;&quot;" width="960"/>
+                <img src="scaled_268ca84134cb43a69cbd34a1605435f15497c505bc373c006b297e4435b115ba.png" title="And preencho o campo 'Validade' &quot;&lt;validade&gt;&quot;" width="960"/>
+                <img src="e23ed3f1e680ae7c1c7f9d693c3f2a6a7119ce5c934273f9e41450840d7f072d.png" title="And preencho o campo 'Validade' &quot;&lt;validade&gt;&quot;" width="960"/>
+                <img src="scaled_a6f1dd04c3ec4b7355eec792f74e83a0589b5c85c74ecbed1722bbdc997c9324.png" title="And preencho o campo 'Codigo de Seguranca' &quot;&lt;codSeg&gt;&quot;" width="960"/>
+                <img src="scaled_25f0e52613342c59d032956039755f353b6ca90547cbcd04f9587da3dbed1099.png" title="And seleciono o numero de 'Parcelas' &quot;&lt;qtdParcelas&gt;&quot;" width="960"/>
+                <img src="269991e02c9b576dba474459f192fe3d73425300608822619bdc2637b1833916.png" title="And seleciono o numero de 'Parcelas' &quot;&lt;qtdParcelas&gt;&quot;" width="960"/>
+                <img src="a698260bcd8ceca1c19cb687ffb48a7c827d2d2ade7e12816f834abd53bcb896.png" title="Then clico na ckb 'Armazenar dados' &quot;&lt;armazenarDados&gt;&quot;" width="960"/>
+                <img src="ca349e8b0fbc21939ff0e6e6e97ca533c6791f8d4d99a5d786a93231b2a05d68.png" title="Then clico na ckb 'Armazenar dados' &quot;&lt;armazenarDados&gt;&quot;: <span class='success-color'>SUCCESS</span>" width="960"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.3.0</span>
+</div>
+</body>
+</html>
