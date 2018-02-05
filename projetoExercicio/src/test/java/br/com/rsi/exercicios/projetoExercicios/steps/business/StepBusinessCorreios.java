@@ -163,10 +163,10 @@ public class StepBusinessCorreios {
 			viewElement.click(page.getImgCaixa());
 		else
 			if(formato.equals("Envelope"))
-				viewElement.click(page.getImgCaixa());
+				viewElement.click(page.getImgEnvelope());
 		else
 			if(formato.equals("Rolo"))
-				viewElement.click(page.getImgCaixa());
+				viewElement.click(page.getImgRolo());
 		
 	}
 
