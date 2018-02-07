@@ -28,8 +28,8 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	@FindBy(xpath = "//*[@id=\"result-card\"]/div/div/div[2]/div/div/div/h3/a")
 	private List<WebElement> linksVerHotel;
 	
-	@FindBy(xpath = "//*[@id=\"wrap-page-head\"]/div[1]/span/i")
-	private List<WebElement> iEstrelas;
+	@FindBy(className = "page-title-text")
+	private WebElement lblTituloLocal;
 	
 	//CT02(Selecionar Passagem aerea)
 	@FindBy(css = "a[title=\"Passagens Aéreas\"]")
@@ -191,12 +191,8 @@ public class PageObjectClassHotelUrbano extends PageObject{
 		return linksVerHotel;
 	}
 
-	public List<WebElement> getIEstrelas() {
-		return iEstrelas;
-	}
-
-	public List<WebElement> getiEstrelas() {
-		return iEstrelas;
+	public WebElement getLblTituloLocal() {
+		return lblTituloLocal;
 	}
 
 	public WebElement getMenuAereos() {

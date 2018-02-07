@@ -65,9 +65,10 @@ public class StepBusinessHotelUrbano {
 		}
 	}
 	
-	public void verificarHotelClicado(int qtdEstrelas) {
-		viewElement.waitForElementIsPresent(10, page.getIEstrelas().get(0));
-		Assert.assertTrue(qtdEstrelas == page.getIEstrelas().size());	
+	public void verificarHotelClicado(String nomeHotel) {
+		viewElement.waitForElementIsPresent(10, page.getLblTituloLocal());
+		LOG.info("Hotel selecionado: "+page.getLblTituloLocal().getText());
+	    Assert.assertTrue(page.getLblTituloLocal().getText().equals(nomeHotel));	
 	}
 	
 	//CT02(Selecionar Passagem aerea)

@@ -59,6 +59,7 @@ public class StepBusinessNetshoes {
 		{
 			for(int i = 0; i < listaProdutos.size(); i++){
 				LOG.info("Item "+ (i+1) + ": " + listaProdutos.get(i).getText());
+				viewElement.mouseOver(listaProdutos.get(i));
 				if(listaProdutos.get(i).getText().contains(nomeProduto)) {
 					LOG.info("ACHOU O PRODUTO!");
 					achou = true;
@@ -161,6 +162,12 @@ public class StepBusinessNetshoes {
 		viewElement.waitForElementIsPresent(10, page.getLinkVoltarLoja());
 		viewElement.click(page.getLinkVoltarLoja());
 
+	}
+
+	public void verificarPaginaCorrespondente(String url) {
+		LOG.info("URL ATUAL: "+viewElement.getDriver().getCurrentUrl());
+		Assert.assertTrue(viewElement.getDriver().getCurrentUrl().equals(url));
+		
 	}
 	
 	

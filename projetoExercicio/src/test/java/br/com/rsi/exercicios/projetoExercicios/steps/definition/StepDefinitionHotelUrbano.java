@@ -48,8 +48,8 @@ public class StepDefinitionHotelUrbano {
 	}
 
 	@Then("^verifico o link do hotel clicado \"([^\"]*)\"$")
-	public void verifico_o_link_do_hotel_clicado(int qtdEstrelas) throws Throwable {
-	    stepB.verificarHotelClicado(qtdEstrelas);
+	public void verifico_o_link_do_hotel_clicado(String nomeHotel) throws Throwable {
+	    stepB.verificarHotelClicado(nomeHotel);
 	}
 	
 	

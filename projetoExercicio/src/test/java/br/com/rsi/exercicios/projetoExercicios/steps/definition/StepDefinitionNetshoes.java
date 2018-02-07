@@ -90,9 +90,14 @@ public class StepDefinitionNetshoes {
 	    stepB.clicarBtnLimparCarrinho();
 	}
 
-	@Then("^volto para para o inicio da loja$")
+	@When("^volto para para o inicio da loja$")
 	public void volto_para_para_o_inicio_da_loja() throws Throwable {
 	    stepB.clicarLinkVoltarLoja();
+	}
+	
+	@Then("^verifico se esta na pagina especifica \"([^\"]*)\"$")
+	public void verifico_se_esta_na_pagina_especifica(String url) throws Throwable {
+	    stepB.verificarPaginaCorrespondente(url);
 	}
 	
 }

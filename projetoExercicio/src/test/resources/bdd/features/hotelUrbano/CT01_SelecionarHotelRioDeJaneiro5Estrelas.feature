@@ -8,7 +8,7 @@ Scenario Outline: Selecionar hotel
   And clico no botao 'Buscar'
   And seleciono o nivel de 'Categoria' "<qtdEstrelas>"
   And clico no link 'Ver' "<nomeHotel>"
-  Then verifico o link do hotel clicado "<qtdEstrelas>"
+  Then verifico o link do hotel clicado "<nomeHotel>"
  
 Examples:
    | url                          | pesquisa        | nomeHotel                          |qtdEstrelas | posLink |

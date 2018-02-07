@@ -72,6 +72,7 @@ public class StepBusinessSouBarato {
 			
 			for(int i = aux; i < listaProdutos.size(); i++){
 				LOG.info("Item "+ (i+1) + ": " + listaProdutos.get(i).getText());
+				viewElement.mouseOver(listaProdutos.get(i));
 				if(listaProdutos.get(i).getText().contains(nomeProduto)) {
 					LOG.info("ACHOU O PRODUTO!");
 					achou = true;
