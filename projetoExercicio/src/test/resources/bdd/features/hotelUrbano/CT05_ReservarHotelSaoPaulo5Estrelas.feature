@@ -31,4 +31,6 @@ Scenario Outline: Reservar hotel
   
 Examples:
    | url                          | pesquisa        | qtdEstrelas | nomeHotel           | dataEntrada| dataSaida  | qtdQuartos | qtdAdultos | qtdCriancas | posDdl | nomeResp       | email             | cpf         | dtNasc    | tel         |numCartao        | titular          | validade   | codSeg | qtdParcelas | armazenarDados |
-   | https://www.hotelurbano.com/ | São Paulo       | 5           | Meliá Ibirapuera    | 29/03/2018 | 11/08/2018 | 2          | 1          | 0           | 1      | Sr. Responsavel| usuario@email.com | 18277552530 | 02/02/2000| 11999999999 |4556905972222574 | Usuario de Testes| 10/19      | 300    |    4        |   true         |
+   | https://www.hotelurbano.com/ | São Paulo       | 5           | Meliá Ibirapuera    | 28/03/2018 | 01/05/2018 | 2          | 1          | 0           | 1      | Sr. Responsavel| usuario@email.com | 18277552530 | 02/02/2000| 11999999999 |4556905972222574 | Usuario de Testes| 10/19      | 300    |    4        |   true         |
+   
+   

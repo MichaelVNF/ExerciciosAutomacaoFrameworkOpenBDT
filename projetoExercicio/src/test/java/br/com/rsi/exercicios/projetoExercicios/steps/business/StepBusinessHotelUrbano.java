@@ -204,6 +204,7 @@ public class StepBusinessHotelUrbano {
 		{
 			if(page.getLblMes().getText().contains(meses[i])) {
 				mesPopup = i + 1;
+				break;
 			}
 		}
 		
@@ -261,13 +262,23 @@ public class StepBusinessHotelUrbano {
 		//DEFINE DIA
 		page.waitFor(500).milliseconds();//espere carregar os td's dos dias
 		
+		
 		List<WebElement> listaDias = page.getListaDias();
+		int posPrimeiroDia = 0;
 		for(int i = 0; i < listaDias.size(); i++)
+		{
+			if(listaDias.get(i).getText().equals("1")) {
+				posPrimeiroDia = i;//o calendario exibe no mes atual dias do mes anterior e/ou sucessor, p/ correção devemos partir do 1 dia do mes atual
+				break;
+			}
+		}
+		
+		for(int i = posPrimeiroDia; i < listaDias.size(); i++)
 		{
 			if(listaDias.get(i).getText().equals(""+dia))
 			{
 				listaDias.get(i).click();
-				i = listaDias.size();
+				break;
 			}
 		}
 		
