@@ -187,8 +187,115 @@ public class StepBusinessHotelUrbano {
 	}
 	
 	
+//	public void selecionarData(String data) throws InterruptedException{
+//		
+//		String dt[] = data.split("/");
+//		int dia = Integer.parseInt(dt[0]);
+//		int mes = Integer.parseInt(dt[1]);
+//		int ano = Integer.parseInt(dt[2]);
+//		
+//		int anoPopup = Integer.parseInt(page.getLblAno().getText());
+//
+//		//converte mes em numero
+//		String meses[] = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
+//		int mesPopup = 0;
+//		
+//		for(int i = 0; i < meses.length; i++)
+//		{
+//			if(page.getLblMes().getText().contains(meses[i])) {
+//				mesPopup = i + 1;
+//				break;
+//			}
+//		}
+//		
+//		//DEFINE ANO
+//		if(ano > anoPopup)
+//		{
+//			int difAno = (ano - anoPopup) - 1;//diferenca entre os anos, desconta 1 ano ja q ele pod não ser 1 'ano' de fato(ou seja, não conter os 12 meses)
+//			
+//			int limite = 12 * difAno;//qtd de vezes q os meses serao pulados
+//			limite = limite + (12-mesPopup);//para o ultimo pular a qtd d vezes subtraindo os meses(convertidos em nums) q encontravam-se no calendario
+//			limite = limite + mes;//limite incrementa o mes de entrada 
+//			
+//			for(int i = 1; i <= limite; i++ )
+//			{
+//				viewElement.click(page.getSpanNext());
+//				page.waitFor(500).milliseconds();
+//			}
+//		}
+//		else
+//			if(ano < anoPopup)
+//			{
+//				int difAno = (anoPopup - ano) - 1;//diferenca entre os anos
+//				
+//				int limite = 12 * difAno;//qtd de vezes q os meses serao pulados
+//				limite = limite + (12-mes);//para o ultimo pular a qtd d vezes subtraindo os meses(convertidos em nums) q foram fornecidos na entrada
+//				limite = limite + (mesPopup);
+//				
+//				for(int i = 1; i <= limite; i++ )
+//				{	
+//					viewElement.click(page.getSpanPrevious());
+//					page.waitFor(500).milliseconds();
+//				}
+//			}
+//		else //DEFINE MES(PARA O MSM ANO QUE SE ENCONTRA CALENDARIO E ENTRADA: ano == anoPopup)
+//		{
+//			if(mes > mesPopup)
+//			{
+//				for(int i = 1; i <= (mes-mesPopup); i++ )
+//				{
+//					viewElement.click(page.getSpanNext());
+//					page.waitFor(500).milliseconds();
+//				}
+//			}
+//			else
+//				if(mes < mesPopup)
+//				{	
+//					for(int i = 1; i <= (mesPopup-mes); i++ )
+//					{
+//						viewElement.click(page.getSpanPrevious());
+//						page.waitFor(500).milliseconds(); 
+//					}
+//				}		
+//		}
+//		
+//		//DEFINE DIA
+//		page.waitFor(500).milliseconds();//espere carregar os td's dos dias
+//		
+//		
+//		List<WebElement> listaDias = page.getListaDias();
+//		int posPrimeiroDia = 0;
+//		for(int i = 0; i < listaDias.size(); i++)
+//		{
+//			if(listaDias.get(i).getText().equals("1")) {
+//				posPrimeiroDia = i;//o calendario exibe no mes atual dias do mes anterior e/ou sucessor, p/ correção devemos partir do 1 dia do mes atual
+//				break;
+//			}
+//		}
+//		
+//		for(int i = posPrimeiroDia; i < listaDias.size(); i++)
+//		{
+//			if(listaDias.get(i).getText().equals(""+dia))
+//			{
+//				listaDias.get(i).click();
+//				break;
+//			}
+//		}
+//		
+//	}
+	
+	public int converteMesTextoEmMesNumerico(String meses[], String mes) {
+		for(int i = 0; i < meses.length; i++)
+		{
+			if(mes.equals(meses[i])) {
+				return i + 1;
+			}
+		}
+		return 0;
+	}
+
 	public void selecionarData(String data) throws InterruptedException{
-		
+			
 		String dt[] = data.split("/");
 		int dia = Integer.parseInt(dt[0]);
 		int mes = Integer.parseInt(dt[1]);
@@ -196,88 +303,28 @@ public class StepBusinessHotelUrbano {
 		
 		int anoPopup = Integer.parseInt(page.getLblAno().getText());
 
-		//converte mes em numero
+		//nomes dos meses p/ converter mes em numero
 		String meses[] = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
-		int mesPopup = 0;
-		
-		for(int i = 0; i < meses.length; i++)
-		{
-			if(page.getLblMes().getText().contains(meses[i])) {
-				mesPopup = i + 1;
-				break;
-			}
-		}
-		
-		//DEFINE ANO
-		if(ano > anoPopup)
-		{
-			int difAno = (ano - anoPopup) - 1;//diferenca entre os anos, desconta 1 ano ja q ele pod não ser 1 'ano' de fato(ou seja, não conter os 12 meses)
-			
-			int limite = 12 * difAno;//qtd de vezes q os meses serao pulados
-			limite = limite + (12-mesPopup);//para o ultimo pular a qtd d vezes subtraindo os meses(convertidos em nums) q encontravam-se no calendario
-			limite = limite + mes;//limite incrementa o mes de entrada 
-			
-			for(int i = 1; i <= limite; i++ )
-			{
-				viewElement.click(page.getSpanNext());
-				page.waitFor(500).milliseconds();
-			}
-		}
-		else
-			if(ano < anoPopup)
-			{
-				int difAno = (anoPopup - ano) - 1;//diferenca entre os anos
-				
-				int limite = 12 * difAno;//qtd de vezes q os meses serao pulados
-				limite = limite + (12-mes);//para o ultimo pular a qtd d vezes subtraindo os meses(convertidos em nums) q foram fornecidos na entrada
-				limite = limite + (mesPopup);
-				
-				for(int i = 1; i <= limite; i++ )
-				{	
-					viewElement.click(page.getSpanPrevious());
-					page.waitFor(500).milliseconds();
-				}
-			}
-		else //DEFINE MES(PARA O MSM ANO QUE SE ENCONTRA CALENDARIO E ENTRADA: ano == anoPopup)
-		{
-			if(mes > mesPopup)
-			{
-				for(int i = 1; i <= (mes-mesPopup); i++ )
-				{
-					viewElement.click(page.getSpanNext());
-					page.waitFor(500).milliseconds();
-				}
-			}
-			else
-				if(mes < mesPopup)
-				{	
-					for(int i = 1; i <= (mesPopup-mes); i++ )
-					{
-						viewElement.click(page.getSpanPrevious());
-						page.waitFor(500).milliseconds(); 
-					}
-				}		
+	 
+		//DEFINE MES E ANO
+		while(ano != Integer.parseInt(page.getLblAno().getText()) || mes != converteMesTextoEmMesNumerico(meses, page.getLblMes().getText())) {
+			viewElement.click(page.getSpanNext());	
 		}
 		
 		//DEFINE DIA
-		page.waitFor(500).milliseconds();//espere carregar os td's dos dias
-		
-		
-		List<WebElement> listaDias = page.getListaDias();
 		int posPrimeiroDia = 0;
-		for(int i = 0; i < listaDias.size(); i++)
+		for(int i = 0; i < page.getListaDias().size(); i++)
 		{
-			if(listaDias.get(i).getText().equals("1")) {
+			if(page.getListaDias().get(i).getText().equals("1")) {
 				posPrimeiroDia = i;//o calendario exibe no mes atual dias do mes anterior e/ou sucessor, p/ correção devemos partir do 1 dia do mes atual
 				break;
 			}
 		}
 		
-		for(int i = posPrimeiroDia; i < listaDias.size(); i++)
+		for(int i = posPrimeiroDia; i < page.getListaDias().size(); i++)
 		{
-			if(listaDias.get(i).getText().equals(""+dia))
-			{
-				listaDias.get(i).click();
+			if(page.getListaDias().get(i).getText().equals(""+dia)) {
+				page.getListaDias().get(i).click();
 				break;
 			}
 		}
