@@ -309,6 +309,7 @@ public class StepBusinessHotelUrbano {
 		//DEFINE MES E ANO
 		while(ano != Integer.parseInt(page.getLblAno().getText()) || mes != converteMesTextoEmMesNumerico(meses, page.getLblMes().getText())) {
 			viewElement.click(page.getSpanNext());	
+			page.waitFor(500).milliseconds();
 		}
 		
 		//DEFINE DIA
