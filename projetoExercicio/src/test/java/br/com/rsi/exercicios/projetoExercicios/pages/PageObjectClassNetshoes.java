@@ -11,48 +11,42 @@ public class PageObjectClassNetshoes extends PageObject{
 
 
 	//CT01 e CT02 - (Adicionar item ao carrinho) 
-	@FindBy(id = "search")
+	@FindBy(id = "search-input")
 	private WebElement campoBusca;
 	
-	@FindBy(xpath = "//*[@id=\"input-search-bt\"]/span")
+	@FindBy(css = "button[title='Buscar']")
 	private WebElement btnBuscar;
 	
-	@FindBy(css = "div[itemprop='name']")
+	@FindBy(css = "span[itemprop='name']")
 	private List<WebElement> divProdutos;
 	
 	private By btnProximo = By.partialLinkText("Próxim");
 	
-	@FindBy(id = "border-bottom-color-text")
+	@FindBy(xpath = "//*[@id=\"buy-box\"]/section/div/ul/li/a")
 	private List<WebElement> linksCores;
 
 	@FindBy(name = "quantity")
 	private List<WebElement> listaCarrinho;
 	
-	@FindBy(id = "buy-now-button")
+	@FindBy(id = "buy-button-now")
 	private WebElement btnComprar;
 	
 	//CT03(Escolher um calçado na secao outlet com valor abaixo de 150 reais)
-	@FindBy(xpath = "/html/body/div[3]/div[2]/div[1]/div[3]/aside/div/div[2]/ul/li[12]/a")
-	private WebElement linkTenisOutlet;
-	
-	@FindBy(name = "price.pricelistLow")
+	@FindBy(xpath = "//*[@id=\"aggregate-salePrice\"]/div/a")
 	private List<WebElement> ckbsPrecos;
 	
 	//CT04(Adicionar item ao carrinho e calcular frete)
-	@FindBy(name = "cep-first-input")
-	private WebElement cpfPrefixo;
+	@FindBy(name = "shipping[zipCode]")
+	private WebElement txtCep;
 	
-	@FindBy(name = "cep-second-input")
-	private WebElement cpfSufixo;
-	
-	@FindBy(xpath = "/html/body/div[3]/div[2]/table/tfoot/tr[1]/td[1]/div/form/div/div/div[4]/button")
+	@FindBy(className = "calculate-shipping__button")
 	private WebElement btnCalcFrete;
 	
 	//CT05(Adicionar item no carrinho, Limpar Carrinho e voltar para loja)
-	@FindBy(xpath = "/html/body/div[3]/div[2]/table/tfoot/tr[5]/td[1]/form/button")
-	private WebElement btnLimparCarrinho;
+	@FindBy(linkText = "Limpar Carrinho")
+	private WebElement linkLimparCarrinho;
 	
-	@FindBy(xpath = "/html/body/div[3]/div[2]/div[3]/div[1]/div/a")
+	@FindBy(id = "back-to-store")
 	private WebElement linkVoltarLoja;
 	
 	public WebElement getCampoBusca() {
@@ -75,12 +69,8 @@ public class PageObjectClassNetshoes extends PageObject{
 		return listaCarrinho;
 	}
 
-	public WebElement getCpfPrefixo() {
-		return cpfPrefixo;
-	}
-
-	public WebElement getCpfSufixo() {
-		return cpfSufixo;
+	public WebElement getTxtCep() {
+		return txtCep;
 	}
 
 	public WebElement getBtnCalcFrete() {
@@ -91,16 +81,12 @@ public class PageObjectClassNetshoes extends PageObject{
 		return divProdutos;
 	}
 
-	public WebElement getBtnLimparCarrinho() {
-		return btnLimparCarrinho;
+	public WebElement getLinkLimparCarrinho() {
+		return linkLimparCarrinho;
 	}
 
 	public WebElement getLinkVoltarLoja() {
 		return linkVoltarLoja;
-	}
-
-	public WebElement getLinkTenisOutlet() {
-		return linkTenisOutlet;
 	}
 
 	public List<WebElement> getCkbsPrecos() {

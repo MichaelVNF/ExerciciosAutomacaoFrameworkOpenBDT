@@ -58,9 +58,9 @@ public class StepDefinitionNetshoes {
 	}
 	
 	//CT03(Escolher um calçado na secao outlet com valor abaixo de 150 reais)
-	@When("^clico no link 'Tenis' em 'Outlet'$")
-	public void clico_no_link_Tenis_em_Outlet() throws Throwable {
-	    stepB.clicarLinkTenisOutlet();
+	@When("^clico no link em 'Outlet' \"([^\"]*)\"$")
+	public void clico_no_link_calcados_masculinos_em_Outlet(String link) throws Throwable {
+	    stepB.clicarLinkOutlet(link);
 	}
 
 	@When("^clico na ckb 'Preco' \"([^\"]*)\"$")
@@ -69,9 +69,9 @@ public class StepDefinitionNetshoes {
 	}
 	
 	//CT04(Adicionar item ao carrinho e calcular frete)
-	@When("^preencho os campos do 'CPF' \"([^\"]*)\"$")
-	public void preencho_os_campos_do_CPF(String cpf) throws Throwable {
-	    stepB.preencherCamposCpf(cpf);
+	@When("^preencho o campos do 'CEP' \"([^\"]*)\"$")
+	public void preencho_o_campos_do_CEP(String cep) throws Throwable {
+	    stepB.preencherCampoCep(cep);
 	}
 
 	@When("^clico no botao 'Calcular Frete'$")
@@ -85,13 +85,13 @@ public class StepDefinitionNetshoes {
 	}
 
 	//CT05(Adicionar item no carrinho, Limpar Carrinho e voltar para loja)
-	@When("^limpo o carrinho$")
-	public void limpo_o_carrinho() throws Throwable {
-	    stepB.clicarBtnLimparCarrinho();
+	@When("^clico no link 'limpar carrinho'$")
+	public void clico_no_link_limpar_carrinho() throws Throwable {
+	    stepB.clicarLinkLimparCarrinho();
 	}
 
-	@When("^volto para para o inicio da loja$")
-	public void volto_para_para_o_inicio_da_loja() throws Throwable {
+	@When("^clico no link 'voltar para a loja'$")
+	public void clico_no_link_voltar_para_a_loja() throws Throwable {
 	    stepB.clicarLinkVoltarLoja();
 	}
 	

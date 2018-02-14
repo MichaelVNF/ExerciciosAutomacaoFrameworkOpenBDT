@@ -97,8 +97,9 @@ public class StepBusinessNetshoes {
 		page.waitFor(1).seconds();
 	}
 
-	public void clicarRdbTamanho(String numTam) {
-		viewElement.findElement(By.cssSelector("span[title=\""+ numTam +"\"]")).click();
+	public void clicarRdbTamanho(String tam) {
+		
+		viewElement.findElement(By.cssSelector("a[data-label='"+ tam +"']")).click();
 		page.waitFor(1).seconds();
 	}
 	
@@ -117,14 +118,14 @@ public class StepBusinessNetshoes {
 	}
 	
 	//CT03(Escolher um calçado na secao outlet com valor abaixo de 150 reais)
-	public void clicarLinkTenisOutlet() {
-		viewElement.waitForElementIsPresent(10, page.getLinkTenisOutlet());
-		viewElement.click(page.getLinkTenisOutlet());
+	public void clicarLinkOutlet(String link) {
+		viewElement.waitForElementIsPresent(10, viewElement.findElement(By.linkText(link)));
+		viewElement.findElement(By.linkText(link)).click();
 	}
 	
 	public void clicarCkbsPrecos(double valor) {
 		
-		double precos[] = {50, 100, 200, 300, 500, 1000};
+		double precos[] = {100, 200, 300, 500, 1000};
 		
 		for(int i = 0; i < precos.length; i++) {
 			if(valor >= precos[i]){
@@ -136,10 +137,9 @@ public class StepBusinessNetshoes {
 	
 	
 	//CT04(Adicionar item ao carrinho e calcular frete)
-	public void preencherCamposCpf(String cpf) {
-		String cpfPartes[] = cpf.split("-");
-		viewElement.sendText(page.getCpfPrefixo(), cpfPartes[0]);
-		viewElement.sendText(page.getCpfSufixo(), cpfPartes[1]);
+	public void preencherCampoCep(String cep) {
+		viewElement.sendText(page.getTxtCep(), cep);
+		
 	}
 	
 	public void clicarBtnCalcularFrete() {
@@ -149,12 +149,12 @@ public class StepBusinessNetshoes {
 
 	public void verificarCalculoFrete() {
 		
-		Assert.assertTrue(viewElement.findElement(By.xpath("/html/body/div[3]/div[2]/table/tfoot/tr[1]/td[2]/strong")).getText().contains("FRETE"));
+		Assert.assertTrue(viewElement.findElement(By.xpath("//tr[@class='shipping cart__table__row']/td[2]/p")).getText().contains("FRETE"));
 	}
 
 	//CT05(Adicionar item no carrinho, Limpar Carrinho e voltar para loja)
-	public void clicarBtnLimparCarrinho() {
-		viewElement.click(page.getBtnLimparCarrinho());
+	public void clicarLinkLimparCarrinho() {
+		viewElement.click(page.getLinkLimparCarrinho());
 		
 	}
 

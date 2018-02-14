@@ -9,12 +9,12 @@ Scenario Outline: Adicionar Item
   And clico no rdb 'color' "<posCor>"
   And clico no botao 'Comprar'
   And verifico o produto no carrinho "<qtdProdComprados>"
-  And preencho os campos do 'CPF' "<cpf>"
+  And preencho o campos do 'CEP' "<cep>"
   And clico no botao 'Calcular Frete'
   Then verifico o calculo do frete
   
 Examples:
-   | url                         | pesqProduto				| nomeProduto                       | posCor | qtdProdComprados | cpf       |
+   | url                         | pesqProduto				| nomeProduto                       | posCor | qtdProdComprados | cep       |
    | http://www.netshoes.com.br/ | Bola de futebol de campo | Bola Futebol Campo Topper Cup III | 1      | 1                | 06020-000 |
 
 

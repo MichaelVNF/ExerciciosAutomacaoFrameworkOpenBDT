@@ -13,6 +13,6 @@ Scenario Outline: Adicionar Tenis
 
 Examples:
    | url                         | pesqProduto | nomeProduto                      | posCor| tamanhoTenis | qtdProdComprados |
-   | http://www.netshoes.com.br/ |   Tênis     | Tênis Fila Pulse 2.0 Masculino   | 1     | 38           | 1                |
+   | http://www.netshoes.com.br/ |   Tênis     | Tênis Nike Flex Bijoux Feminino  | 1     | 34           | 1                |
 
 
