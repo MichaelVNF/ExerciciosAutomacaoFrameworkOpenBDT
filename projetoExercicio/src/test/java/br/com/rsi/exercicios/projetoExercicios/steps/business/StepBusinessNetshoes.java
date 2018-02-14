@@ -108,7 +108,7 @@ public class StepBusinessNetshoes {
 	}
 	
 	public void verificarProdutoNoCarrinho(int qtd) {
-		viewElement.waitForElementIsPresent(10, page.getListaCarrinho().get(0));//espera aparecer ao meno o 1º elemento
+		viewElement.waitForElementIsPresent(10, page.getListaCarrinho().get(0));//espera aparecer ao menos o 1º elemento
 		
 		int total = 0;
 		for(int i = 0; i < page.getListaCarrinho().size(); i++)
