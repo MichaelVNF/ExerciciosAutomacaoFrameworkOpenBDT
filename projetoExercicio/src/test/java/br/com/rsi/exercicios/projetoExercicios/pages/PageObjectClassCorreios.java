@@ -62,7 +62,7 @@ public class PageObjectClassCorreios extends PageObject{
 	
 	@FindBy(className = "next")
 	private WebElement linkNext;
-	//-----------------------------
+	//----------------------------
 	
 	@FindBy(name = "peso")
 	private WebElement ddlPeso;
