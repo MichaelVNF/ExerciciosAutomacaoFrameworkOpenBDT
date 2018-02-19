@@ -11,6 +11,5 @@ Scenario Outline: Adicionar Iphone
   Then verifico os produtos na sacola "<qtdProdComprados>"
 
 Examples:
-   | url                          | pesqProduto |nomeProduto                 | anosGarantia | qtdProdComprados |
-   | http://www.soubarato.com.br/ | Iphone      |USADO - Iphone 6 16Gb Prata | 1            | 1                | 
-
+   | url                          | pesqProduto | nomeProduto    | anosGarantia | qtdProdComprados |
+   | http://www.soubarato.com.br/ | Iphone      | Iphone 6       | 1            | 1                | 

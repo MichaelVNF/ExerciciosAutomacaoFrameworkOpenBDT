@@ -14,7 +14,7 @@ Scenario Outline: Escolher Calcado
   Then verifico o produto no carrinho "<qtdProdComprados>"
 
 Examples:
-   | url                         | pesqProduto | linkOutlet          |precoAte | nomeProduto          | posCor| tamanhoTenis | qtdProdComprados |
-   | http://www.netshoes.com.br/ |   Outlet    | Calçados Masculinos |  150    | Tênis Kappa Impact   | 2     | 38           | 1                |
+   | url                         | pesqProduto | linkOutlet          |precoAte | nomeProduto          | posCor | tamanhoTenis | qtdProdComprados |
+   | http://www.netshoes.com.br/ |   Outlet    | Calçados Masculinos |  150    | Tênis Kappa Impact   | 4      | 38           | 1                |
 
 

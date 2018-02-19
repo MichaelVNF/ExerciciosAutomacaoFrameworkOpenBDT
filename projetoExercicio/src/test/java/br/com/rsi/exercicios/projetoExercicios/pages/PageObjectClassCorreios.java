@@ -13,17 +13,17 @@ public class PageObjectClassCorreios extends PageObject{
 	@FindBy(id = "acesso-busca")
 	private WebElement txtCepOuEndereco;
 	
-	@FindBy(xpath = "//*[@id=\"busca-acesso-rapido\"]/form/input[2]")
+	@FindBy(xpath = "//input[@class='acesso-busca-submit' and position()=2]")
 	private WebElement btnPesq;
-
-	@FindBy(xpath = "/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/table/tbody/tr/td")
+	
+	@FindBy(xpath = "//table[@class='tmptabela']/tbody/tr/td")
 	private List<WebElement> tblEnderecos;
 	
-	@FindBy(xpath = "/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/div[5]/a")
+	@FindBy(xpath = "//a[text()='[ Próxima ]']")
 	private WebElement linkProxima;
 	
 	//CT3(Calcular Preços e prazos) e CT5(Calcular Preços e prazos)
-	@FindBy(xpath = "//*[@id=\"content-principais-servicos\"]/ul/li[3]/a")
+	@FindBy(xpath = "//a[@title='Preços e prazos']")
 	private WebElement linkPrecosPrazos;
 	
 	@FindBy(id = "data")
@@ -53,14 +53,14 @@ public class PageObjectClassCorreios extends PageObject{
 	@FindBy(name = "embalagem1")
 	private WebElement ddlEmbalagem;
 	
-	//para embalagem dos correios
-	private By xpathBtnsSelecionarEmbalagem = By.xpath("//*[@id='spanTipoEmbalagem']/div/div[2]/div/div/div/p/button");
+	//para embalagem dos correios                       
+	private By xpathBtnsSelecionarEmbalagem = By.xpath("//button[text()='Selecionar esta']");
 	
 	public By getXpathBtnsSelecionarEmbalagem() {
 		return xpathBtnsSelecionarEmbalagem;
 	}
-
-	@FindBy(xpath = "//*[@id=\"spanTipoEmbalagem\"]/div/div[1]/a[2]")
+	
+	@FindBy(className = "next")
 	private WebElement linkNext;
 	//-----------------------------
 	
@@ -82,13 +82,10 @@ public class PageObjectClassCorreios extends PageObject{
 	@FindBy(name = "Calcular")
 	private WebElement btnEnviar;
 	
-	@FindBy(xpath = "/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/table/tfoot/tr/th")
+	@FindBy(xpath = "//tr[@class='destaque' and position()=1]/th")
 	private WebElement thValorTotal;
 	
 	//CT4(Buscar Agencia)
-	@FindBy(xpath = "//*[@id=\"content-principais-servicos\"]/ul/li[4]/a")
-	private WebElement linkAgencias;
-	
 	@FindBy(id = "tipoBusca")
 	private List<WebElement> rdbTipoBusca;
 	
@@ -101,10 +98,12 @@ public class PageObjectClassCorreios extends PageObject{
 	@FindBy(name = "bairroAgencia")
 	private WebElement ddlBairroAgencia;
 	
-	@FindBy(xpath = "//*[@id=\"tableNomeAgencia\"]/tbody/tr/td/a")
+	@FindBy(xpath = "//a[@title='Rede de Atendimento']")
+	private WebElement linkAgencias;
+
+	
+	@FindBy(xpath = "//*[@id='tableNomeAgencia']")
 	private List<WebElement> tblAgencias;
-	
-	
 	
 	public WebElement getTxtCepOuEndereco() {
 		return txtCepOuEndereco;

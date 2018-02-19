@@ -56,6 +56,8 @@ public class StepBusinessHotelUrbano {
 		
 		for(int i = 0; i < page.getLinksVerHotel().size(); i++) {
 			LOG.info("Item " + (i+1)+ ": " + page.getLinksVerHotel().get(i).getText());
+			viewElement.mouseOver(page.getLinksVerHotel().get(i));
+			
 			if(page.getLinksVerHotel().get(i).getText().contains(nome))
 			{
 				viewElement.waitForElementIsPresent(10, page.getLinksVerHotel().get(i));
@@ -79,17 +81,17 @@ public class StepBusinessHotelUrbano {
 	public void preencherCampoOrigem(String origem) {
 		viewElement.waitForElementIsPresent(10, page.getTxtOrigem());
 		viewElement.click(page.getTxtOrigem());
-		viewElement.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[3]/div/div/div/input")).sendKeys(origem);
+		viewElement.findElement(By.xpath("//input[@placeholder='Cidade ou aeroporto de origem']")).sendKeys(origem);
 		page.waitFor(2000).milliseconds();
-		viewElement.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[3]/div/div/div/input")).sendKeys(Keys.ENTER);
+		viewElement.findElement(By.xpath("//input[@placeholder='Cidade ou aeroporto de origem']")).sendKeys(Keys.ENTER);
 	}
 	
 	public void preencherCampoDestino(String destino) {
 		viewElement.waitForElementIsPresent(10, page.getTxtDestino());
 		viewElement.click(page.getTxtDestino());
-		viewElement.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[4]/div/div/div/input")).sendKeys(destino);
+		viewElement.findElement(By.xpath("//input[@placeholder='Cidade ou aeroporto de destino']")).sendKeys(destino);
 		page.waitFor(2000).milliseconds();
-		viewElement.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[4]/div/div/div/input")).sendKeys(Keys.ENTER);
+		viewElement.findElement(By.xpath("//input[@placeholder='Cidade ou aeroporto de destino']")).sendKeys(Keys.ENTER);
 	
 	}
 	
@@ -104,8 +106,8 @@ public class StepBusinessHotelUrbano {
 	}
 	
 	public void verificarResultadosBuscaVoo() {
-		viewElement.waitForElementIsPresent(30, viewElement.findElement(By.xpath("//*[@id=\"main-container\"]/div/div/div[3]/div/div[2]/section[1]/div[1]/div[2]/div/div[2]/div/div/div/span")));
-		Assert.assertTrue(page.containsAllText("Selecionar"));
+		viewElement.waitForElementIsPresent(30, viewElement.findElement(By.xpath("//button[@class='price-button js-raise-booking']")));
+		Assert.assertTrue(viewElement.findElement(By.xpath("//button[@class='price-button js-raise-booking']")).getText().contains("Selecionar"));
 	}
 	
 	
@@ -115,7 +117,7 @@ public class StepBusinessHotelUrbano {
 	}
 	
 	public void clicarSugestaoPesq(int pos) {
-		viewElement.findElement(By.xpath("//*[@id=\"hu-hotels-autocomplete-field\"]/div/ul/li["+(pos+3)+"]")).click();
+		viewElement.findElement(By.xpath("//ul[@class='autocomplete-results']/li["+(pos+3)+"]")).click();
 	}
 	
 	
@@ -186,104 +188,6 @@ public class StepBusinessHotelUrbano {
 
 	}
 	
-	
-//	public void selecionarData(String data) throws InterruptedException{
-//		
-//		String dt[] = data.split("/");
-//		int dia = Integer.parseInt(dt[0]);
-//		int mes = Integer.parseInt(dt[1]);
-//		int ano = Integer.parseInt(dt[2]);
-//		
-//		int anoPopup = Integer.parseInt(page.getLblAno().getText());
-//
-//		//converte mes em numero
-//		String meses[] = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
-//		int mesPopup = 0;
-//		
-//		for(int i = 0; i < meses.length; i++)
-//		{
-//			if(page.getLblMes().getText().contains(meses[i])) {
-//				mesPopup = i + 1;
-//				break;
-//			}
-//		}
-//		
-//		//DEFINE ANO
-//		if(ano > anoPopup)
-//		{
-//			int difAno = (ano - anoPopup) - 1;//diferenca entre os anos, desconta 1 ano ja q ele pod não ser 1 'ano' de fato(ou seja, não conter os 12 meses)
-//			
-//			int limite = 12 * difAno;//qtd de vezes q os meses serao pulados
-//			limite = limite + (12-mesPopup);//para o ultimo pular a qtd d vezes subtraindo os meses(convertidos em nums) q encontravam-se no calendario
-//			limite = limite + mes;//limite incrementa o mes de entrada 
-//			
-//			for(int i = 1; i <= limite; i++ )
-//			{
-//				viewElement.click(page.getSpanNext());
-//				page.waitFor(500).milliseconds();
-//			}
-//		}
-//		else
-//			if(ano < anoPopup)
-//			{
-//				int difAno = (anoPopup - ano) - 1;//diferenca entre os anos
-//				
-//				int limite = 12 * difAno;//qtd de vezes q os meses serao pulados
-//				limite = limite + (12-mes);//para o ultimo pular a qtd d vezes subtraindo os meses(convertidos em nums) q foram fornecidos na entrada
-//				limite = limite + (mesPopup);
-//				
-//				for(int i = 1; i <= limite; i++ )
-//				{	
-//					viewElement.click(page.getSpanPrevious());
-//					page.waitFor(500).milliseconds();
-//				}
-//			}
-//		else //DEFINE MES(PARA O MSM ANO QUE SE ENCONTRA CALENDARIO E ENTRADA: ano == anoPopup)
-//		{
-//			if(mes > mesPopup)
-//			{
-//				for(int i = 1; i <= (mes-mesPopup); i++ )
-//				{
-//					viewElement.click(page.getSpanNext());
-//					page.waitFor(500).milliseconds();
-//				}
-//			}
-//			else
-//				if(mes < mesPopup)
-//				{	
-//					for(int i = 1; i <= (mesPopup-mes); i++ )
-//					{
-//						viewElement.click(page.getSpanPrevious());
-//						page.waitFor(500).milliseconds(); 
-//					}
-//				}		
-//		}
-//		
-//		//DEFINE DIA
-//		page.waitFor(500).milliseconds();//espere carregar os td's dos dias
-//		
-//		
-//		List<WebElement> listaDias = page.getListaDias();
-//		int posPrimeiroDia = 0;
-//		for(int i = 0; i < listaDias.size(); i++)
-//		{
-//			if(listaDias.get(i).getText().equals("1")) {
-//				posPrimeiroDia = i;//o calendario exibe no mes atual dias do mes anterior e/ou sucessor, p/ correção devemos partir do 1 dia do mes atual
-//				break;
-//			}
-//		}
-//		
-//		for(int i = posPrimeiroDia; i < listaDias.size(); i++)
-//		{
-//			if(listaDias.get(i).getText().equals(""+dia))
-//			{
-//				listaDias.get(i).click();
-//				break;
-//			}
-//		}
-//		
-//	}
-	
 	public int converteMesTextoEmMesNumerico(String meses[], String mes) {
 		for(int i = 0; i < meses.length; i++)
 		{
@@ -301,8 +205,6 @@ public class StepBusinessHotelUrbano {
 		int mes = Integer.parseInt(dt[1]);
 		int ano = Integer.parseInt(dt[2]);
 		
-		int anoPopup = Integer.parseInt(page.getLblAno().getText());
-
 		//nomes dos meses p/ converter mes em numero
 		String meses[] = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
 	 
@@ -379,12 +281,15 @@ public class StepBusinessHotelUrbano {
 			
 		trajeto = trajeto.toUpperCase();
 		boolean achou = false;
-		List<WebElement> listaTrajetos = viewElement.findElements(By.xpath("//*[@id=\"reactRoot\"]/div/div[3]/div[2]/div/div/div/div[2]/div/a/div[2]/div[1]/strong"));
+		viewElement.waitForElementIsPresent(10, page.getListaTrajetos().get(0));
 		
-		for(int i = 0; i < listaTrajetos.size(); i++)
+		for(int i = 0; i < page.getListaTrajetos().size(); i++)
 		{	
-			if(listaTrajetos.get(i).getText().contains(trajeto)) {
+			viewElement.mouseOver(page.getListaTrajetos().get(i));
+			LOG.info("\nTrajeto "+ (i+1) +" : " + page.getListaTrajetos().get(i).getText());
+			if(page.getListaTrajetos().get(i).getText().contains(trajeto)) {
 				achou = true;
+				LOG.info("\nAchou o Trajeto!");
 				break;
 			}
 		}

@@ -54,8 +54,9 @@ public class StepBusinessNetshoes {
 		boolean achou = false;
 		boolean linkProxAtivado = true;
 		boolean continua = true;
+		int limite = 0;
 		
-		while(continua) 
+		while(continua && limite != 3) 
 		{
 			for(int i = 0; i < listaProdutos.size(); i++){
 				LOG.info("Item "+ (i+1) + ": " + listaProdutos.get(i).getText());
@@ -87,7 +88,8 @@ public class StepBusinessNetshoes {
 			else{
 				continua = false;
 			}
-		}
+			limite++;
+		}	
 		Assert.assertTrue(achou);
 	}
 		

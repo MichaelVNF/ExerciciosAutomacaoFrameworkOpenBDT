@@ -16,5 +16,5 @@ Examples:
 # As Variaveis logradouro, bairro e localidade são complementares à pesquisa. Representa o endereco unico e exato a partir do objetivo da pesquisa
 
 #Examples:
-#   | url                                     | pesqEndereco       | logradouro      | bairro        | localidade   | cepEsperado |
-#   | http://www.correios.com.br/para-voce    |   Rua Covas        | Rua Mário Covas | Cidade Kemel  | São Paulo/SP |  08130-060  |
+#  | url                                     | pesqEndereco       | logradouro      | bairro        | localidade   | cepEsperado |
+#  | http://www.correios.com.br/para-voce    |   Rua Covas        | Rua Mário Covas | Cidade Kemel  | São Paulo/SP |  08130-060  |

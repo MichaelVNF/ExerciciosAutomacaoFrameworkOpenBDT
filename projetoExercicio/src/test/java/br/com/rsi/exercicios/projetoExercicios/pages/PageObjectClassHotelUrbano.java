@@ -10,54 +10,51 @@ import net.serenitybdd.core.pages.PageObject;
 public class PageObjectClassHotelUrbano extends PageObject{
 
 	//CT01(Selecionar hotel) 
-	@FindBy(css = "a[title=\"Reserva de Hotéis\"]")
+	@FindBy(css = "a[title='Reserva de Hotéis']")
 	private WebElement menuHoteis;
 
 	@FindBy(id = "huSearchComponentAutocomplete")
 	private WebElement txtBarraPesquisa;
 	
-	@FindBy(xpath = "//*[@id=\"get-intent-midia\"]/div/form/div[2]/div[2]/button")
+	@FindBy(xpath = "//button[@data-event-action='Click_buscar']")
 	private WebElement btnBuscar;
 	
-	private By ckbsCategoria = By.xpath("//*[@id='filters']/aside/div[2]/div[2]/div[2]/label");
+	private By ckbsCategoria = By.xpath("//label[@data-event-action='Click_filtro_categoria']");
 	
 	public By getCkbsCategoria() {
 		return ckbsCategoria;
 	}
 	
-	@FindBy(xpath = "//*[@id=\"result-card\"]/div/div/div[2]/div/div/div/h3/a")
+	@FindBy(xpath = "//h3[@class='component-card_title_h']/a")
 	private List<WebElement> linksVerHotel;
 	
 	@FindBy(className = "page-title-text")
 	private WebElement lblTituloLocal;
 	
 	//CT02(Selecionar Passagem aerea)
-	@FindBy(css = "a[title=\"Passagens Aéreas\"]")
+	@FindBy(css = "a[title='Passagens Aéreas']")
 	private WebElement menuAereos;
 	
-	@FindBy(xpath = "//*[@id=\"search\"]/div[1]/div[3]/div/div/a")
+	@FindBy(xpath = "//a[@tabindex='1']")
 	private WebElement txtOrigem;
 	
-	@FindBy(xpath = "//*[@id=\"search\"]/div[1]/div[4]/div/div/a")
+	@FindBy(xpath = "//a[@class='place-selector__cover text-ellipsis js-autocomplete-place-cover']")
 	private WebElement txtDestino;
 
-	@FindBy(xpath = "//*[@id=\"search\"]/a")
+	@FindBy(xpath = "//*[@id='search']/a")
 	private WebElement linkBuscar;
 	
-	@FindBy(xpath = "//*[@id=\"service-class\"]/div/button/div")
+	@FindBy(xpath = "//button[@aria-label='Classe de cabine']/div")
 	private WebElement ddlClasse;
 	
 	//CT03(ComprarIngresso)
-	@FindBy(css = "a[title=\"Ingressos\"]")
+	@FindBy(css = "a[title='Ingressos']")
 	private WebElement menuIngressos;
 	
-	@FindBy(xpath = "//*[@id=\"reactRoot\"]/div/div[3]/div[2]/div/div[2]/div/div[2]/div[1]/div/div/a/div[2]")
-	private List<WebElement> divIngressos;
-	
-	@FindBy(xpath = "//*[@id=\"offer-options\"]/div[1]/div[1]/div/select")
+	@FindBy(css = "select[class='hu-dropdown--field mapx-produto-pacotes-click-oferta_input_pessoa select2-hidden-accessible']")
 	private WebElement ddlQtdPessoas;
 	
-	@FindBy(xpath = "//*[@id=\"offer-options\"]/div[2]/div/div[2]/div/div[4]/div[2]/div[4]/a")
+	@FindBy(xpath = "//a[contains(text(),'COMPRAR')]")
 	private List<WebElement> linksComprarIngresso;
 	
 	@FindBy(name = "guestEmail")
@@ -91,42 +88,43 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	private WebElement ckbArmazenarDados;
 
 	//CT04(Consultar Promocao)
-	@FindBy(css = "a[title=\"Promoções de Viagens\"]")
+	@FindBy(css = "a[title='Promoções de Viagens']")
 	private WebElement menuPromocoes;
 	
-	
+	@FindBy(css = "strong[class='product-card__support-text']")
+	private List<WebElement> listaTrajetos;
 	
 	//CT05(Reservar Hotel)
 	//CALENDARIO POPUP
-	@FindBy(xpath = "//*[@id=\"formCalendarTop\"]/div[1]/div[1]/div/input")
+	@FindBy(xpath = "//input[@data-event-label='DisponibilidadeA' and @name='checkin']")
 	private WebElement txtEntrada;
 	
-	@FindBy(xpath = "//*[@id=\"formCalendarTop\"]/div[1]/div[2]/div/input")
+	@FindBy(xpath = "//input[@data-event-label='DisponibilidadeA' and @name='checkout']")
 	private WebElement txtSaida;
 		
-	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/div/div/span[1]")
+	@FindBy(css = "span[class='ui-datepicker-month']")
 	private WebElement lblMes;
 	
-	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/div/div/span[2]")
+	@FindBy(css = "span[class='ui-datepicker-year']")
 	private WebElement lblAno;
 	
-	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/table/tbody/tr/td")
+	@FindBy(css = "td[data-handler='selectDay']")
 	private List<WebElement> listaDias;
 	
-	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/div/a[2]/span")
+	@FindBy(xpath = "//a[@title='Próximo']/span")
 	private WebElement spanNext;
 	
-	@FindBy(xpath = "//*[@id=\"ui-datepicker-div\"]/div/a[1]/span")
+	@FindBy(xpath = "//a[@title='Anterior']/span")
 	private WebElement spanPrevious;
 	///FIM - CALENDARIO POPUP
 	
-	@FindBy(xpath = "//*[@id=\"formCalendarTop\"]/div[2]/div[1]/div/select")
+	@FindBy(css = "select[name='rooms']")
 	private WebElement ddlQuartos;
 	
-	@FindBy(xpath = "//*[@id=\"formCalendarTop\"]/div[2]/div[2]/div/select")
+	@FindBy(css = "select[name='adults']")
 	private WebElement ddlAdultos;
 	
-	@FindBy(xpath = "//*[@id=\"formCalendarTop\"]/div[2]/div[3]/div/select")
+	@FindBy(css = "select[name='children']")
 	private WebElement ddlCriancas;
 	
 	@FindBy(css = "input[value='Verificar disponibilidade']")
@@ -222,9 +220,9 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	public WebElement getMenuPromocoes() {
 		return menuPromocoes;
 	}
-
-	public List<WebElement> getDivIngressos() {
-		return divIngressos;
+	
+	public List<WebElement> getListaTrajetos() {
+		return listaTrajetos;
 	}
 
 	public WebElement getDdlQtdPessoas() {

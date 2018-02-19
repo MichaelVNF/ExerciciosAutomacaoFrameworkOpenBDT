@@ -22,7 +22,7 @@ public class PageObjectClassNetshoes extends PageObject{
 	
 	private By btnProximo = By.partialLinkText("Próxim");
 	
-	@FindBy(xpath = "//*[@id=\"buy-box\"]/section/div/ul/li/a")
+	@FindBy(xpath = "//ul[@data-type='color']/li/a")
 	private List<WebElement> linksCores;
 
 	@FindBy(name = "quantity")
@@ -32,7 +32,7 @@ public class PageObjectClassNetshoes extends PageObject{
 	private WebElement btnComprar;
 	
 	//CT03(Escolher um calçado na secao outlet com valor abaixo de 150 reais)
-	@FindBy(xpath = "//*[@id=\"aggregate-salePrice\"]/div/a")
+	@FindBy(xpath = "//div[@class='content saleprice']/a")
 	private List<WebElement> ckbsPrecos;
 	
 	//CT04(Adicionar item ao carrinho e calcular frete)
@@ -96,9 +96,4 @@ public class PageObjectClassNetshoes extends PageObject{
 	public By getBtnProximo() {
 		return btnProximo;
 	}
-
-	
-	
-	
-	
 }

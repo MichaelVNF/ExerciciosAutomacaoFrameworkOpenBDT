@@ -14,6 +14,6 @@ Scenario Outline: Calcular Frete
   Then verifico o calculo do cep
 
 Examples:
-   | url                          | pesqProduto |nomeProduto                                           | anosGarantia | qtdProdComprados | cep      |
-   | http://www.soubarato.com.br/ | Notebook    |Notebook Dell Inspiron i14-7460-A10S Intel Core i5 8GB| Sem          | 1                | 06020-000|
+   | url                          | pesqProduto | nomeProduto                                           | anosGarantia | qtdProdComprados | cep      |
+   | http://www.soubarato.com.br/ | Notebook    | Notebook Dell Inspiron i14-7460-A10S Intel Core i5 8GB| Sem          | 1                | 06020-000|
 

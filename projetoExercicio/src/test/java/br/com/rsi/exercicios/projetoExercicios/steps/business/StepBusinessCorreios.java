@@ -66,14 +66,18 @@ public class StepBusinessCorreios {
 		boolean continua = true;
 		boolean achou = false;
 		boolean linkProxAtivado = true;
+		int limite = 0;
+		
 		String cep = "";
 	
 		List<WebElement> listaEnderecos = page.getTblEnderecos();//atribui a 1º lista
 
-		while(continua)
+		while(continua && limite != 3)
 		{	
 			for(int i = 0; i < listaEnderecos.size(); i+=4)
-			{   LOG.info("Item"+ (i-3) + ": "+ listaEnderecos.get(i).getText() + " | " + listaEnderecos.get(i+1).getText() + " | " + listaEnderecos.get(i+2).getText() + " | ");
+			{  
+				LOG.info("Item"+ ((i/4)+1) + ": "+ listaEnderecos.get(i).getText() + " | " + listaEnderecos.get(i+1).getText() + " | " + listaEnderecos.get(i+2).getText() + " | ");
+				viewElement.mouseOver(listaEnderecos.get(i));
 				if(listaEnderecos.get(i).getText().contains(logradouro) && listaEnderecos.get(i+1).getText().contains(bairro) && listaEnderecos.get(i+2).getText().contains(localidade))
 				{
 					LOG.info("\n\nACHOU - CEP: " + listaEnderecos.get(i+3).getText() + "\n\n");
@@ -106,6 +110,7 @@ public class StepBusinessCorreios {
 				continua = false;
 				LOG.info("\n\n\nCANCELA\n\n\n");
 			}
+			limite++;
 		}
 		Assert.assertTrue(cep.contains(cepEsperado));
 	}

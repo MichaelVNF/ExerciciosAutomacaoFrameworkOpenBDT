@@ -10,7 +10,7 @@ import net.serenitybdd.core.pages.PageObject;
 public class PageObjectClassSouBarato extends PageObject{
 
 	//CT01(Adicionar ao carrinho um item da seção Produtos Reembalados)
-	@FindBy(xpath = "//*[@id=\"containerpage\"]/div[1]/div/div/ul")
+	@FindBy(xpath = "//ul[@class='list-mtl']")
 	private WebElement menuSuperior;
 	
 	@FindBy(linkText = "Produtos Reembalados")
@@ -27,14 +27,14 @@ public class PageObjectClassSouBarato extends PageObject{
 	@FindBy(id = "product-selected-buy-continue")
 	private WebElement linkContinuarCompra;
 	
-	@FindBy(xpath = "//*[@id=\"containerpage\"]/form/div[2]/div[1]/div/div[2]/ul/li/label/span[2]/span")
+	@FindBy(xpath = "//span[@class='wr-info']")
 	private List<WebElement> rdbsGarantia;
 	
-	@FindBy(xpath = "//*[@id=\"containerpage\"]/form/div[2]/div[2]/div/div[2]/button")
+	@FindBy(xpath = "//div[@class='warranty-button']/button")
 	private WebElement btnContinuar;
 
 	//CT02(Adicionar geladeira Brastemp ao carrinho (via Menu)
-	@FindBy(xpath = "//*[@id=\"main-header-menu-toggle\"]/span")
+	@FindBy(xpath = "//*[@id='main-header-menu-toggle']/span")
 	private WebElement menuMenu;
 	
 	@FindBy(id = "header-menu")
@@ -44,12 +44,11 @@ public class PageObjectClassSouBarato extends PageObject{
 	@FindBy(id = "header-search-input")
 	private WebElement txtBusca;
 	
-	@FindBy(xpath = "//*[@id=\"main-header\"]/div[3]/div/div[4]/form/button")
+	@FindBy(className = "main-header-search-button")
 	private WebElement btnBuscar;
 	
-	
 	//CT04(Acessar aba das vantagens do cartão Sou Barato)
-	@FindBy(xpath = "//*[@id=\"containerpage\"]/div[3]/div/div/div[1]/ul")
+	@FindBy(xpath = "//div[@class='center']/ul")
 	private WebElement menuCartaoSouBarato;
 	
 	//CT05(Adicionar item e Calcular frete)
@@ -119,10 +118,4 @@ public class PageObjectClassSouBarato extends PageObject{
 	public WebElement getBtnCalcFrete() {
 		return btnCalcFrete;
 	}
-	
-	
-	
-	
-	
-	
 }

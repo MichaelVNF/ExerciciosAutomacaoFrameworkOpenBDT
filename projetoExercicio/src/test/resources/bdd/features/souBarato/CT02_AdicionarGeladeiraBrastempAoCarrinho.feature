@@ -11,7 +11,7 @@ Scenario Outline: Adicionar Geladeira
   Then verifico os produtos na sacola "<qtdProdComprados>"
 
 Examples:
-   | url                          | nomeProduto                                                          | categoria       | subCategoria           | qtdProdComprados |
-   | http://www.soubarato.com.br/ | USADO: Refrigerador Brastemp Clean BRM39 352 Litros Compartimento... | Eletrodomésticos| Geladeiras e Freezeres | 1                |
+   | url                          | nomeProduto                                             | categoria       | subCategoria           | qtdProdComprados |
+   | http://www.soubarato.com.br/ | USADO: Geladeira/Refrigerador Frost Free Brastemp Ative | Eletrodomésticos| Geladeiras e Freezeres | 1                |
 
 

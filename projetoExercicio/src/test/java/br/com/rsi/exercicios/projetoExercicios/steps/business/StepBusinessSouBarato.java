@@ -65,12 +65,13 @@ public class StepBusinessSouBarato {
 		boolean achou = false;
 		boolean linkProxAtivado = true;
 		boolean continua = true;
-		int aux = 0;
+		int limite = 0;
+		int primeiroProduto = 0;
 		
-		while(continua) 
+		while(continua && limite != 3) 
 		{
 			
-			for(int i = aux; i < listaProdutos.size(); i++){
+			for(int i = primeiroProduto; i < listaProdutos.size(); i++){
 				LOG.info("Item "+ (i+1) + ": " + listaProdutos.get(i).getText());
 				viewElement.mouseOver(listaProdutos.get(i));
 				if(listaProdutos.get(i).getText().contains(nomeProduto)) {
@@ -92,7 +93,7 @@ public class StepBusinessSouBarato {
 			}
 			
 			if(achou == false && linkProxAtivado){
-				aux = listaProdutos.size();//conta a partir da ultima lida
+				primeiroProduto = listaProdutos.size();//conta a partir da ultima lida
 				viewElement.findElement(proximo).click();
 				page.waitFor(5).seconds();//espera carregar a nova lista
 				listaProdutos =  retornarListaNova();//nova lista
@@ -101,6 +102,7 @@ public class StepBusinessSouBarato {
 			else{
 				continua = false;
 			}
+			limite++;
 		}
 		Assert.assertTrue(achou);
 	}
@@ -126,7 +128,7 @@ public class StepBusinessSouBarato {
 		boolean temGarantia = true;
 		try {
 			WebDriverWait wait = new WebDriverWait(viewElement.getDriver(), 2);
-			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"containerpage\"]/form/div[2]/div[1]/div/div[2]/ul/li/label/span[2]/span")));//Espera pelo elemento, caso não aparerecer retorna exception
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='wr-info']")));//Espera pelo elemento, caso não aparerecer retorna exception
 		}
 		catch(Exception e) {
 			temGarantia = false;
@@ -144,7 +146,7 @@ public class StepBusinessSouBarato {
 	}
 		
 	public void verificarProdutosSacola(String qtdComprados) {
-		Assert.assertTrue(viewElement.findElement(By.xpath("//*[@id=\"app\"]/section/article/div[2]/div[2]/div/div/table/tbody/tr[1]/td[1]")).getText().contains(qtdComprados));
+		Assert.assertTrue(viewElement.findElement(By.xpath("//td[@class='text-capitalize col-xs-8']")).getText().contains(qtdComprados));
 	}
 
 	//CT02(Adicionar geladeira Brastemp ao carrinho (via Menu)

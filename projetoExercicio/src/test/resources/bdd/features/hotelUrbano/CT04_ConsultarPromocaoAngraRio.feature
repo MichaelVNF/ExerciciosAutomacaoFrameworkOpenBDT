@@ -8,4 +8,4 @@ Scenario Outline: Consultar Promocao
 
 Examples:
    | url                            | trajeto                       |
-   | https://www.hotelurbano.com/   | Angra dos Reis/Rio de Janeiro |
+   | https://www.hotelurbano.com/   | Mangaratiba/Rio de Janeiro    |
