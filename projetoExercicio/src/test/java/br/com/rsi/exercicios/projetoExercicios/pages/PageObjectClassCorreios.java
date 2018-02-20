@@ -15,8 +15,8 @@ public class PageObjectClassCorreios extends PageObject{
 	
 	@FindBy(xpath = "//input[@class='acesso-busca-submit' and position()=2]")
 	private WebElement btnPesq;
-	
-	@FindBy(xpath = "//table[@class='tmptabela']/tbody/tr/td")
+					 //table[@class='tmptabela']/tbody/tr/td
+	@FindBy(xpath = "//table[@class='tmptabela']//td")
 	private List<WebElement> tblEnderecos;
 	
 	@FindBy(xpath = "//a[text()='[ Próxima ]']")
