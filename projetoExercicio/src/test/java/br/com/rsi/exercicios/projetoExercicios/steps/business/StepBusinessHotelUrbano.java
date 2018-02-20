@@ -61,7 +61,7 @@ public class StepBusinessHotelUrbano {
 			if(page.getLinksVerHotel().get(i).getText().contains(nome))
 			{
 				viewElement.waitForElementIsPresent(10, page.getLinksVerHotel().get(i));
-				viewElement.open(page.getLinksVerHotel().get(i).getAttribute("href"));
+				viewElement.open(page.getLinksVerHotel().get(i).getAttribute("href"));//representa o 'clique'
 				break;
 			}
 		}
