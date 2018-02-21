@@ -10,7 +10,7 @@ Scenario Outline: Adicionar Produto
   Then verifico os produtos na sacola "<qtdProdComprados>"
 
 Examples:
-   | url                          | opcao                | nomeProduto   | anosGarantia | qtdProdComprados |
-   | http://www.soubarato.com.br/ | Produtos Reembalados | Smart TV      | 2            | 1                |
+   | url                          | opcao                | nomeProduto     | anosGarantia | qtdProdComprados |
+   | http://www.soubarato.com.br/ | Produtos Reembalados | Smart TV LED 49 | 2            | 1                |
 
 

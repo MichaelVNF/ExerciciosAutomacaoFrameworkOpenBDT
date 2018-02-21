@@ -91,7 +91,7 @@ public class StepBusinessCorreios {
 			{
 				try {
 					WebDriverWait wait = new WebDriverWait(viewElement.getDriver(), 1);
-					wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/div[5]/a")));//Espera pelo elemento, caso não aparerecer retorna exception
+					wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[text()='[ Próxima ]']")));//Espera pelo elemento, caso não aparerecer retorna exception
 				}
 				catch(Exception e) {
 					linkProxAtivado = false;
@@ -268,7 +268,9 @@ public class StepBusinessCorreios {
 	
 	public void verificarListagemEnderecoAgencia(String rua)
 	{
-		viewElement.waitForElementIsPresent(10, page.getTblAgencias().get(0));//aguarda a presenca d ao menos o 1 elemento
+		page.waitFor(2000).milliseconds();
+		page.waitForTextToDisappear("Loading");
+		viewElement.waitForElementIsPresent(20, page.getTblAgencias().get(0));//aguarda a presenca d ao menos o 1 elemento
 		
 		boolean achou = false;
 		List<WebElement> listaAgencias = page.getTblAgencias();
@@ -277,8 +279,8 @@ public class StepBusinessCorreios {
 		{
 			listaAgencias.get(i).click();
 			page.waitForTextToAppear("Endereço");
-		
-			String nomeRua = viewElement.findElement(By.xpath("//*[@id=\"detalheAgencia"+ (i+1) +"\"]/tbody/tr[2]/td")).getText();
+			
+			String nomeRua = viewElement.findElement(By.xpath("//*[@id='detalheAgencia"+ (i+1) +"']//tr[2]")).getText();
 			if(nomeRua.contains(rua)) {
 				achou = true;
 				break;	
@@ -288,7 +290,5 @@ public class StepBusinessCorreios {
 		
 		Assert.assertTrue(achou);
 	}
-	
-	
-	
+
 }

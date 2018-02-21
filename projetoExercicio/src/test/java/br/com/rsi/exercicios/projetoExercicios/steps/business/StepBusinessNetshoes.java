@@ -58,7 +58,8 @@ public class StepBusinessNetshoes {
 		
 		while(continua && limite != 3) 
 		{
-			for(int i = 0; i < listaProdutos.size(); i++){
+			for(int i = 0; i < listaProdutos.size(); i++)
+			{
 				LOG.info("Item "+ (i+1) + ": " + listaProdutos.get(i).getText());
 				viewElement.mouseOver(listaProdutos.get(i));
 				if(listaProdutos.get(i).getText().contains(nomeProduto)) {
@@ -150,8 +151,7 @@ public class StepBusinessNetshoes {
 	}
 
 	public void verificarCalculoFrete() {
-		
-		Assert.assertTrue(viewElement.findElement(By.xpath("//tr[@class='shipping cart__table__row']/td[2]/p")).getText().contains("FRETE"));
+		Assert.assertTrue(page.getTrTextoFrete().getText().contains("FRETE"));
 	}
 
 	//CT05(Adicionar item no carrinho, Limpar Carrinho e voltar para loja)

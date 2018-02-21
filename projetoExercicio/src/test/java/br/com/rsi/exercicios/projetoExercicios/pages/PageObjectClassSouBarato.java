@@ -30,6 +30,9 @@ public class PageObjectClassSouBarato extends PageObject{
 	@FindBy(xpath = "//span[@class='wr-info']")
 	private List<WebElement> rdbsGarantia;
 	
+	@FindBy(xpath = "//td[@class='text-capitalize col-xs-8']")
+	private WebElement tdQtdProdutosSacola;
+	
 	@FindBy(xpath = "//div[@class='warranty-button']/button")
 	private WebElement btnContinuar;
 
@@ -88,6 +91,10 @@ public class PageObjectClassSouBarato extends PageObject{
 
 	public List<WebElement> getRdbsGarantia() {
 		return rdbsGarantia;
+	}
+
+	public WebElement getTdQtdProdutosSacola() {
+		return tdQtdProdutosSacola;
 	}
 
 	public WebElement getBtnContinuar() {

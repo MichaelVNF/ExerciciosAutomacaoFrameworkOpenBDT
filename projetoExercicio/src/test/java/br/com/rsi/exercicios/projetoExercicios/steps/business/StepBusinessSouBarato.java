@@ -34,14 +34,14 @@ public class StepBusinessSouBarato {
 		boolean existe = true; 
 		try {
 			WebDriverWait wait = new WebDriverWait(viewElement.getDriver(), 3);
-			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='lightpop']/div/div[2]/a")));//Espera pelo elemento, caso não aparerecer retorna exception	
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='lightpop-close md-btn-visible']/a")));//Espera pelo elemento, caso não aparerecer retorna exception	
 		}
 		catch(Exception e) {
 			existe = false;
 		}
-		
+		//div[@class='lightpop-wrapper']/div[2]/a
 		if(existe)
-			viewElement.findElement(By.xpath("//*[@id='lightpop']/div/div[2]/a")).click();
+			viewElement.findElement(By.xpath("//div[@class='lightpop-close md-btn-visible']/a")).click();
 	}
 
 	//CT01(Adicionar ao carrinho um item da seção Produtos Reembalados)
@@ -146,7 +146,8 @@ public class StepBusinessSouBarato {
 	}
 		
 	public void verificarProdutosSacola(String qtdComprados) {
-		Assert.assertTrue(viewElement.findElement(By.xpath("//td[@class='text-capitalize col-xs-8']")).getText().contains(qtdComprados));
+		viewElement.waitForElementIsPresent(10, page.getTdQtdProdutosSacola());
+		Assert.assertTrue(page.getTdQtdProdutosSacola().getText().contains(qtdComprados));
 	}
 
 	//CT02(Adicionar geladeira Brastemp ao carrinho (via Menu)

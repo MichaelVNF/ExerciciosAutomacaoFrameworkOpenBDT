@@ -42,6 +42,9 @@ public class PageObjectClassNetshoes extends PageObject{
 	@FindBy(className = "calculate-shipping__button")
 	private WebElement btnCalcFrete;
 	
+	@FindBy(xpath = "//tr[@class='shipping cart__table__row']/td[2]/p")
+	private WebElement trTextoFrete;
+	
 	//CT05(Adicionar item no carrinho, Limpar Carrinho e voltar para loja)
 	@FindBy(linkText = "Limpar Carrinho")
 	private WebElement linkLimparCarrinho;
@@ -71,6 +74,10 @@ public class PageObjectClassNetshoes extends PageObject{
 
 	public WebElement getTxtCep() {
 		return txtCep;
+	}
+
+	public WebElement getTrTextoFrete() {
+		return trTextoFrete;
 	}
 
 	public WebElement getBtnCalcFrete() {
