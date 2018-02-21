@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <a
+                    href="420cec9a358e316e156f0e40f0e4744899adb7c2251f9a2394fc20dec2360f3d.html">Ct05 - Calcular Pre&ccedil;os E Prazos - RSI Os&hellip;</a>
+                > <a
+                    href="eee5c3740250ee7b2563497f0653965f7186836983259a139385a3c0c95fb56b.html">Calcular Precos e Prazos </a>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 21-02-2018 12:38</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Ct05 - Calcular Preços E Prazos - RSI Osasco A RSI Alphaville</span>
+                                    <span class="badge tag-badge">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" href="f01b871a4bff95f97d65732647bf3428457bc7f00ca9129112a8e86f9b7d3a73.html">Calculaprecoprazorsi
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Calcular Precos E Prazos
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Abrir pagina: &lt;url&gt;</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="scaled_a8f8e38af1d91869467a31310e19ef0a118562f4c3490fd35d0e81da674ab816.png" title="Given estou na pagina do site dos correios &quot;&lt;url&gt;&quot;" width="960"/>
+                <img src="a8f8e38af1d91869467a31310e19ef0a118562f4c3490fd35d0e81da674ab816.png" title="Abrir pagina: http://www.correios.com.br/para-voce" width="960"/>
+                <img src="4af8f516ba115c69bb7caff570b27470f20dca296bd7b1d4cc41528f2375c445.png" title="When clico no link 'Precos e Prazos'" width="960"/>
+                <img src="b6ce0ec635239e702885c9d80c146db7962d3ad6fb10f5522d929cdfd38ba603.png" title="And preencho o campo 'Data da postagem' &quot;&lt;dataPostagem&gt;&quot;" width="960"/>
+                <img src="121179884081954c4b6b3f3af049b5836a99884a83cc0731866d550a4835d0b3.png" title="And preencho o campo 'CEP de Origem' &quot;&lt;cepOrigem&gt;&quot;" width="960"/>
+                <img src="6fe2528f8d810a2d45f7056708da8ae7d1cec7434b874e569c5a8c6be3b54647.png" title="And preencho o campo 'CEP de Origem' &quot;&lt;cepOrigem&gt;&quot;" width="960"/>
+                <img src="e4aa62af00389cce7403bb663182de6ffc1c0e064dfb7c9cba2a5a98c0f96b2c.png" title="And preencho o campo 'CEP de Destino' &quot;&lt;cepDestino&gt;&quot;" width="960"/>
+                <img src="12f162b128ad973faaa930916f64b5181b3db418f207dd2eddd2df8a23812cc2.png" title="And preencho o campo 'CEP de Destino' &quot;&lt;cepDestino&gt;&quot;" width="960"/>
+                <img src="f251da33b07bebb7eac0d353767418b58ab9628873bbeab239f5f6fe907ff754.png" title="And seleciono a ddl 'Servico' &quot;&lt;servico&gt;&quot;" width="960"/>
+                <img src="f251da33b07bebb7eac0d353767418b58ab9628873bbeab239f5f6fe907ff754.png" title="And clico no ckb 'Comparar Servicos' &quot;&lt;ckbCompararServ&gt;&quot;" width="960"/>
+                <img src="387d3f8a38e1aaeb37349a9b1fd02a9923ed3e2ec347e05bcd091eb43ea03fd6.png" title="And clico sobre o 'Formato' do objeto &quot;&lt;formato&gt;&quot;" width="960"/>
+                <img src="b9ded9b28331c64470c8d5c822a4ce26b011b60ceb05b160f00c29110a00eead.png" title="And seleciono na ddl o tipo de 'Embalagem' &quot;&lt;embalagem&gt;&quot;" width="960"/>
+                <img src="f30fbbfc87a5ab6a7383e72c0f5fc408a93b90095149d794cfc55d1138aa83f5.png" title="And clico no botao 'Selecionar esta' para escolher um tipo &quot;&lt;numTipoEmbalagem&gt;&quot;" width="960"/>
+                <img src="5dc662e57f2d7f98e973c51a1d598152695277a0190b1dbe3344dc0b3198b35c.png" title="And seleciono a ddl 'Peso estimado' &quot;&lt;pesoEstimado&gt;&quot;" width="960"/>
+                <img src="35ab8adf36c3d389e295233e557f7e61edd49ff7f4e2c24d9843e6da7dcf131a.png" title="And clico no ckb 'Mao Propria' &quot;&lt;ckbMaoPropria&gt;&quot;" width="960"/>
+                <img src="d4edf24a6f21a687c481676f8ef77ed08bfae9ddb9e2d3c580ff240f433ed93d.png" title="And clico no ckb 'Aviso de Recebimento - AR' &quot;&lt;ckbAvisoRecebimento&gt;&quot;" width="960"/>
+                <img src="102f2570f3393748145adc395f40d587bcb1bad1d7de0d4da3307064297e8982.png" title="And clico no ckb 'Declaracao de Valor' &quot;&lt;ckbDeclaracaoValor&gt;&quot; &quot;&lt;valorDeclarado&gt;&quot;" width="960"/>
+                <img src="b90ae7535544f2c9f31b56a3db7eef39c35c9930fb9b8adbaff375ec4613f66b.png" title="And clico no botao 'Enviar'" width="960"/>
+                <img src="1fbbb0a2b01b1f0ee58c515e6611f25a14c8ea6d3801e261cbea263351f5ee48.png" title="And clico no botao 'Enviar'" width="960"/>
+                <img src="scaled_752a97fec2b9f19f3ac9f040c75e99251ee158cea2c30308a41e93c185d36181.png" title="And verifico a abertura da nova janela" width="960"/>
+                <img src="752a97fec2b9f19f3ac9f040c75e99251ee158cea2c30308a41e93c185d36181.png" title="Then verifco se houve resultado dos calculos: <span class='success-color'>SUCCESS</span>" width="960"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.3.0</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <a
+                    href="21cc2af2364dbec59547ec9901735f0c3c4532381875ebf5ebdbec8c17100d0c.html">Ct02 -  Consultar V&ocirc;o Economico Para Bah&hellip;</a>
+                > <a
+                    href="f6eee346cecdbb29145aa74fe4cbfcbfefef728280aa5ae4f4972c4effc0c1e0.html">Consultar v&ocirc;o </a>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 21-02-2018 14:21</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Ct02 -  Consultar Vôo Economico Para Bahia</span>
+                                    <span class="badge tag-badge">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" href="a38b3b16ebc179a4926379dcc3a1979e30a366b8236c41ba2fffb99b54bc58eb.html">Consultavoo
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Consultar V&ocirc;o
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Abrir pagina: https://www.hotelurbano.com/</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="2477606edbabc4433fe7ea344f49b673ae4853ada2b2479cd28f07f00f675e2f.png" title="Given estou na pagina do site do hotel urbano &quot;&lt;url&gt;&quot;" width="960"/>
+                <img src="be40dcd0e4ea61ad172d01db07f052285c005d6698fb7da26ba485c17c706898.png" title="Abrir pagina: https://www.hotelurbano.com/" width="960"/>
+                <img src="0558dbe8b59426c806913800293f75409a5869bf11b59f0e88c356752fd89598.png" title="When clico no menu 'Aereos' na barra superior" width="960"/>
+                <img src="1c7222fc83ad8252c6e10ceb0d2b31b6e33990c81d08513533ded009ae8a9b20.png" title="When clico no menu 'Aereos' na barra superior" width="960"/>
+                <img src="1fcb0a2bebd89d040a096d0708fc55b69b558976466566e699bf006ad535fe5b.png" title="And preencho o campo de 'Origem' &quot;&lt;origem&gt;&quot;" width="960"/>
+                <img src="cc35061fc388e49d8f1a9db295839d4d91ea13bdbe1959991f9c9ca4a8516f00.png" title="And preencho o campo de 'Origem' &quot;&lt;origem&gt;&quot;" width="960"/>
+                <img src="261f07d1787fca0f45ad21a6ae249d2dea6fc48033182011ac135f6e2d899846.png" title="And preencho o campo de 'Destino' &quot;&lt;destino&gt;&quot;" width="960"/>
+                <img src="1f7565baed0f9dc6d5f1e9d63faa74d3606c178cf906d95cf2051a7b91340062.png" title="And preencho o campo de 'Destino' &quot;&lt;destino&gt;&quot;" width="960"/>
+                <img src="159f9d960e5d34875b2ad47973bcb4f29c109c9a0ec6d7a131a6189ca7058035.png" title="And seleciono a ddl 'Classe' &quot;&lt;classe&gt;&quot;" width="960"/>
+                <img src="a87504f2e59c70f63a89f858538900c3d6213574c07a30f82910c4ef32a50d57.png" title="And seleciono a ddl 'Classe' &quot;&lt;classe&gt;&quot;" width="960"/>
+                <img src="86878125fbcd8d2bf47faa403cc2149df34abce72002a4717aa7ea3cc7df1df8.png" title="And clico no link para 'Buscar'" width="960"/>
+                <img src="add75f01db2caf242c4811257bf9667c090db976257a1ae1b02eb8c4c100f952.png" title="Then verifico existencia dos resultados para busca do voo: <span class='success-color'>SUCCESS</span>" width="960"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.3.0</span>
+</div>
+</body>
+</html>
