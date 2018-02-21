@@ -40,6 +40,9 @@ public class PageObjectClassSouBarato extends PageObject{
 	@FindBy(id = "header-menu")
 	private WebElement navMenu;
 	
+	@FindBy(id = "filter-group-1")
+	private WebElement linksMarcas;
+	
 	//CT03(Adicionar Iphone ao carrinho (via campo busca)
 	@FindBy(id = "header-search-input")
 	private WebElement txtBusca;
@@ -97,6 +100,10 @@ public class PageObjectClassSouBarato extends PageObject{
 
 	public WebElement getNavMenu() {
 		return navMenu;
+	}
+	
+	public WebElement getLinksMarcas() {
+		return linksMarcas;
 	}
 
 	public WebElement getBtnBuscar() {

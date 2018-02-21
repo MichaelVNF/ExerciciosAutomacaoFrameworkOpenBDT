@@ -36,9 +36,15 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	private WebElement menuAereos;
 	
 	@FindBy(xpath = "//a[@tabindex='1']")
+	private WebElement divOrigem;
+	
+	@FindBy(xpath = "//input[@placeholder='Cidade ou aeroporto de origem']")
 	private WebElement txtOrigem;
 	
 	@FindBy(xpath = "//a[@class='place-selector__cover text-ellipsis js-autocomplete-place-cover']")
+	private WebElement divDestino;
+	
+	@FindBy(xpath = "//input[@placeholder='Cidade ou aeroporto de destino']")
 	private WebElement txtDestino;
 
 	@FindBy(xpath = "//*[@id='search']/a")
@@ -46,6 +52,9 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	
 	@FindBy(xpath = "//button[@aria-label='Classe de cabine']/div")
 	private WebElement ddlClasse;
+	
+	@FindBy(xpath = "//button[@class='price-button js-raise-booking']")
+	private WebElement btnSelecionarPassagem;
 	
 	//CT03(ComprarIngresso)
 	@FindBy(css = "a[title='Ingressos']")
@@ -197,6 +206,10 @@ public class PageObjectClassHotelUrbano extends PageObject{
 		return menuAereos;
 	}
 
+	public WebElement getDivOrigem() {
+		return divOrigem;
+	}
+	
 	public WebElement getTxtOrigem() {
 		return txtOrigem;
 	}
@@ -205,8 +218,16 @@ public class PageObjectClassHotelUrbano extends PageObject{
 		return txtDestino;
 	}
 
+	public WebElement getDivDestino() {
+		return divDestino;
+	}
+
 	public WebElement getDdlClasse() {
 		return ddlClasse;
+	}
+
+	public WebElement getBtnSelecionarPassagem() {
+		return btnSelecionarPassagem;
 	}
 
 	public WebElement getLinkBuscar() {

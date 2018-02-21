@@ -110,7 +110,7 @@ public class StepBusinessSouBarato {
 	public void clicarBtnComprar() {
 		boolean clicarContinua = false;
 		
-		if(viewElement.findElement(By.className("p-buybox")).getText().contains("Reembalado"))
+		if(viewElement.findElement(By.className("p-buybox")).getText().contains("Reembalado") || viewElement.findElement(By.id("skusbox")).getText().contains("Selecione"))
 			clicarContinua = true;
 		
 		viewElement.waitForElementIsPresent(10, page.getBtnComprar());
@@ -160,6 +160,11 @@ public class StepBusinessSouBarato {
 	
 	public void clicarSubmenuCatergoria(String subCategoria) {
 		viewElement.click(page.getNavMenu().findElement(By.partialLinkText(subCategoria)));
+	}
+	
+	public void clicarLinkMarcaProduto(String marca) {
+		LOG.info("Link marca: " + page.getLinksMarcas().findElement(By.linkText(marca)).getText());
+		page.getLinksMarcas().findElement(By.linkText(marca)).click();
 	}
 	
 	//CT03(Adicionar Iphone ao carrinho (via campo busca)

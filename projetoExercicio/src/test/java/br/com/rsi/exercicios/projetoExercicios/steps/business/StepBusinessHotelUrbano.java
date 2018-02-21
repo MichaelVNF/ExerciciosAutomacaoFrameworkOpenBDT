@@ -54,7 +54,8 @@ public class StepBusinessHotelUrbano {
 	public void clicarLinkVerHotel(String nome) {
 		viewElement.waitForElementIsPresent(10, page.getLinksVerHotel().get(0));
 		
-		for(int i = 0; i < page.getLinksVerHotel().size(); i++) {
+		for(int i = 0; i < page.getLinksVerHotel().size(); i++) 
+		{
 			LOG.info("Item " + (i+1)+ ": " + page.getLinksVerHotel().get(i).getText());
 			viewElement.mouseOver(page.getLinksVerHotel().get(i));
 			
@@ -79,19 +80,19 @@ public class StepBusinessHotelUrbano {
 	}
 	
 	public void preencherCampoOrigem(String origem) {
-		viewElement.waitForElementIsPresent(10, page.getTxtOrigem());
-		viewElement.click(page.getTxtOrigem());
-		viewElement.findElement(By.xpath("//input[@placeholder='Cidade ou aeroporto de origem']")).sendKeys(origem);
+		viewElement.waitForElementIsPresent(10, page.getDivOrigem());
+		viewElement.click(page.getDivOrigem());
+		viewElement.sendText(page.getTxtOrigem(), origem);
 		page.waitFor(2000).milliseconds();
-		viewElement.findElement(By.xpath("//input[@placeholder='Cidade ou aeroporto de origem']")).sendKeys(Keys.ENTER);
+		viewElement.sendText(page.getTxtOrigem(), ""+Keys.ENTER);
 	}
 	
 	public void preencherCampoDestino(String destino) {
-		viewElement.waitForElementIsPresent(10, page.getTxtDestino());
-		viewElement.click(page.getTxtDestino());
-		viewElement.findElement(By.xpath("//input[@placeholder='Cidade ou aeroporto de destino']")).sendKeys(destino);
+		viewElement.waitForElementIsPresent(10, page.getDivDestino());
+		viewElement.click(page.getDivDestino());
+		viewElement.sendText(page.getTxtDestino(), destino);
 		page.waitFor(2000).milliseconds();
-		viewElement.findElement(By.xpath("//input[@placeholder='Cidade ou aeroporto de destino']")).sendKeys(Keys.ENTER);
+		viewElement.sendText(page.getTxtDestino(), ""+Keys.ENTER);
 	
 	}
 	
@@ -106,10 +107,9 @@ public class StepBusinessHotelUrbano {
 	}
 	
 	public void verificarResultadosBuscaVoo() {
-		viewElement.waitForElementIsPresent(30, viewElement.findElement(By.xpath("//button[@class='price-button js-raise-booking']")));
-		Assert.assertTrue(viewElement.findElement(By.xpath("//button[@class='price-button js-raise-booking']")).getText().contains("Selecionar"));
+		viewElement.waitForElementIsPresent(30, page.getBtnSelecionarPassagem());
+		Assert.assertTrue(page.getBtnSelecionarPassagem().getText().contains("Selecionar"));
 	}
-	
 	
 	//CT03(Comprar Ingresso) e 	CT05(Reservar Hotel)
 	public void clicarMenuIngressos() {
@@ -230,8 +230,7 @@ public class StepBusinessHotelUrbano {
 				page.getListaDias().get(i).click();
 				break;
 			}
-		}
-		
+		}	
 	}
 	
 	public void selecionarDdlQtdQuartos(String qtd) {

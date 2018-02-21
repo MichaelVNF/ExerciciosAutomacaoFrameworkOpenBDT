@@ -64,6 +64,11 @@ public class StepDefinitionSouBarato {
 	    stepB.clicarSubmenuCatergoria(subCategoria);
 	}
 
+	@When("^clico no link da marca do produto \"([^\"]*)\"$")
+	public void clico_no_link_da_marca_do_produto(String marca) throws Throwable {
+	    stepB.clicarLinkMarcaProduto(marca);
+	}
+	
 	//CT03(Adicionar Iphone ao carrinho (via campo busca)
 	@When("^preencho o campo de 'Busca' \"([^\"]*)\"$")
 	public void preencho_o_campo_de_Busca(String busca) throws Throwable {
