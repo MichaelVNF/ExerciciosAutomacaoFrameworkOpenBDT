@@ -6,12 +6,13 @@ Scenario Outline: Adicionar Geladeira
   When clico no menu 'Menu'
   And sobreponho o mouse na categoria especifica "<categoria>"
   And clico na subCategoria especifica "<subCategoria>"
+  And clico no link da marca do produto "<marca>"
   And clico no link do produto especifico "<nomeProduto>"
   And clico no botao para 'Comprar' 
+  And clico no rdb 'Garantia' "<anosGarantia>"
   Then verifico os produtos na sacola "<qtdProdComprados>"
 
 Examples:
-   | url                          | nomeProduto                                                          | categoria       | subCategoria           | qtdProdComprados |
-   | http://www.soubarato.com.br/ | USADO: Refrigerador Brastemp Clean BRM39 352 Litros Compartimento... | Eletrodomésticos| Geladeiras e Freezeres | 1                |
-
+   | url                          | nomeProduto | categoria       | subCategoria           | marca    | anosGarantia | qtdProdComprados |
+   | http://www.soubarato.com.br/ | Geladeira   | Eletrodomésticos| Geladeiras e Freezeres | Brastemp | 1            | 1                |
 

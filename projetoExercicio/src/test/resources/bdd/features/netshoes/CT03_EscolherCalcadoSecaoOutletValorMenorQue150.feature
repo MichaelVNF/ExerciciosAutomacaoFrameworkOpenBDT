@@ -15,6 +15,6 @@ Scenario Outline: Escolher Calcado
 
 Examples:
    | url                         | pesqProduto | linkOutlet          |precoAte | nomeProduto          | posCor | tamanhoTenis | qtdProdComprados |
-   | http://www.netshoes.com.br/ |   Ofertas   | Calçados Masculinos |  150    | Tênis Kappa Impact   | 4      | 38           | 1                |
+   | http://www.netshoes.com.br/ |   Outlet    | Calçados Masculinos |  150    | Tênis Kappa Impact   | 4      | 38           | 1                |
 
 
